@@ -1,0 +1,18 @@
+<header>
+    <div class="container border-bottom py-3 mb-3">
+        <div class="row justify-content-start">
+            <div class="col-10 text-center header-brandname">
+                {% if page.title %}
+                    <span class="h1">{{ page.title }}</span>
+                {% else %}
+                    <span class="h1">Mon blog</span>
+                {% endif%}
+            </div>
+            <div class="col-2 my-auto">
+                <a class="float-right" href="{{ site.url }}/feed.xml">
+                    <i class="fas fa-rss-square h1 mb-0"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>

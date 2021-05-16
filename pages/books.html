@@ -1,0 +1,248 @@
+---
+layout: page
+title: Ma bibliothèque
+permalink: /books/
+cover: "images/pages/books/cover.jpg"
+---
+
+<h2 class="pb-3">Biographies</h2>
+
+<div class="row">
+    {% assign books = site.books | sort: 'type' %}
+    {% for book in books %}
+        {% if book.type == "biography" %}
+            <div class="col-4 mx-auto">
+                <div class="card no-border mb-3">
+                    <img class="card-img" src="{{ site.url }}/images/pages/books/{{ book.type }}/{{ book.thumbnail }}" />
+                    <div class="card-body text-center">
+                        <div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#book-{{ book.type }}-{{ book.number }}">
+                                Plus d'infos
+                            </button>
+                        </div>
+                        <div>
+                            {% if book.status == "Lu" %}
+                                <a class="badge bg-success text-white">{{ book.status }}</a>
+                            {% else %}
+                                {% if book.status == "En Cours" %}
+                                    <a class="badge bg-warning text-white">{{ book.status }}</a>
+                                {% else %}
+                                    <a class="badge bg-danger text-white">{{ book.status }}</a>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="modal fade" id="book-{{ book.type }}-{{ book.number }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="book-{{ book.type }}-{{ book.number }}" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="book-{{ book.type }}-{{ book.number }}">{{ book.title }} - {{ book.author }}</h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img class="img-fluid" src="{{ site.url }}/images/pages/books/{{ book.type }}/{{ book.thumbnail }}" />
+                                        </div>
+                                        <div class="col-9">
+                                            {{ book }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                <a href="{{ site.url }}/{{ book.link_my_file }}">Ma fiche</a> |
+                                <a href="{{ book.link_buy }}">Ou le trouver ?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<hr />
+
+<h2 class="pb-3">Business</h2>
+
+<div class="row">
+    {% assign books = site.books | sort: 'type' %}
+    {% for book in books %}
+        {% if book.type == "business" %}
+            <div class="col-4 mx-auto">
+                <div class="card no-border mb-3">
+                    <img class="card-img" src="{{ site.url }}/images/pages/books/{{ book.type }}/{{ book.thumbnail }}" />
+                    <div class="card-body text-center">
+                        <div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#book-{{ book.type }}-{{ book.number }}">
+                                Plus d'infos
+                            </button>
+                        </div>
+                        <div>
+                            {% if book.status == "Lu" %}
+                                <a class="badge bg-success text-white">{{ book.status }}</a>
+                            {% else %}
+                                {% if book.status == "En Cours" %}
+                                    <a class="badge bg-warning text-white">{{ book.status }}</a>
+                                {% else %}
+                                    <a class="badge bg-danger text-white">{{ book.status }}</a>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="modal fade" id="book-{{ book.type }}-{{ book.number }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="book-{{ book.type }}-{{ book.number }}" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="book-{{ book.type }}-{{ book.number }}">{{ book.title }} - {{ book.author }}</h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img class="img-fluid" src="{{ site.url }}/images/pages/books/{{ book.type }}/{{ book.thumbnail }}" />
+                                        </div>
+                                        <div class="col-9">
+                                            {{ book }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                <a href="{{ site.url }}/{{ book.link_my_file }}">Ma fiche</a> |
+                                <a href="{{ book.link_buy }}">Ou le trouver ?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<hr />
+
+<h2 class="pb-3">Essais</h2>
+
+<div class="row">
+    {% assign books = site.books | sort: 'type' %}
+    {% for book in books %}
+        {% if book.type == "essays" %}
+            <div class="col-4 mx-auto">
+                <div class="card no-border mb-3">
+                    <img class="card-img" src="{{ site.url }}/images/pages/books/{{ book.type }}/{{ book.thumbnail }}" />
+                    <div class="card-body text-center">
+                        <div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#book-{{ book.type }}-{{ book.number }}">
+                                Plus d'infos
+                            </button>
+                        </div>
+                        <div>
+                            {% if book.status == "Lu" %}
+                                <a class="badge bg-success text-white">{{ book.status }}</a>
+                            {% else %}
+                                {% if book.status == "En Cours" %}
+                                    <a class="badge bg-warning text-white">{{ book.status }}</a>
+                                {% else %}
+                                    <a class="badge bg-danger text-white">{{ book.status }}</a>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="modal fade" id="book-{{ book.type }}-{{ book.number }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="book-{{ book.type }}-{{ book.number }}" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="book-{{ book.type }}-{{ book.number }}">{{ book.title }} - {{ book.author }}</h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img class="img-fluid" src="{{ site.url }}/images/pages/books/{{ book.type }}/{{ book.thumbnail }}" />
+                                        </div>
+                                        <div class="col-9">
+                                            {{ book }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                <a href="{{ site.url }}/{{ book.link_my_file }}">Ma fiche</a> |
+                                <a href="{{ book.link_buy }}">Ou le trouver ?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<hr />
+
+<h2 class="pb-3">Développement Personnel</h2>
+
+<div class="row">
+    {% assign books = site.books | sort: 'type' %}
+    {% for book in books %}
+        {% if book.type == "self-growth" %}
+            <div class="col-4 mx-auto">
+                <div class="card no-border mb-3">
+                    <img class="card-img" src="{{ site.url }}/images/pages/books/{{ book.type }}/{{ book.thumbnail }}" />
+                    <div class="card-body text-center">
+                        <div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#book-{{ book.type }}-{{ book.number }}">
+                                Plus d'infos
+                            </button>
+                        </div>
+                        <div>
+                            {% if book.status == "Lu" %}
+                                <a class="badge bg-success text-white">{{ book.status }}</a>
+                            {% else %}
+                                {% if book.status == "En Cours" %}
+                                    <a class="badge bg-warning text-white">{{ book.status }}</a>
+                                {% else %}
+                                    <a class="badge bg-danger text-white">{{ book.status }}</a>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="modal fade" id="book-{{ book.type }}-{{ book.number }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="book-{{ book.type }}-{{ book.number }}" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="book-{{ book.type }}-{{ book.number }}">{{ book.title }} - {{ book.author }}</h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img class="img-fluid" src="{{ site.url }}/images/pages/books/{{ book.type }}/{{ book.thumbnail }}" />
+                                        </div>
+                                        <div class="col-9">
+                                            {{ book }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                <a href="{{ site.url }}/{{ book.link_my_file }}">Ma fiche</a> |
+                                <a href="{{ book.link_buy }}">Ou le trouver ?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>

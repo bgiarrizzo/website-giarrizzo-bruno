@@ -1,0 +1,113 @@
+# Core Settings
+
+name: Bruno Giarrizzo
+
+description: Bruno Giarrizzo, Freelance, Developer & DevOps
+description_meta: "Bruno Giarrizzo, Papa, Freelance, Developpeur & DevOps. Parle de code, de développement personnel, d'investissement et de business."
+description_long: >
+  Papa, Freelance, Developpeur & DevOps. Passionné de code, de développement personnel, d'investissement et de business. <br /><br />
+  <a href="{{ site.url }}/about/">Contactez moi</a> pour toute question, ou <a href="https://paypal.me/{{ site.social_ids.paypal }}" target="_blank">soutenez mon travail</a> !
+
+keywords:
+  [
+    Bruno,
+    Giarrizzo,
+    Bruno Giarrizzo,
+    Freelance,
+    Développeur,
+    DevOps,
+    Ethical Hacker,
+    Ethical,
+    Hacker,
+    Django,
+    Python,
+    Swift,
+    Ansible,
+    Terraform,
+    Kubernetes,
+    Infra as Code,
+    Investissement,
+    Immobilier,
+    Entrepreneuriat,
+    Business,
+    Entreprise,
+  ]
+
+# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
+# Used for Sitemap.xml and your RSS feed
+url: https://www.bruno-giarrizzo.fr
+
+author_avatar: "images/photo-min.jpg"
+# If you're hosting your site at a Project repository on GitHub pages
+# (http://yourusername.github.io/repository-name)
+# and NOT your User repository (http://yourusername.github.io)
+# then add in the baseurl here, like this: "/repository-name"
+baseurl: ""
+
+# Enter your Disqus shortname (not your username) to enable commenting on posts
+# You can find your shortname on the Settings page of your Disqus account
+disqus: bruno-giarrizzo
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics: UA-178521232-1
+
+# Misc
+
+footer_bio: >
+  <p>Bruno, DevOps, Lillois, Marié et Papa d'une petite fille.</p>
+  <p>iPhone à la main, Macbook dans le sac à dos, je cherche toujours la petite bête à coder.</p>
+  <p>Je partage ici : du code, du business, du développement personnel, du WTF.</p>
+
+social_ids:
+  twitter: b_giarrizzo
+  instagram: bgiarrizzo
+  twitch: bruno_bing
+  youtube: UCSXj4YcwcmH57INCrNAR03Q
+  github: bgiarrizzo
+  paypal: bgiarrizzo
+
+email: contact@bruno-giarrizzo.fr
+
+paginate: 5
+paginate_path: "blog/page:num/"
+
+# -----------------------------------------
+# Build settings
+
+plugins:
+  - jekyll-paginate
+
+exclude:
+  - .gitignore
+  #   - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+collections:
+  # Blog Categories
+  category:
+    output: true
+    permalink: /:collection/:name/
+  # Resume sections exploded in markdown files
+  resume:
+    output: true
+  # book listing in markdown files
+  books:
+    output: true
+  # game listing in markdown files
+  games:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"

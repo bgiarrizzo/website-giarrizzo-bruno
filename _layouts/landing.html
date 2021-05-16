@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr-FR" prefix="og: http://ogp.me/ns#" >
+    <head>
+
+        <title>
+            {% if page.title %}
+                {{ page.title }} | bruno-giarrizzo.fr
+            {% else %}
+                bruno-giarrizzo.fr | {{ site.description }}
+            {% endif %}
+        </title>
+
+        {% include meta.html %}
+        {% include analytics.html %}
+        
+    </head>
+
+    <body class="bg-dark">
+
+        {% include navigation.html %}
+
+        <main>            
+            <div class="container" id="landing_bloc">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-2 d-flex d-none d-lg-block align-items-center">
+                                    <img class="img-fluid border border-3 rounded-circle mb-3" src="{{ site.url }}/images/photo-original.jpg" />
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-9 d-flex align-items-center mb-5">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-6 d-block d-lg-none">
+                                                <img class="img-fluid border border-3 rounded-circle mb-3" src="{{ site.url }}/images/photo-original.jpg" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p class="font-weight-bold text-white">Bonjour, je suis Bruno</p>
+                                                <h1 class="text-white my-4" id="typewriter"></h1>
+                                                <h5 class="text-white mt-3">Je suis un développeur et DevOps freelance, travaillant en remote.</h5>
+                                                <h5 class="text-white">J'aide les entreprises à développer du soft de qualité.</h5>
+                                                <h5 class="text-white">Je propose des engagements mensuels adaptés à vos projets.</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 mt-5">
+                                                <a href="#" class="btn btn-primary">Prenons rendez-vous ?</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 my-5">
+                        <h1 class="text-center text-secondary">Ils ont fait confiance ...</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 d-flex align-items-center">
+                        <img class="mx-auto img-fluid" src="{{ site.url }}/images/pages/landing/decathlon.png" />
+                    </div>
+                    <div class="col-4 d-flex align-items-center">
+                        <img class="mx-auto img-fluid" src="{{ site.url }}/images/pages/landing/motoblouz.png" />
+                    </div>
+                    <div class="col-4 d-flex align-items-center">
+                        <img class="mx-auto img-fluid" src="{{ site.url }}/images/pages/landing/bnpp.png" />
+                    </div>
+                </div>
+            </div>
+        </main>
+            
+        {% include style.html %}
+        {% include js.html %}
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <script>
+            var app = document.getElementById('typewriter');
+
+            var typewriter = new Typewriter(app, {
+                loop: true,
+                delay: 35,
+            });
+
+            typewriter.typeString('Je developpe vos APIs')
+                .pauseFor(2500)
+                .deleteAll(1)
+                .typeString('Je batis des systèmes scalables et efficients')
+                .pauseFor(2500)
+                .deleteAll(1)
+                .typeString('Nous devrions travailler ensemble, sur votre prochain succès !')
+                .pauseFor(2500)
+                .deleteAll(1)
+                .start();
+        </script>
+        
+    </body>
+
+</html>

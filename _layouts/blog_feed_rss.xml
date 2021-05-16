@@ -1,0 +1,33 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     version="2.0">
+    <channel>
+        <title>{{ site.name }}</title>
+        <description>{{ site.description_meta }}</description>
+        <lastBuildDate>{{ site.time | time_to_rssschema }}</lastBuildDate>
+        <language>{{ site.language }}</language>
+        <generator>Jekyll with Github Pages</generator>
+        <link>{{ site.url }}</link>
+        <copyright>{{ site.license }}</copyright>
+        <managingEditor>{{site.email}}</managingEditor>
+        <webMaster>{{site.email}}</webMaster>
+        <pubDate>{{ site.posts.last.date }}</pubDate>
+        <sy:updatePeriod>hourly</sy:updatePeriod>
+	      <sy:updateFrequency>1</sy:updateFrequency>
+        {% for post in site.posts %}
+          {% if post.category != "Podcast" %}
+            <item>
+                <title>{{post.title }}</title>
+                <pubDate>{{ post.date }}</pubDate>
+                <link>{{ site.url }}{{ post.url }}</link>
+                <description><![CDATA[{{ post.summary }}]]></description>
+                <content:encoded><![CDATA[{{ post.content | expand_urls: site.url | cdata_escape }}]]></content:encoded>
+            </item>
+          {% endif %}
+        {% endfor %}
+    </channel>
+</rss>

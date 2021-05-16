@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<div class="container">
+    <h1 class="mb-4 pb-2 border-bottom">{{ page.category }}</h1>
+    <div class="row">
+        {% for post in site.categories[page.category] %}
+            <article class="col-12 mb-4">
+                <div class="card shadow">
+                    {% if post.cover %}
+                        <div class="card-header p-0 m-0">
+                            <img alt="{{ post.cover_alt }}" class="card-img-top" src="{{ site.url }}/{{ post.cover }}">
+                        </div>
+                    {% endif %}
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            <a href="{{ site.url }}{{ post.url }}" class="stretched-link">
+                                {{ post.title }}
+                            </a>
+                        </h2>
+                        <p class="text-muted">
+                            <i class="far fa-clock"></i> {{ post.date | date: "%B %e, %Y" }}
+                        </p>
+                        <p class="text-justify">
+                            {{ post.summary }}
+                        </p>
+                        <div class="col-12">
+                            {% if post.tags %}
+                                <hr />
+                                <ul class="list-inline text-center mb-0">
+                                    {% for tag in post.tags %}
+                                        <li class="list-inline-item">
+                                            <a class="badge badge-primary text-white">#{{ tag }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                            Par Bruno, dans {{ post.categories }}
+                        </small>
+                    </div>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+</div>

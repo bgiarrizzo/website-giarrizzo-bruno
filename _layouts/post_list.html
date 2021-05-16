@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="row">
+        {% include sidebar_presentation.html %}
+        <div class="col-12 col-sm-12 col-md-12 col-lg-7">
+            <div class="row">
+                {% for post in paginator.posts %}
+                    {% if post.category != "Podcast" %}
+                        <article class="col-12 mb-4">
+                            <div class="card shadow">
+                                {% if post.cover %}
+                                    <div class="card-header m-0 p-0" style="height: auto; display: block; text-align: center; width: 100%; max-width: none;">
+                                        <img alt="{{ post.cover_alt }}" class="card-img-top" src="{{ site.url }}/{{ post.cover }}">
+                                    </div>
+                                {% endif %}
+                                <div class="card-body">
+                                    <h2 class="card-title">
+                                        <a href="{{ site.url }}{{ post.url }}" class="stretched-link">
+                                            {{ post.title }}
+                                        </a>
+                                    </h2>
+                                    <p class="text-muted">
+                                        <i class="far fa-clock"></i> {{ post.date | date: "%B %e, %Y" }}
+                                    </p>
+                                    {% if post.summary %}
+                                        <p class="text-justify mb-0">
+                                            {{ post.summary }}
+                                        </p>
+                                    {% endif %}
+                                    {% if post.tags %}
+                                        <div class="col-12">
+                                            <hr />
+                                            <ul class="list-inline text-center mb-0">
+                                                {% for tag in post.tags %}
+                                                    <li class="list-inline-item">
+                                                        <a class="badge bg-primary text-white">#{{ tag }}</a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        Par Bruno, dans <strong>{{ post.categories }}</strong>
+                                    </small>
+                                </div>
+                            </div>
+                        </article>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% if paginator.total_pages > 1 %}
+                <nav class="row mx-auto">
+                    <div class="pagination mb-4 mx-auto">
+                        {% if paginator.previous_page %}
+                            <li class="page-item">
+                                <a href="{{ paginator.previous_page_path }}" class="page-link">Previous</a>
+                            </li>
+                        {% else %}
+                            <li class="page-item disabled">
+                                <a href="#" class="page-link">Previous</a>
+                            </li>
+                        {% endif %}
+                        {% for page in (1..paginator.total_pages) %}
+                            {% if page == paginator.page %}
+                                <li class="page-item active">
+                                    <a class="page-link" href="{{ '/' | relative_url }}">{{ page }} <span class="sr-only">(current)</span></a>
+                                </li>
+                            {% else %}
+                                <li class="page-item">
+                                    <a class="page-link" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                        
+                        {% if paginator.next_page %}
+                            <li class="page-item">
+                                <a href="{{ paginator.next_page_path }}" class="page-link">Next</a>
+                            </li>
+                        {% else %}
+                            <li class="page-item disabled">
+                                <a href="#" class="page-link">Next</a>
+                            </li>
+                        {% endif %}
+                    </div>
+                </nav>
+            {% endif %}
+        </div>
+    </div>
+</div>

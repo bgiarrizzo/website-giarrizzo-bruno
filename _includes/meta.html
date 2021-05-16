@@ -1,0 +1,79 @@
+    <meta charset="utf-8">
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="alternate" type="application/rss+xml" title="Bruno Giarrizzo - Flux RSS du blog" href="{{ site.url }}/blog.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Bruno Giarrizzo - Flux RSS du podcast" href="{{ site.url }}/podcast.xml" />
+    
+    <meta name="rating" content="General" />
+    <meta name="Author" content="{{ site.name }}" />
+    <meta name="Webmaster" content="{{ site.name }}" />
+    
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta name="Language" content="fr" />
+    <meta http-equiv="content-language" content="fr" />
+    
+    <meta name="robots" content="all" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="expires" content="never" />
+
+    <!-- SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="identifier-URL" content="{{ site.url }}" />
+ 
+    <!-- Meta -->
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    <meta name="title" content="{{ site.name }}" />
+    {% if page.tags %}
+        <meta name="keywords" content="{{ site.keywords | join:', ' }}, {{ page.tags | join:', ' }}" />
+    {% else %}
+        <meta name="keywords" content="{{ site.keywords | join:', ' }}" />
+    {% endif %}
+    <meta name="Subject" content="{{ site.description }}" />
+    
+
+    <!-- Facebook -->
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="{{ site.name }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    {% if page.image %}
+        <meta property="og:image" content="{{ site.url }}{{ page.cover }}" />
+    {% else %}
+        <meta property="og:image" content="" />
+    {% endif %}
+    <meta property="og:image:type" content="image/jpg" />
+    
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="{{ site.social_ids.twitter }}" />
+    <meta name="twitter:creator" content="{{ site.social_ids.twitter }}" />
+    <meta name="twitter:title" content="{{ site.name }}" />
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+    {% if page.image %}
+        <meta name="twitter:image" content="{{ site.url }}{{ page.cover }}" />
+    {% else %}
+        <meta property="twitter:image" content="" />
+    {% endif %}
+    
+    {% if page.title %}
+        <meta property="og:title" content="{{ page.title }}" />
+        <meta property="twitter:title" content="{{ page.title }}" />
+    {% endif %}
+
+    {% if page.summary %}
+        <meta name="description" content="{{ page.summary }}" />
+        <meta property="og:description" content="{{ page.summary }}" />
+        <meta name="twitter:description" content="{{ page.summary }}." />
+    {% else %}
+        <meta name="description" content="{{ site.description_meta }}">
+        <meta property="og:description" content="{{ site.description_meta }}" />
+        <meta name="twitter:description" content="{{ site.description_meta }}." />
+    {% endif %}
