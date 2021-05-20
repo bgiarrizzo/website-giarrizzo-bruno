@@ -3,10 +3,13 @@
 name: Bruno Giarrizzo
 
 description: Bruno Giarrizzo, Freelance, Developer & DevOps
-description_meta: "Bruno Giarrizzo, Papa, Freelance, Developpeur & DevOps. Parle de code, de développement personnel, d'investissement et de business."
+
+description_meta: >
+  <p>Freelance, Developpeur & DevOps. Je suis à votre disposition pour répondre à tout type de projets, de développement spécifique ou d'applications web.</p>
+
 description_long: >
-  Papa, Freelance, Developpeur & DevOps. Passionné de code, de développement personnel, d'investissement et de business. <br /><br />
-  <a href="{{ site.url }}/about/">Contactez moi</a> pour toute question, ou <a href="https://paypal.me/{{ site.social_ids.paypal }}" target="_blank">soutenez mon travail</a> !
+  <p>Freelance, Developpeur & DevOps. Je suis à votre disposition pour répondre à tout type de projets, de développement spécifique ou d'applications web.</p>
+  <p>N'hésitez pas à <a href="#">me contacter</a> </p>
 
 keywords:
   [
@@ -26,11 +29,6 @@ keywords:
     Terraform,
     Kubernetes,
     Infra as Code,
-    Investissement,
-    Immobilier,
-    Entrepreneuriat,
-    Business,
-    Entreprise,
   ]
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
@@ -52,11 +50,6 @@ disqus: bruno-giarrizzo
 google_analytics: UA-178521232-1
 
 # Misc
-
-footer_bio: >
-  <p>Bruno, DevOps, Lillois, Marié et Papa d'une petite fille.</p>
-  <p>iPhone à la main, Macbook dans le sac à dos, je cherche toujours la petite bête à coder.</p>
-  <p>Je partage ici : du code, du business, du développement personnel, du WTF.</p>
 
 social_ids:
   twitter: b_giarrizzo

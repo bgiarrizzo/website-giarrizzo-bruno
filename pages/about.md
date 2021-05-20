@@ -3,7 +3,7 @@ layout: page
 title: A Propos
 permalink: /about/
 cover: "images/pages/about/cover.jpg"
-cover_alt: "Ma cover"
+cover_alt: "My little girl, Me, and my dog, thanks to my wife for taking the picture :)"
 ---
 
 Vous pouvez me contactez sur "bruno **arobase** giarrizzo **point** fr". Merci de ne pas ajouter cette adresse à vos bases de données ou mailing-lists.
