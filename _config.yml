@@ -5,11 +5,14 @@ name: Bruno Giarrizzo
 description: Bruno Giarrizzo, Freelance, Developer & DevOps
 
 description_meta: >
-  <p>Freelance, Developpeur & DevOps. Je suis à votre disposition pour répondre à tout type de projets, de développement spécifique ou d'applications web.</p>
+  Freelance DevOps and Developer. I can participate to multiple type of projects : Specific development, Refactoring, Webapps, APIs, etc
 
-description_long: >
-  <p>Freelance, Developpeur & DevOps. Je suis à votre disposition pour répondre à tout type de projets, de développement spécifique ou d'applications web.</p>
-  <p>N'hésitez pas à <a href="#">me contacter</a> </p>
+description_sidebar: >
+  <p style="font-size: 0.8em;">Freelance DevOps and Developer. I can participate to multiple type of projects : Specific development, Refactoring, Webapps, APIs, etc</p>
+  <p style="font-size: 0.8em;">Feel free to <a href="/onboard/">reach me</a> </p>
+
+description_pages_posts: >
+  blablabla
 
 keywords:
   [
@@ -17,7 +20,7 @@ keywords:
     Giarrizzo,
     Bruno Giarrizzo,
     Freelance,
-    Développeur,
+    Developer,
     DevOps,
     Ethical Hacker,
     Ethical,

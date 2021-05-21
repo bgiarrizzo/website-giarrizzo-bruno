@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Ma bibliothèque
+title: My Books
 permalink: /books/
 cover: "images/pages/books/cover.jpg"
 ---
@@ -17,14 +17,14 @@ cover: "images/pages/books/cover.jpg"
                     <div class="card-body text-center">
                         <div>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#book-{{ book.type }}-{{ book.number }}">
-                                Plus d'infos
+                                More
                             </button>
                         </div>
                         <div>
-                            {% if book.status == "Lu" %}
+                            {% if book.status == "Read" %}
                                 <a class="badge bg-success text-white">{{ book.status }}</a>
                             {% else %}
-                                {% if book.status == "En Cours" %}
+                                {% if book.status == "Reading" %}
                                     <a class="badge bg-warning text-white">{{ book.status }}</a>
                                 {% else %}
                                     <a class="badge bg-danger text-white">{{ book.status }}</a>
@@ -78,14 +78,14 @@ cover: "images/pages/books/cover.jpg"
                     <div class="card-body text-center">
                         <div>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#book-{{ book.type }}-{{ book.number }}">
-                                Plus d'infos
+                                More
                             </button>
                         </div>
                         <div>
-                            {% if book.status == "Lu" %}
+                            {% if book.status == "Read" %}
                                 <a class="badge bg-success text-white">{{ book.status }}</a>
                             {% else %}
-                                {% if book.status == "En Cours" %}
+                                {% if book.status == "Reading" %}
                                     <a class="badge bg-warning text-white">{{ book.status }}</a>
                                 {% else %}
                                     <a class="badge bg-danger text-white">{{ book.status }}</a>
@@ -139,14 +139,14 @@ cover: "images/pages/books/cover.jpg"
                     <div class="card-body text-center">
                         <div>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#book-{{ book.type }}-{{ book.number }}">
-                                Plus d'infos
+                                More
                             </button>
                         </div>
                         <div>
-                            {% if book.status == "Lu" %}
+                            {% if book.status == "Read" %}
                                 <a class="badge bg-success text-white">{{ book.status }}</a>
                             {% else %}
-                                {% if book.status == "En Cours" %}
+                                {% if book.status == "Reading" %}
                                     <a class="badge bg-warning text-white">{{ book.status }}</a>
                                 {% else %}
                                     <a class="badge bg-danger text-white">{{ book.status }}</a>
@@ -200,14 +200,14 @@ cover: "images/pages/books/cover.jpg"
                     <div class="card-body text-center">
                         <div>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#book-{{ book.type }}-{{ book.number }}">
-                                Plus d'infos
+                                More
                             </button>
                         </div>
                         <div>
-                            {% if book.status == "Lu" %}
+                            {% if book.status == "Read" %}
                                 <a class="badge bg-success text-white">{{ book.status }}</a>
                             {% else %}
-                                {% if book.status == "En Cours" %}
+                                {% if book.status == "Reading" %}
                                     <a class="badge bg-warning text-white">{{ book.status }}</a>
                                 {% else %}
                                     <a class="badge bg-danger text-white">{{ book.status }}</a>

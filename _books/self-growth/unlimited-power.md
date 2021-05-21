@@ -6,7 +6,7 @@ type: self-growth
 link_buy: https://www.amazon.fr/
 link_my_file: ""
 thumbnail: robbins-unlimitedpower.jpg
-status: Non Lu
+status: ToRead
 # status: [Lu, En Cours, Non Lu]
 ---
 

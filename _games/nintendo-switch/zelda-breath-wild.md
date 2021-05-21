@@ -5,7 +5,7 @@ platform: nintendo-switch
 link_buy: https://www.amazon.fr/
 link_my_file: ""
 thumbnail: zelda-breath-wild.jpg
-status: Non Fait
+status: ToDo
 # status: [Fait, En Cours, Non Fait]
 ---
 

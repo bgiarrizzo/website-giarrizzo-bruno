@@ -5,7 +5,7 @@ platform: nintendo-switch
 link_buy: https://www.amazon.fr/
 link_my_file: ""
 thumbnail: zelda-links-awakening.jpg
-status: Fait
+status: Done
 # status: [Fait, En Cours, Non Fait]
 ---
 

@@ -1,27 +1,26 @@
 ---
 layout: page
-title: A Propos
+title:
 permalink: /about/
-cover: "images/pages/about/cover.jpg"
-cover_alt: "My little girl, Me, and my dog, thanks to my wife for taking the picture :)"
 ---
 
-Vous pouvez me contactez sur "bruno **arobase** giarrizzo **point** fr". Merci de ne pas ajouter cette adresse à vos bases de données ou mailing-lists.
+I’m an experienced Developer and DevOps, and have been working with technology since I was a kid. I’ve written worked for startups, retailers, e-merchants, Financial Institutions, and even French territorial organisms.
 
-<h2 class="pb-2 border-bottom">A propos de l'auteur</h2>
+<figure>
+    <img class="img-responsive w-100 rounded shadow mb-2" src="{{ site.url }}/images/pages/about/cover.jpg">
+    <figcaption class="figure-caption text-center">My little girl, Me, and my dog, thanks to my wife for taking the picture :)</figcaption>
+</figure>
 
-Bonjour ! Je suis Bruno, lillois, marié et Papa d'une petite fille.
+<h2 class="pb-2 border-bottom">About Me</h2>
 
-Je code depuis plusieurs mois en voguant entre le Back-end (Python / Django / Flask / FastAPI) et le mobile (swift). J'évolue maintenant dans des missions Dev et Ops, jonglant avec automatisation, déploiement applicatifs, au travers d'infrastructure cloud et developpement d'API.
+Hello ! I am Bruno, from north of France, married, and dad of a little girl.
 
-iPhone à la main, Macbook dans le sac à dos, je cherche toujours une petite ou une grosse bête à coder ...
+<h2 class="pb-2 border-bottom">Reach Out</h2>
 
-<h2 class="pb-2 border-bottom">Soutenir et s'abonner</h2>
+If you want to work with me, feel free to fill the form on <a href="{{ site.url }}/onboard/">this page</a>.
 
-Si mes contenus vous plaisent, vous pouvez me soutenir ponctuellement [via PayPal](https://paypal.me/bgiarrizzo), ou plus régulièrement [via liberapay](https://liberapay.com/bgiarrizzo/donate) .
+You'll recieve then a link with my availability so that we can call each other :)
 
-Vous pourriez me suivre sur Twitter ou Instagram, mais ces comptes ne sont plus actifs, et existent uniquement pour ma présence sur le web, je suis parfois en live le soir sur [twitch](https://twitch.tv/{{ site.social_ids.twitch }}).
+You could follow me on Twitter or Instagram, but these accounts are not actives anymore, and exists only for my web presence. I am occasionaly livestreaming on [twitch](https://twitch.tv/{{ site.social_ids.twitch }})
 
-Vous pouvez également me suivre via mon [flux RSS]({{ site.url }}/feed.xml).
-
-Je vous laisse découvrir mon travail et mon univers. A bientôt :)
+You can also follow me through my blog [RSS Feed]({{ site.url }}/feed.xml).

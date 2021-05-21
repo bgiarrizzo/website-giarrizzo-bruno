@@ -5,26 +5,33 @@ layout: default
 <div class="container">
   <div class="row">
     {% include sidebar_presentation.html %}
-    <div class="col-12 col-sm-12 col-md-12 col-lg-7">
-      {% if page.cover %}
-        <img class="img-fluid w-100 rounded shadow" src="{{ site.url }}/{{ page.cover }}">
-        <p class="border-bottom my-4 pb-2">
-      {% else %}
-        <p class="border-bottom mb- pb-2">
-      {% endif %}
-        Par <strong>Bruno</strong>, le {{ page.date | date: "%e/%m/%Y" }}, dans <a href="{{ site.url }}/category/{{ page.categories[0] | slugify }}/">{{ page.categories }}</a>
-      </p>
-      <article class="my-4">
-          <h1>
-            {{ page.title }}
-          </h1>
-          <p class="font-italic mb-5">
-            {{ page.summary }}
-          </p>
-          <div class="text-justify">
-            {{ content }}
-          </div>
-      </article>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-7 mx-4">
+      <div class="card shadow mb-4">
+        <div class="card-header m-0 p-0" style="height: auto; width: 100%;">
+            {% if page.cover %}
+                <img alt="{{ post.cover_alt }}" class="card-img-top" src="{{ site.url }}/{{ page.cover }}">
+            {% endif %}
+        </div>
+        <article class="card-body">
+            <h1>
+              {{ page.title }}
+            </h1>
+            <p class="font-italic mb-5">
+              {{ page.summary }}
+            </p>
+            <div class="text-justify">
+              {{ content }}
+            </div>
+        </article>
+        <div class="card-footer">
+            <span>
+                The {{ page.date | date: "%e/%m/%Y" }}, in <a href="{{ site.url }}/category/{{ page.categories[0] | slugify }}/">{{ page.categories }}</a>
+            </span>
+        </div>
+
+
+      </div>
+
       <div class="card shadow mb-4 d-lg-none">
         <div class="card-header">
           Sharing is caring
@@ -59,61 +66,7 @@ layout: default
           </ul>
         </div>
       </div>
-      <div class="card shadow mb-4 d-lg-none">
-        <div class="card-header">
-          {{ site.name }}
-        </div>
-        <div class="card-body">
-          <p class="card-text">
-            {{ site.description_long }}
-          </p>
-        </div>
-      </div>
-      <div class="card shadow mb-3">
-        <div class="card-header">
-          Commentaires
-        </div>
-        <div class="card-body py-1 px-3">
-          {% if site.url != "http://localhost:4000" %}
-            {% include disqus.html %}
-          {% else %}
-            <p class="m-5">Ceci est un fake bloc, afin de simuler un espace de commentaires ...</p>
-          {% endif %}
-        </div>
-      </div>
     </div>
-    <div class="col-lg-1 px-0 ml-4 d-none d-lg-block">
-      <div class="card sticky-top shadow mb-3" style="top: 1.5em;">
-        <div class="card-body mx-auto text-center pb-0">
-          <ul class="list-unstyled">
-            <li>
-              <a href="mailto:?subject={{ page.title }}&body={{ site.url }}{{ page.url }}" target="_blank">
-                <i class="far fa-envelope fa-lg text-muted fa-2x my-3"></i>
-              </a>
-            </li>
-            <li>
-              <a href="http://twitter.com/share?text={{ page.title }}&url={{ site.url }}{{ page.url }}" target="_blank">
-                <i class="fab fa-twitter fa-lg text-muted fa-2x my-3"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank">
-                <i class="fab fa-facebook fa-lg text-muted fa-2x my-3"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" target="_blank">
-                <i class="fab fa-linkedin fa-lg text-muted fa-2x my-3"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://wa.me/?text={{ page.title }} - {{ site.url }}{{ page.url }}" target="_blank">
-                <i class="fab fa-whatsapp fa-lg text-muted fa-2x my-3"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    {% include sidebar_social.html %}
   </div>
 </div>

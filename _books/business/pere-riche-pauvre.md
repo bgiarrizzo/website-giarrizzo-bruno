@@ -6,7 +6,7 @@ type: business
 link_buy: https://www.amazon.fr/
 link_my_file: ""
 thumbnail: kiyosaki-richdadpoordad.jpg
-status: Lu
+status: Read
 # status: [Lu, En Cours, Non Lu]
 ---
 

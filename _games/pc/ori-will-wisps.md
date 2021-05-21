@@ -5,7 +5,7 @@ platform: pc
 link_buy: https://www.amazon.fr/
 link_my_file: ""
 thumbnail: ori-will-wisps.jpg
-status: Non Fait
+status: ToDo
 # status: [Fait, En Cours, Non Fait]
 ---
 

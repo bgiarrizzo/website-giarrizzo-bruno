@@ -1,11 +1,11 @@
-<div class="col-lg-2 mx-4 d-none d-lg-block">
-    <div class="sticky-top mb-3" style="top: 1.5em;">
-        <img class="img-fluid rounded-circle float-right mb-3" src="{{ site.url }}/images/photo-original.jpg" />
-        <h3 class="text-right">{{ site.name }}</h3>
-        <p class="text-right">
-            <small>
-                {{ site.description_long }}
-            </small>
-        </p>
+<div class="col-lg-2 px-0 ml-4 d-none d-lg-block">
+    <div class="card sticky-top shadow mb-3" style="top: 1.5em;">
+        <div class="card-body mb-auto">
+            <img class="img-fluid rounded-circle mb-3" src="{{ site.url }}/images/photo-original.jpg" />
+            <h3>{{ site.name }}</h3>
+            <div class="card-text">
+                {{ site.description_sidebar }}
+            </div>
+        </div>
     </div>
 </div>

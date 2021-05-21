@@ -1,14 +1,15 @@
 ---
 layout: page
-title: Mon CV
+title: Resume - CV
 permalink: /resume/
+cover: "images/pages/resume/cover.png"
 ---
 
-<div class="card mb-3 shadow">
+<div class="card my-4 shadow">
     <div class="card-header">{{ site.name }}</div>
     <div class="row card-body">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-            <h2 class="h5">Dev Python / Django, DevOps</h3>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+            <h3 class="h5">Dev Python / Django, DevOps</h3>
             <hr />
             <ul class="list-unstyled">
                 <li>
@@ -26,7 +27,7 @@ permalink: /resume/
             </ul>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-            <h2 class="h5">Technos & Langages préférés</h2>
+            <h2 class="h5">My Favorites</h2>
             <hr />
             <div class="progress mb-3"><div aria-valuemax="90" aria-valuemin="0" aria-valuenow="90" class="progress-bar bg-primary" role="progressbar" style="width: 90%">GNU/Linux</div></div>
             <div class="progress mb-3"><div aria-valuemax="75" aria-valuemin="0" aria-valuenow="75" class="progress-bar bg-warning" role="progressbar" style="width: 75%">Python</div></div>
@@ -40,31 +41,41 @@ permalink: /resume/
     </div>
 </div>
 
-<h1 class="border-bottom pb-2 mb-4">Experiences</h1>
+<h1 class="border-bottom pb-2 mb-4">Work Experience</h1>
 
     {% assign resume_jobs = site.resume | sort: 'start_date' | reverse %}
     {% for resume_job in resume_jobs %}
         {% if resume_job.type == "experience" %}
-            <div class="card shadow my-4">
-                <div class="card-header">
-                    <strong>{{resume_job.title}}</strong> @ <a href="{{ resume_job.company_url }}" target="_blank"><strong>{{ resume_job.company }}</strong></a>
-                    <p class="mb-0 float-right">{{ resume_job.start_date }} - {{resume_job.end_date}}</p>
+            <div class="row">
+                <div class="col-12">
+                    <p class="h4">
+                        <a href="{{ resume_job.company_url }}" target="_blank">
+                            <strong>{{ resume_job.company }}</strong>
+                        </a>
+                    </p>
                 </div>
-                <div class="card-body text-justify">
+                <div class="col-12 my-3">
+                    <strong>{{ resume_job.title }}</strong>
+                    <p class="mb-0 float-end">{{ resume_job.start_date }} - {{ resume_job.end_date }}</p>
+                </div>
+                <div class="col-12">
                     {{ resume_job.content }}
                 </div>
-                <ul class="list-inline border-top p-3 mb-0">
-                    {% for tag in resume_job.tags %}
-                        <li class="list-inline-item"><a class="badge bg-primary text-white">#{{ tag }}</a></li>
-                    {% endfor %}
-                </ul>
+                <div class="col-12 mt-4">
+                    <ul class="list-inline mb-0">
+                        {% for tag in resume_job.tags %}
+                            <li class="list-inline-item"><a class="badge bg-primary text-white">#{{ tag }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
+            <hr />
         {% endif %}
     {% endfor %}
 
 <h1 class="border-bottom pb-2 mb-4">Portfolio</h1>
 
-    <h2 class="border-bottom pb-2 mb-4">Projets OpenSource</h1>
+    <h2 class="border-bottom pb-2 mb-4">OpenSource</h1>
 
     <div class="row">
         {% for element in site.resume %}
@@ -102,31 +113,6 @@ permalink: /resume/
                                 <a href="{{ element.url_ext }}" target="_blank">{{ element.title }}</a>
                             </h5>
                             <p class="card-text text-justify">{{ element.content }}</p>
-                            <a class="btn btn-sm btn-block btn-secondary" href="{{ element.url_ext }}" target="_blank">
-                                <i class="fas fa-globe-europe"></i> En savoir plus ...
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-
-    <h2 class="border-bottom pb-2 mb-4">Scripts</h1>
-
-    <div class="row">
-        {% for element in site.resume %}
-            {% if element.type == "script" %}
-                <div class="col-12 col-md-6 col-lg-6 mb-3 mx-auto">
-                    <div class="card shadow">
-                        <img alt="Card image cap" class="card-img-top" src="{{ element.thumb }}">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <a href="{{ element.url_ext }}" target="_blank">{{ element.title }}</a>
-                            </h5>
-                            <p class="card-text text-justify">
-                                {{ element.content }}
-                            </p>
                             <a class="btn btn-sm btn-block btn-secondary" href="{{ element.url_ext }}" target="_blank">
                                 <i class="fas fa-globe-europe"></i> En savoir plus ...
                             </a>
