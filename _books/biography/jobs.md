@@ -6,7 +6,7 @@ type: biography
 link_buy: https://www.amazon.fr/
 link_my_file: ""
 thumbnail: jobs-isaacson.jpg
-status: Reading
+status: Read
 # status: [Lu, En Cours, Non Lu]
 ---
 
