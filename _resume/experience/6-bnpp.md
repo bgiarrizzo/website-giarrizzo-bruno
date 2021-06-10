@@ -9,6 +9,10 @@ type: experience
 tags:
   [
     Python,
+    Python 2.7,
+    Python 3.6,
+    Python 3.8,
+    Python 3.9,
     Flask,
     FastAPI,
     Django,
@@ -25,7 +29,7 @@ Au sein d'une équipe de 15 développeurs, et des intervenants répartis entre l
 - La première permettant d'ordonnancer la mise à jour des différentes VM sur des timeslots choisis **(Python 2.7, Django 1.11)**
 - La seconde est une API permettant de gérer l'inventaire des services Bare Metal **(Python 3.7, Flask 1.0.2)**
 
-J'ai pu également participer à la refonte de l'application gestionnaire des produits logiciels gérée par la BNP **(Python 3.9, FastAPI 0.63.0)**
+Je participe également activement à la refonte de l'outil gestionnaire des Produits as Code utilisés par l'entité CIB **(Python 3.9, FastAPI 0.63.0)**
 
 Environnement technique :
 

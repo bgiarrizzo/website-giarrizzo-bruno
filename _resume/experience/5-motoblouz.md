@@ -52,10 +52,10 @@ Environnement technique :
 
 - Environnement OpenSource
 - 35 serveurs physiques ou virtuels Linux.
-- 40 containers docker (alpine, debian).
+- 40 containers docker (Alpine, Debian, Ubuntu).
 - Debian (8.x et 9.x), Docker 18.x
-- Nginx 1.10, php 7.1 à 7.3, mysql 5.5 &amp; 5.7
-- ElasticSearch, logstash, Kibana 6.5
+- Nginx 1.10, PHP 5.4, 7.1, 7.2, 7.3, MySQL 5.5 &amp; 5.7
+- Stack ELK 6.x
 - Gitlab 9.x à 12.x
 - Ansible 2.4 à 2.8
 - Zabbix 3.2 et 3.4
