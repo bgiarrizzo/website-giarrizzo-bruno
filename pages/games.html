@@ -16,6 +16,13 @@ cover: "images/pages/games/cover.png"
                     <img class="card-img" src="{{ site.url }}/images/pages/games/{{ game.platform }}/{{ game.thumbnail }}" />
                     <div class="card-body text-center">
                         <div>
+                            <a href="{{ game.link_buy }}" target="_blank">
+                                <button type="button" class="btn btn-primary">
+                                    More
+                                </button>
+                            </a>
+                        </div>
+                        <div>
                             {% if game.status == "Done" %}
                                 <a class="badge bg-success text-white">{{ game.status }}</a>
                             {% else %}
@@ -45,6 +52,13 @@ cover: "images/pages/games/cover.png"
                 <div class="card no-border mb-3">
                     <img class="card-img" src="{{ site.url }}/images/pages/games/{{ game.platform }}/{{ game.thumbnail }}" />
                     <div class="card-body text-center">
+                        <div>
+                            <a href="{{ game.link_buy }}" target="_blank">
+                                <button type="button" class="btn btn-primary">
+                                    More
+                                </button>
+                            </a>
+                        </div>
                         <div>
                             {% if game.status == "Done" %}
                                 <a class="badge bg-success text-white">{{ game.status }}</a>

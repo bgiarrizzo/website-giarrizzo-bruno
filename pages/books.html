@@ -16,6 +16,13 @@ cover: "images/pages/books/cover.jpg"
                     <img class="card-img" src="{{ site.url }}/images/pages/books/{{ book.type }}/{{ book.thumbnail }}" />
                     <div class="card-body text-center">
                         <div>
+                            <a href="{{ book.link_buy }}" target="_blank">
+                                <button type="button" class="btn btn-primary">
+                                    More
+                                </button>
+                            </a>
+                        </div>
+                        <div>
                             {% if book.status == "Read" %}
                                 <a class="badge bg-success text-white">{{ book.status }}</a>
                             {% else %}
@@ -45,6 +52,13 @@ cover: "images/pages/books/cover.jpg"
                 <div class="card no-border mb-3">
                     <img class="card-img" src="{{ site.url }}/images/pages/books/{{ book.type }}/{{ book.thumbnail }}" />
                     <div class="card-body text-center">
+                        <div>
+                            <a href="{{ book.link_buy }}" target="_blank">
+                                <button type="button" class="btn btn-primary">
+                                    More
+                                </button>
+                            </a>
+                        </div>
                         <div>
                             {% if book.status == "Read" %}
                                 <a class="badge bg-success text-white">{{ book.status }}</a>
@@ -76,6 +90,13 @@ cover: "images/pages/books/cover.jpg"
                     <img class="card-img" src="{{ site.url }}/images/pages/books/{{ book.type }}/{{ book.thumbnail }}" />
                     <div class="card-body text-center">
                         <div>
+                            <a href="{{ book.link_buy }}" target="_blank">
+                                <button type="button" class="btn btn-primary">
+                                    More
+                                </button>
+                            </a>
+                        </div>
+                        <div>
                             {% if book.status == "Read" %}
                                 <a class="badge bg-success text-white">{{ book.status }}</a>
                             {% else %}
@@ -105,6 +126,13 @@ cover: "images/pages/books/cover.jpg"
                 <div class="card no-border mb-3">
                     <img class="card-img" src="{{ site.url }}/images/pages/books/{{ book.type }}/{{ book.thumbnail }}" />
                     <div class="card-body text-center">
+                        <div>
+                            <a href="{{ book.link_buy }}" target="_blank">
+                                <button type="button" class="btn btn-primary">
+                                    More
+                                </button>
+                            </a>
+                        </div>
                         <div>
                             {% if book.status == "Read" %}
                                 <a class="badge bg-success text-white">{{ book.status }}</a>
