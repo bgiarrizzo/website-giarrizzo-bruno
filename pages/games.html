@@ -16,11 +16,6 @@ cover: "images/pages/games/cover.png"
                     <img class="card-img" src="{{ site.url }}/images/pages/games/{{ game.platform }}/{{ game.thumbnail }}" />
                     <div class="card-body text-center">
                         <div>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#game-{{ game.platform }}-{{ game.number }}">
-                                More
-                            </button>
-                        </div>
-                        <div>
                             {% if game.status == "Done" %}
                                 <a class="badge bg-success text-white">{{ game.status }}</a>
                             {% else %}
@@ -30,32 +25,6 @@ cover: "images/pages/games/cover.png"
                                     <a class="badge bg-danger text-white">{{ game.status }}</a>
                                 {% endif %}
                             {% endif %}
-                        </div>
-                    </div>
-                    <div class="modal fade" id="game-{{ game.platform }}-{{ game.number }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="game-{{ game.platform }}-{{ game.number }}" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="game-{{ game.platform }}-{{ game.number }}">{{ game.title }}</h5>
-                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <img class="img-fluid" src="{{ site.url }}/images/pages/games/{{ game.platform }}/{{ game.thumbnail }}" />
-                                        </div>
-                                        <div class="col-9">
-                                            {{ game }}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                <a href="{{ site.url }}/{{ game.link_my_file }}">Ma fiche</a> |
-                                <a href="{{ game.link_buy }}">Ou le trouver ?</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -77,11 +46,6 @@ cover: "images/pages/games/cover.png"
                     <img class="card-img" src="{{ site.url }}/images/pages/games/{{ game.platform }}/{{ game.thumbnail }}" />
                     <div class="card-body text-center">
                         <div>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#game-{{ game.platform }}-{{ game.number }}">
-                                More
-                            </button>
-                        </div>
-                        <div>
                             {% if game.status == "Done" %}
                                 <a class="badge bg-success text-white">{{ game.status }}</a>
                             {% else %}
@@ -91,32 +55,6 @@ cover: "images/pages/games/cover.png"
                                     <a class="badge bg-danger text-white">{{ game.status }}</a>
                                 {% endif %}
                             {% endif %}
-                        </div>
-                    </div>
-                    <div class="modal fade" id="game-{{ game.platform }}-{{ game.number }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="game-{{ game.platform }}-{{ game.number }}" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="game-{{ game.platform }}-{{ game.number }}">{{ game.title }}</h5>
-                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <img class="img-fluid" src="{{ site.url }}/images/pages/games/{{ game.platform }}/{{ game.thumbnail }}" />
-                                        </div>
-                                        <div class="col-9">
-                                            {{ game }}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                <a href="{{ site.url }}/{{ game.link_my_file }}">Ma fiche</a> |
-                                <a href="{{ game.link_buy }}">Ou le trouver ?</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
