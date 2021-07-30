@@ -17,6 +17,7 @@ tags:
     FastAPI,
     Django,
     REST API,
+    Airflow,
     Docker,
     Kubernetes,
     Ansible,
@@ -29,7 +30,7 @@ Au sein d'une équipe de 15 développeurs, et des intervenants répartis entre l
 - La première permettant d'ordonnancer la mise à jour des différentes VM sur des timeslots choisis **(Python 2.7, Django 1.11)**
 - La seconde est une API permettant de gérer l'inventaire des services Bare Metal **(Python 3.7, Flask 1.0.2)**
 
-Je participe également activement à la refonte de l'outil gestionnaire des Produits as Code utilisés par l'entité CIB **(Python 3.9, FastAPI 0.63.0)**
+Je participe également activement à la refonte de l'outil gestionnaire des Produits as Code utilisés par l'entité CIB **(Python 3.9, FastAPI 0.63.0, Apache Airflow)**
 
 Environnement technique :
 
@@ -39,4 +40,5 @@ Environnement technique :
 - Python 3.6, 3.7, 3.8, 3.9
 - Django 1.x, Fastapi 0.63.x, Flask 1.x
 - Docker, Kubernetes, Helm, Ansible
+- Apache Airflow
 - MongoDB, PostgreSQL
