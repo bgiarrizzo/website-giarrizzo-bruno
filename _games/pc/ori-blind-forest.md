@@ -5,7 +5,7 @@ platform: pc
 link_buy: https://www.amazon.fr/
 link_my_file: ""
 thumbnail: ori-blind-forest.jpg
-status: Doing
+status: Done
 # status: [Fait, En Cours, Non Fait]
 ---
 

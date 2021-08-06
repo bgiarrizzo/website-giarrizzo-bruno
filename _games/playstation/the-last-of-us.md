@@ -1,10 +1,10 @@
 ---
-number: 3
-title: Ori and the Will of the Wisps
-platform: pc
+number: 1
+title: The Last of Us
+platform: playstation
 link_buy: https://www.amazon.fr/
 link_my_file: ""
-thumbnail: ori-will-wisps.jpg
+thumbnail: the-last-of-us.jpg
 status: Done
 # status: [Fait, En Cours, Non Fait]
 ---
