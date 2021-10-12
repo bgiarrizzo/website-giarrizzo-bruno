@@ -6,7 +6,7 @@ layout: default
     <h1 class="mb-4 pb-2 border-bottom">{{ page.category }}</h1>
     <div class="row">
         {% for post in site.categories[page.category] %}
-            <article class="col-12 mb-4">
+            <article class="col-12 mb-3">
                 <div class="card shadow">
                     {% if post.cover %}
                         <div class="card-header p-0 m-0">
