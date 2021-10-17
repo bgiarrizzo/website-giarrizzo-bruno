@@ -1,5 +1,5 @@
 ---
-title: Lectures
-category: Lectures
+title: Reading
+category: reading
 description: ""
 ---

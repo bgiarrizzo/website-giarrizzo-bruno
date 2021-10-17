@@ -1,5 +1,5 @@
 ---
-title: Partage
-category: Partage
+title: Sharing
+category: sharing
 description: ""
 ---

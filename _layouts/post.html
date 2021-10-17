@@ -8,17 +8,18 @@ layout: default
     <div class="col-12 col-sm-12 col-md-12 col-lg-7 mx-4">
       <div class="card shadow mb-3">
         <div class="card-header m-0 p-0" style="height: auto; width: 100%;">
-            {% if page.cover %}
-                <img alt="{{ post.cover_alt }}" class="card-img-top" src="{{ site.url }}/{{ page.cover }}">
-            {% endif %}
+          {% if page.cover %}
+              <img alt="{{ post.cover_alt }}" class="card-img-top" src="{{ site.url }}/{{ page.cover }}">
+          {% endif %}
         </div>
         <article class="card-body">
             <h1>
               {{ page.title }}
             </h1>
-            <p class="font-italic mb-5">
+            <p class="font-italic mt-3">
               {{ page.summary }}
             </p>
+            <hr / class="my-4">
             <div class="text-justify">
               {{ content }}
             </div>
@@ -28,8 +29,6 @@ layout: default
                 The {{ page.date | date: "%e/%m/%Y" }}, in <a href="{{ site.url }}/category/{{ page.categories[0] | slugify }}/">{{ page.categories }}</a>
             </span>
         </div>
-
-
       </div>
 
       <div class="card shadow mb-4 d-lg-none">

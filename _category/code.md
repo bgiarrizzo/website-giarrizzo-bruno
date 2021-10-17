@@ -1,5 +1,5 @@
 ---
 title: Code
-category: Code
+category: code
 description: "À propos du code"
 ---

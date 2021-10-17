@@ -1,5 +1,5 @@
 ---
 title: Business
-category: Business
+category: business
 description: ""
 ---

@@ -1,5 +1,5 @@
 ---
 title: Random
-category: Random
+category: random
 description: ""
 ---
