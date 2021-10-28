@@ -65,12 +65,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (~> 4.2.0)
+  jekyll (~> 4.2.1)
   jekyll-feed (~> 0.12)
   jekyll-paginate
-  tzinfo (~> 1.2)
-  tzinfo-data
-  wdm (~> 0.1.1)
   webrick (~> 1.7)
 
 BUNDLED WITH

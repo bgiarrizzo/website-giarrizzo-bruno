@@ -28,6 +28,10 @@ layout: default
                                     <p class="text-justify mb-0">
                                         {{ post.summary }}
                                     </p>
+                                {% else %}
+                                    <p class="text-justify mb-0">
+                                        {{ post.content }}
+                                    </p>
                                 {% endif %}
                                 {% if post.tags %}
                                     <div class="col-12">
