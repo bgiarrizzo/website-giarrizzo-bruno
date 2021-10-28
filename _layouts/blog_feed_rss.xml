@@ -10,7 +10,7 @@ layout: null
         <description>{{ site.description_meta }}</description>
         <lastBuildDate>{{ site.time | time_to_rssschema }}</lastBuildDate>
         <language>{{ site.language }}</language>
-        <generator>Jekyll with Github Pages</generator>
+        <generator>Jekyll</generator>
         <link>{{ site.url }}</link>
         <copyright>{{ site.license }}</copyright>
         <managingEditor>{{site.email}}</managingEditor>
@@ -19,15 +19,17 @@ layout: null
         <sy:updatePeriod>hourly</sy:updatePeriod>
 	      <sy:updateFrequency>1</sy:updateFrequency>
         {% for post in site.posts %}
-          {% if post.category != "Podcast" %}
-            <item>
-                <title>{{post.title }}</title>
-                <pubDate>{{ post.date }}</pubDate>
-                <link>{{ site.url }}{{ post.url }}</link>
+          <item>
+              <title>{{post.title }}</title>
+              <pubDate>{{ post.date }}</pubDate>
+              <link>{{ site.url }}{{ post.url }}</link>
+              {% if post.summary %}
                 <description><![CDATA[{{ post.summary }}]]></description>
-                <content:encoded><![CDATA[{{ post.content | expand_urls: site.url | cdata_escape }}]]></content:encoded>
-            </item>
-          {% endif %}
+              {% else %}
+                <description><![CDATA[{{ post.content | expand_urls: site.url | cdata_escape }}]]></description>
+              {% endif %}
+              <content:encoded><![CDATA[{{ post.content | expand_urls: site.url | cdata_escape }}]]></content:encoded>
+          </item>
         {% endfor %}
     </channel>
 </rss>
