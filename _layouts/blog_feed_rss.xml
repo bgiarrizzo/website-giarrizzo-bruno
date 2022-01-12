@@ -11,7 +11,7 @@ layout: null
         <lastBuildDate>{{ site.time | time_to_rssschema }}</lastBuildDate>
         <language>{{ site.language }}</language>
         <generator>Jekyll</generator>
-        <link>{{ site.url }}</link>
+        <link>{{ site.url }}/blog/</link>
         <copyright>{{ site.license }}</copyright>
         <managingEditor>{{site.email}}</managingEditor>
         <webMaster>{{site.email}}</webMaster>
