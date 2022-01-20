@@ -55,14 +55,13 @@ google_analytics: UA-178521232-1
 # Misc
 
 social_ids:
-  twitter: b_giarrizzo
-  instagram: bgiarrizzo
-  twitch: bruno_bing
+  twitter: hyweene
+  twitch: hyweene
   youtube: UCSXj4YcwcmH57INCrNAR03Q
   github: bgiarrizzo
   paypal: bgiarrizzo
 
-email: contact@bruno-giarrizzo.fr
+email: b.giarrizzo@cyberlife.sh
 
 paginate: 5
 paginate_path: "blog/page:num/"
