@@ -29,10 +29,6 @@ In my opinion, to reach success for a software product, it needs two key ingredi
 
 <h2 class="pb-2 border-bottom">Reach Me Out</h2>
 
-If you want to work with me, feel free to fill the form on <a href="{{ site.url }}/onboard/">this page</a>.
-
-You'll recieve then a link with my availability so that we can call each other :)
-
-You could follow me on Twitter or Instagram, but these accounts are not actives anymore, and exists only for my web presence. I am occasionaly livestreaming on [twitch](https://twitch.tv/{{ site.social_ids.twitch }})
+You could follow me on [Twitter](https://twitter.com/{{ site.social_ids.twitter }}) and I am occasionaly livestreaming on [Twitch](https://twitch.tv/{{ site.social_ids.twitch }})
 
 You can also follow me through my blog [RSS Feed]({{ site.url }}/feed.xml).
