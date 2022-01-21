@@ -6,7 +6,6 @@ company_url: http://www.altima-hosting.com/
 start_date: 2017/04
 end_date: 2017/07
 type: experience
-tags: []
 ---
 
 Exploitation au sein du service Hosting :

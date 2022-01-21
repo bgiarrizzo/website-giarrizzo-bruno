@@ -6,7 +6,6 @@ company_url: http://www.ville-denain.fr/
 start_date: 2013/09
 end_date: 2014/08
 type: experience
-tags: []
 ---
 
 Assistance de l'administrateur en chef dans les tâches de gestion du parc.

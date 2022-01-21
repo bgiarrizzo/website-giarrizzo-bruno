@@ -6,7 +6,6 @@ company_url: http://www.decathlon.com/
 start_date: 2015/11
 end_date: 2017/04
 type: experience
-tags: []
 ---
 
 Mes missions principales etaient :
