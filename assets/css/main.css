@@ -32,8 +32,7 @@ a {
 /*  */
 
 .blockquotecode {
-  margin-left: 32px;
-  background-color: beige;
+  background-color: rgb(230, 230, 230);
   font-family: monospace, monospace;
   border: 1px solid #000;
   border-left: 4px solid #CCC;
@@ -47,6 +46,14 @@ a {
   object-fit: cover;
 }
 
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 10px;
+  text-align: center;
+}
 
 ul.timeline {
   list-style-type: none;
