@@ -1,10 +1,10 @@
 ---
 id: 6
-title: Développeur
+title: Developper
 company: BNP Paribas - Corporate Institutional Banking
 company_url: https://group.bnpparibas/decouvrez-le-groupe/activites/corporate-institutional-banking
 start_date: 2020/09
-end_date: Aujourd'hui
+end_date: 2022/06
 type: experience
 tags:
   [
@@ -25,20 +25,21 @@ tags:
   ]
 ---
 
-Au sein d'une équipe de 15 développeurs, et des intervenants répartis entre la France, l'Angleterre, l'Espagne, les USA et la Chine; J'ai la charge de deux applications :
+In a team of 15 developers and contributors, dispatched across France, United-Kingdom, Spain, USA, India and China, I am in charge of two applications.
 
-- La première permettant d'ordonnancer la mise à jour des différentes VM sur des timeslots choisis **(Python 2.7, Django 1.11)**
-- La seconde est une API permettant de gérer l'inventaire des services Bare Metal **(Python 3.7, Flask 1.0.2)**
+- First is an update scheduler of all virtual hosts (Python 2.7 / Django 1.11)
+- Second is an API managing baremetal hosts inventory (Python 3.10 / FastAPI)
 
-Je participe également activement à la refonte de l'outil gestionnaire des Produits as Code utilisés par l'entité CIB **(Python 3.9, FastAPI 0.63.0, Apache Airflow)**
+<br />I am also involved in the refactoring of the Product as Code Library API used in CIB and later BNPP Group (Python 3.10, FastAPI, PostGres, Celery, Redis, Apache Airflow, OPA/OPAL)
 
-Environnement technique :
+---
+## Tech Environment :
 
 - Linux (Redhat / Ubuntu), Microsoft Windows server
-- 50000+ serveurs virtuels ou BareMetal.
+- 50000+ virtual servers or BareMetal.
 - Debian 9.x, Ubuntu 18.04, 20.04
-- Python 3.6, 3.7, 3.8, 3.9
-- Django 1.x, Fastapi 0.63.x, Flask 1.x
+- Python 3.6, 3.7, 3.8, 3.9, 3.10
+- Django 1.11, Fastapi 0.75.x, Flask 1.x
 - Docker, Kubernetes, Helm, Ansible
-- Apache Airflow
-- MongoDB, PostgreSQL
+- Apache Airflow, OPAL/OPA
+- MongoDB, Redis, PostgreSQL

@@ -1,5 +1,5 @@
 {
-	"name": "Jekyll",
+	"name": "Website Bruno",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": {
