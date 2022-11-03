@@ -8,18 +8,14 @@ end_date: 2014/08
 type: experience
 ---
 
-Assistance de l'administrateur en chef dans les tâches de gestion du parc.
+Helping the main SysAdmin in his IT management tasks.
 
-- Déploiement de solution de monitoring basée sur le couple Nagios/Centreon afin de verifier la connectivité et la performance des liens des sites distants.
-- Mise en place d'une solutions de gestion de parc (OCS Inventory &amp; GLPI) puis d'une mise en place d'un PRA (Plan de Reprise d'activité) inexistant jusqu'alors.
-- Développer l'utilisation de clients légers dans une optique de réduction des coûts matériels.
+* Deployed a monitoring solution based on Nagios/Centreon in order to check-up on connectivity of and performance of remote links.
+* Setup of IT park management (OCS Inventory & GLPI)
+* Develop the use of thin clients in order to reduce hardware costs.
 
-Réalisation :
-
-- Réalisation des tests des différentes solutions Opensource
-- Benchmarking • Déploiement
-
-Environnement technique :
+---
+## Tech Environment :
 
 - Microsoft Windows Server 2008
 - Active Directory
