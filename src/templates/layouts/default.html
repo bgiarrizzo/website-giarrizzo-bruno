@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr-FR" prefix="og: http://ogp.me/ns#" >
+    <head>
+
+        <title>
+            {% if page.title %}
+                {{ page.title }} | bruno-giarrizzo.fr
+            {% else %}
+                bruno-giarrizzo.fr | {{ site.description }}
+            {% endif %}
+        </title>
+
+        {% include meta.html %}
+        {% include analytics.html %}
+        
+    </head>
+
+    <body>
+
+        {% include navigation.html %}
+
+        <main>
+            {{ content }}
+        </main>
+            
+        {% include footer.html %}
+
+        {% include style.html %}
+        
+    </body>
+
+</html>

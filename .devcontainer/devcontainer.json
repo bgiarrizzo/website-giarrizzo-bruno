@@ -1,33 +1,57 @@
 {
 	"name": "Website Bruno",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"args": {
-			// Update 'VARIANT' to pick a Debian OS version: bullseye, buster
-			// Use bullseye when on local arm64/Apple Silicon.
-			"VARIANT": "bullseye",
-			// Enable Node.js: pick the latest LTS version
-			"NODE_VERSION": "lts/*"
-		}	
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspaces/app/",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.fontSize": 14,
+				"editor.formatOnSave": true,
+				"files.exclude": {
+					"**/__pycache__": true,
+					"**/.DS_Store": true,
+					"**/.git": true,
+					"**/.hg": true,
+					"**/.pytest_cache": true,
+					"**/.svn": true,
+					"**/*.pyc": true,
+					"**/CVS": true
+				},
+				"python.defaultInterpreterPath": "${workspaceFolder}/Backend/.venv/bin/python",
+				"python.formatting.blackPath": "${workspaceFolder}/Backend/.venv/bin/black",
+				"python.formatting.provider": "black",
+				"python.linting.banditPath": "${workspaceFolder}/Backend/.venv/bin/bandit",
+				"python.linting.enabled": true,
+				"python.linting.flake8Args": [
+					"--config=${workspaceFolder}/setup.cfg"
+				],
+				"python.linting.flake8Enabled": true,
+				"python.linting.flake8Path": "${workspaceFolder}/Backend/.venv/bin/flake8",
+				"workbench.colorTheme": "GitHub Dark",
+				"workbench.preferredLightColorTheme": "Default Dark+",
+				"workbench.tree.indent": 20,
+				"workbench.tree.renderIndentGuides": "always",
+				"[python]": {
+					"editor.codeActionsOnSave": {
+						"source.organizeImports": true
+					}
+				}
+			},
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.github-vscode-theme",
+				"github.vscode-github-actions",
+				"GitHub.vscode-pull-request-github",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"vscode-icons-team.vscode-icons",
+			]
+		}
 	},
-
-	// Set *default* container specific settings.json values on container create.
-	"settings": {},
-
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [],
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
-		// Jekyll server
-		4000,
-		// Live reload server
-		35729
+		8000
 	],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sh .devcontainer/post-create.sh",
-
-	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"postCreateCommand": "zsh /workspaces/app/.devcontainer/postCreateCommands.sh",
 	"remoteUser": "vscode"
 }

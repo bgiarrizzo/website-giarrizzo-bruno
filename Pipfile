@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[requires]
+python_version = "3.11"
+
+[scripts]
+black = "black src/"
+black_dry = "black src/ --check"
+dev = "python -m http.server 8000"
+isort = "isort src/"
+isort_dry = "isort src/ --check-only"
+flake8 = "flake8 src/"
+
+[packages]
+jinja2 = "*"
+pyyaml = "*"
+markdown = "*"
+pydantic = "*"
+
+[dev-packages]
+black = "*"
+isort = "*"
+flake8 = "*"
+flake8-bandit = "*"
