@@ -93,12 +93,6 @@ collections:
   # Resume sections exploded in markdown files
   resume:
     output: true
-  # book listing in markdown files
-  books:
-    output: true
-  # game listing in markdown files
-  games:
-    output: true
 
 defaults:
   - scope:
