@@ -6,7 +6,6 @@ from config import settings
 
 
 def write_page(filename, content):
-    ## Create the directory, based on the filename
     makedirs(path.dirname(f"{settings.BUILD_PATH}/{filename}"), exist_ok=True)
 
     with open(f"{settings.BUILD_PATH}/{filename}", mode="w", encoding="utf-8") as page:
