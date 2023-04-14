@@ -1,0 +1,13 @@
+<header>
+  <img width="100%" src="{{ site.url }}/media/images/posts/covers/{{ post.cover }}" alt="{{ post.cover_alt }}">
+  <h1>{{ post.title }}</h1>
+  <p class="subtitle">by <a href="{{ site.url }}">Bruno</a>, on {{ post.date }}</p>
+  {% if post.summary %}
+    <p class="summary">{{ post.summary }}</p>
+  {% endif %}
+  <p class="separator">***</p>
+</header>
+
+<article>
+  {{ post.body }}
+</article>

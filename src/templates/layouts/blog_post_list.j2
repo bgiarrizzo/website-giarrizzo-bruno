@@ -1,0 +1,16 @@
+
+<h2>Blog Posts</h2>
+
+{% for year, post in posts | reverse | groupby("year") | reverse %}
+
+    <h3>{{ year }}</h3>
+
+    <ul>
+        {% for post in post %}
+            <li>
+                <a href="{{ site.url }}/blog/{{ post.slug }}/">{{ post.date }} : {{ post.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endfor %}

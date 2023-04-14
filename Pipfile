@@ -9,7 +9,8 @@ python_version = "3.11"
 [scripts]
 black = "black src/"
 black_dry = "black src/ --check"
-dev = "python -m http.server 8000"
+build = "python src/main.py"
+dev = "python -m http.server 8000 --directory build/"
 isort = "isort src/"
 isort_dry = "isort src/ --check-only"
 flake8 = "flake8 src/"
@@ -19,6 +20,8 @@ jinja2 = "*"
 pyyaml = "*"
 markdown = "*"
 pydantic = "*"
+markdown-full-yaml-metadata = "*"
+python-slugify = "*"
 
 [dev-packages]
 black = "*"

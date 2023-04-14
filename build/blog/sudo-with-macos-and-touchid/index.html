@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr-FR" prefix="og: http://ogp.me/ns#" >
+    <head>
+
+        <title>
+            bruno-giarrizzo.fr
+        </title>
+
+        <!-- Favicon -->
+<link href="/static/img/logo.jpg" rel="icon" type="image/jpg" />
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="/static/css/main.css" />
+        
+        
+    </head>
+
+    <body>
+
+        <nav>
+    <a href="http://localhost:8000/">Home</a>
+    <a href="http://localhost:8000/blog/">Blog</a>
+    <a href="http://localhost:8000/resume/">Resume</a>
+    <a href="http://localhost:8000/about/">About</a>
+</nav>
+
+        <main>
+            <header>
+  <img width="100%" src="http://localhost:8000/media/images/posts/covers/2022-08-03.jpg" alt="Sudo with macos and TouchID article cover">
+  <h1>Sudo with macos and TouchID</h1>
+  <p class="subtitle">by <a href="http://localhost:8000">Bruno</a>, on 2022-08-03</p>
+  
+    <p class="summary">I am a lazy guy, and type my password kind of annoy me :-D</p>
+  
+  <p class="separator">***</p>
+</header>
+
+<article>
+  <p>Last October, i got for myself one M1 Macbook pro.</p>
+<p>It is a hell of a machine, powerful, silent and it comes with touchID. </p>
+<p>I didn't change my laptop since my mid-2012 macbook pro, and this was a revolution !</p>
+<p>I saw one day, one of my coworker edit files with <code>sudo vi</code>, no password typed, just put his finger on touchID pad, I always wanted to do the same, so i configured it.</p>
+<p>By default, it is not configured on macos, you have to edit one file : <code>/etc/pam.d/sudo</code></p>
+<p>In this file, you'll find this content : </p>
+<pre class="blockquotecode my-4 py-3">
+    <code>
+        # sudo: auth account password session
+        auth       sufficient     pam_smartcard.so
+        auth       required       pam_opendirectory.so
+        account    required       pam_permit.so
+        password   required       pam_deny.so
+        session    required       pam_permit.so
+    </code>
+</pre>
+
+<p>I just add the line : <code>auth sufficient pam_tid.so</code> so the file looks like this then :</p>
+<pre class="blockquotecode my-4 py-3">
+    <code>
+        # sudo: auth account password session
+        auth       sufficient     pam_tid.so
+        auth       sufficient     pam_smartcard.so
+        auth       required       pam_opendirectory.so
+        account    required       pam_permit.so
+        password   required       pam_deny.so
+        session    required       pam_permit.so
+    </code>
+</pre>
+
+<h1>Bonus</h1>
+<p>On the day you update your mac, the <code>/etc/pam.d/sudo</code> may be overwritten by the update process. And your changes will be lost.</p>
+<p>(I know it is one line to add to file, but if you are lazy like me, you will understand :D)</p>
+<p>One github user, named <a href="https://github.com/tjluoma">tjluoma</a> made a little script, named <a href="https://github.com/tjluoma/sudo-via-touch-id">tjluoma/sudo-via-touch-id</a>, that will check if the line is present in your <code>/etc/pam.d/sudo</code>, and will add it if not !</p>
+<p>Just like he indicates it on his README : </p>
+<pre class="blockquotecode my-4 py-3">
+## How to use this
+
+1. Download sudo-via-touch-id.sh
+2. Make it executable: `chmod 755 sudo-via-touch-id.sh`
+3. Run it: `./sudo-via-touch-id.sh`
+4. (Optional But Useful) move it to a directory such as `/usr/local/bin/` 
+so you can run it again next time there's an update to macOS.
+</pre>
+
+<p>After i installed this script in my <code>/usr/local/bin/</code>, i edited my crontab to run the script each time my laptop is rebooted.</p>
+<p>Like this : </p>
+<pre class="blockquotecode my-4 py-3">
+    <code>
+        @reboot    bash /usr/local/bin/sudo-via-touch-id.sh
+    </code>
+</pre>
+
+<p>With this, on each reboot the script will run, and add the missing line to the <code>/etc/pam.d/sudo</code> if update deleted it !</p>
+</article>
+        </main>
+            
+        <footer>
+    <a href="http://localhost:8000">http://localhost:8000</a>
+</footer>
+        
+    </body>
+
+</html>

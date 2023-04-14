@@ -1,0 +1,350 @@
+{
+  "type": "record",
+  "name": "value",
+  "namespace": "com.adeo.imatch.invoiceMatchingRejectionAnalysisOpened",
+  "doc": "https://adeo.collibra.com/asset/661277ec-f836-4b8d-be8d-70109ec0dc99",
+  "fields": [
+    {
+      "name": "businessUnitIdentifier",
+      "type": "int",
+      "doc": "https://adeo.collibra.com/asset/767397bf-72ef-447f-98f9-0a8392b3e8a0"
+    },
+    {
+      "name": "rejectionAnalysisIdentifier",
+      "type": "string",
+      "doc": "https://adeo.collibra.com/asset/c6f25729-1fc9-45fc-a4af-ac81761a47eb"
+    },
+    {
+      "name": "invoiceMatchingFolderIdentifier",
+      "type": "long",
+      "doc": "https://adeo.collibra.com/asset/9096ef0f-f4ef-4288-87c4-a8b0c27506b3"
+    },
+    {
+      "name": "rejectionReasonIdentifier",
+      "type": "int",
+      "doc": "https://adeo.collibra.com/asset/33b52a0e-aa84-4847-87dc-409b7aa371c1"
+    },
+    {
+      "name": "openingDate",
+      "type": "long",
+      "doc": "https://adeo.collibra.com/asset/77911737-2915-4b8a-9ca4-2628f4b5654a",
+      "logicalType": "timestamp-millis"
+    },
+    {
+      "name": "closingDate",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "logicalType": "timestamp-millis"
+        }
+      ],
+      "doc": "https://adeo.collibra.com/asset/2854be60-81e5-4f92-a5fa-cf41bd590e45",
+      "default": null
+    },
+    {
+      "name": "lastUpdateDate",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "logicalType": "timestamp-millis"
+        }
+      ],
+      "doc": "https://adeo.collibra.com/asset/68b1bc7d-b954-4f6e-b19b-9bc94045d778"
+    },
+    {
+      "name": "amountExcludingTaxes",
+      "type": [
+        "null",
+        "double"
+      ],
+      "doc": "https://adeo.collibra.com/asset/f2f6f759-82b3-45ee-b99b-2c54e4b9f6c9",
+      "default": null
+    },
+    {
+      "name": "amountIncludingTaxes",
+      "type": [
+        "null",
+        "double"
+      ],
+      "doc": "https://adeo.collibra.com/asset/561a2f9a-0225-4c11-ac31-272f19669644",
+      "default": null
+    },
+    {
+      "name": "analysisCompleted",
+      "type": "boolean",
+      "doc": "https://adeo.collibra.com/asset/c4dc21bd-7b2b-40f7-8205-bed35de27a91"
+    },
+    {
+      "name": "vendorSalesConsultantSignature",
+      "type": [
+        "null",
+        "string"
+      ],
+      "doc": "https://adeo.collibra.com/asset/e0c96b90-5288-4c17-a27e-b911e574c0f6",
+      "default": null
+    },
+    {
+      "name": "line",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "lineRecord",
+          "doc": "https://adeo.collibra.com/asset/23ee107c-23d4-4b82-8500-f1a2af6f1bbe",
+          "fields": [
+            {
+              "name": "rejectionAnalysisLineIdentifier",
+              "type": "int",
+              "doc": "https://adeo.collibra.com/asset/805f2b74-2e01-4f9b-b706-f71b377d623b"
+            },
+            {
+              "name": "supplierInvoiceIdentifier",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/6f6f9350-9c68-4e40-bbd1-a4d272ad6d17",
+              "default": null
+            },
+            {
+              "name": "supplierInvoiceLineIdentifier",
+              "type": [
+                "null",
+                "int"
+              ],
+              "doc": "https://adeo.collibra.com/asset/f041c889-509d-46a9-9825-5f91dd77626e",
+              "default": null
+            },
+            {
+              "name": "receiptLongIdentifier",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/38e2f2fb-6e4d-4858-9854-3b92047771f8",
+              "default": null
+            },
+            {
+              "name": "receiptLineIdentifier",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/e5ceb113-b32b-4559-be19-3244d41117f9",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineInvoicedItemIdentifier",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/6bd51f66-0471-4e99-a9a7-c0d04967a3ae",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineOrderedItemIdentifier",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/0494805f-39ca-4ef2-81e0-0179cc0f808d",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineItemBuReference",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/d2d4d5ff-21cd-4ce3-a07b-8fb330a3e222",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineOrderedUnitPriceExcludingTax",
+              "type": [
+                "null",
+                "double"
+              ],
+              "doc": "https://adeo.collibra.com/asset/1b5af438-79e4-46b6-bb28-9df042f43683",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineInvoicedUnitPriceExcludingTax",
+              "type": [
+                "null",
+                "double"
+              ],
+              "doc": "https://adeo.collibra.com/asset/7b97fe52-2faa-4a42-ba24-b1ebd5c18ede",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineAcceptedPrice",
+              "type": [
+                "null",
+                "double"
+              ],
+              "doc": "https://adeo.collibra.com/asset/2b2c6252-d866-48af-b41d-41e217e65a7a",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLinePriceDifferenceStatus",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/7d7b5ad2-aa7c-4b4c-9aac-6f0a27b761bf",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLinePriceDifferenceValider",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/eb8451ea-9b61-4756-80d6-d6464a91a068",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineReceivedQuantity",
+              "type": [
+                "null",
+                "double"
+              ],
+              "doc": "https://adeo.collibra.com/asset/f8f33929-d353-4a85-9bd2-16270c770f07",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineInvoicedQuantity",
+              "type": [
+                "null",
+                "double"
+              ],
+              "doc": "https://adeo.collibra.com/asset/2ba05b91-82a3-4b46-b6c2-84ce0b9222c7",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineAcceptedQuantity",
+              "type": [
+                "null",
+                "double"
+              ],
+              "doc": "https://adeo.collibra.com/asset/9acad659-8a5b-4756-9fd5-a0a4e8996bf9",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineQuantityDifferenceStatus",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/6df1884d-aacf-48db-813a-2df2668f1a3c",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineQuantityDifferenceValider",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/6a643dd0-c43c-4f77-abb1-8f9bd5cbee1e",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineExpectedCharges",
+              "type": [
+                "null",
+                "double"
+              ],
+              "doc": "https://adeo.collibra.com/asset/d6fd123a-016d-455b-9265-04341204bb03",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineInvoicedCharges",
+              "type": [
+                "null",
+                "double"
+              ],
+              "doc": "https://adeo.collibra.com/asset/157196fd-b3ea-4688-b258-e5b87928c354",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineAcceptedCharges",
+              "type": [
+                "null",
+                "double"
+              ],
+              "doc": "https://adeo.collibra.com/asset/911f3990-a5e3-4335-849c-47a76c990a01",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineChargesDifferenceStatus",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/1548a869-2256-4fcd-ba2a-d201c7cbbed5",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineChargesDifferenceValider",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/dda0ed19-b241-4f4f-9c39-a9ad7a7b54a1",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineItemDesignation",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/ef6128ba-3889-466c-bb37-f61b05449707",
+              "default": null
+            },
+            {
+              "name": "rejectionAnalysisLineComment",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/fd606e19-d609-4af1-9b9d-21cfb0aada2f",
+              "default": null
+            },
+            {
+              "name": "creationDate",
+              "type": "long",
+              "doc": "https://adeo.collibra.com/asset/77911737-2915-4b8a-9ca4-2628f4b5654a",
+              "logicalType": "timestamp-millis"
+            },
+            {
+              "name": "lastUpdateDate",
+              "type": [
+                "null",
+                {
+                  "type": "long",
+                  "logicalType": "timestamp-millis"
+                }
+              ],
+              "doc": "https://adeo.collibra.com/asset/68b1bc7d-b954-4f6e-b19b-9bc94045d778",
+              "default": null
+            },
+            {
+              "name": "lastUpdateUser",
+              "type": [
+                "null",
+                "string"
+              ],
+              "doc": "https://adeo.collibra.com/asset/7c15f266-a6bb-4686-85fb-ed0c1293f08c",
+              "default": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

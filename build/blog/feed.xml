@@ -1,0 +1,121 @@
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:thr="http://purl.org/syndication/thread/1.0"
+      xml:lang="en">
+
+        <title></title>
+        <subtitle></subtitle>
+
+        <updated></updated>
+
+        <link rel="alternate" type="text/html" href="http://localhost:8000" />
+        <id>http://localhost:8000</id>
+        <link rel="self" type="application/atom+xml" href="http://localhost:8000/blog/feed.xml" />
+
+        <generator>BrunoJamStackGenerator</generator>
+        <link>http://localhost:8000/blog/</link>
+
+        
+          <entry>
+              <title>Hello World!</title>
+              <author>
+                  <name></name>
+                  <uri>http://localhost:8000</uri>
+              </author>
+              <pubDate>2020-09-26</pubDate>
+              <link>http://localhost:8000</link>
+              
+                <description><![CDATA[Hello World!]]></description>
+              
+              <content:encoded><![CDATA[]]></content:encoded>
+          </entry>
+        
+          <entry>
+              <title>How to install psycopg2-binary on Apple M1</title>
+              <author>
+                  <name></name>
+                  <uri>http://localhost:8000</uri>
+              </author>
+              <pubDate>2021-10-17</pubDate>
+              <link>http://localhost:8000</link>
+              
+                <description><![CDATA[I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it.]]></description>
+              
+              <content:encoded><![CDATA[]]></content:encoded>
+          </entry>
+        
+          <entry>
+              <title>How I enriched prometheus metrics</title>
+              <author>
+                  <name></name>
+                  <uri>http://localhost:8000</uri>
+              </author>
+              <pubDate>2022-05-05</pubDate>
+              <link>http://localhost:8000</link>
+              
+                <description><![CDATA[VMWare exporter metrics didn't have all the informations we wanted. This is how I enriched them.]]></description>
+              
+              <content:encoded><![CDATA[]]></content:encoded>
+          </entry>
+        
+          <entry>
+              <title>Sudo with macos and TouchID</title>
+              <author>
+                  <name></name>
+                  <uri>http://localhost:8000</uri>
+              </author>
+              <pubDate>2022-08-03</pubDate>
+              <link>http://localhost:8000</link>
+              
+                <description><![CDATA[I am a lazy guy, and type my password kind of annoy me :-D]]></description>
+              
+              <content:encoded><![CDATA[]]></content:encoded>
+          </entry>
+        
+    </channel>
+</feed>
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title></title>
+  <link rel="alternate" type="text/html" href="http://localhost:8000"/>
+  <link rel="self" type="application/atom+xml" href="http://localhost:8000/atom.xml"/>
+  <updated>2020--T::Z</updated>
+  <link href="http://localhost:8000/"/>
+  <author>
+    <name></name>
+  </author>
+  <id>http://localhost:8000/atom.xml</id>
+  
+  <entry>
+    <title>Hello World!</title>
+    <link href="http://localhost:8000/"/>
+    <id>http://localhost:8000/</id>
+    <updated>2020--T::00Z</updated>
+    <summary></summary>
+  </entry>
+  <entry>
+    <title>How to install psycopg2-binary on Apple M1</title>
+    <link href="http://localhost:8000/"/>
+    <id>http://localhost:8000/</id>
+    <updated>2021--T::00Z</updated>
+    <summary></summary>
+  </entry>
+  <entry>
+    <title>How I enriched prometheus metrics</title>
+    <link href="http://localhost:8000/"/>
+    <id>http://localhost:8000/</id>
+    <updated>2022--T::00Z</updated>
+    <summary></summary>
+  </entry>
+  <entry>
+    <title>Sudo with macos and TouchID</title>
+    <link href="http://localhost:8000/"/>
+    <id>http://localhost:8000/</id>
+    <updated>2022--T::00Z</updated>
+    <summary></summary>
+  </entry>
+
+</feed>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr-FR" prefix="og: http://ogp.me/ns#" >
+    <head>
+
+        <title>
+            bruno-giarrizzo.fr
+        </title>
+
+        <!-- Favicon -->
+<link href="/static/img/logo.jpg" rel="icon" type="image/jpg" />
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="/static/css/main.css" />
+        
+        
+    </head>
+
+    <body>
+
+        <nav>
+    <a href="http://localhost:8000/">Home</a>
+    <a href="http://localhost:8000/blog/">Blog</a>
+    <a href="http://localhost:8000/resume/">Resume</a>
+    <a href="http://localhost:8000/about/">About</a>
+</nav>
+
+        <main>
+            <header>
+  <img width="100%" src="http://localhost:8000/media/images/posts/covers/2021-10-17.png" alt="how to install psycopg2-binary on mac m1 article cover">
+  <h1>How to install psycopg2-binary on Apple M1</h1>
+  <p class="subtitle">by <a href="http://localhost:8000">Bruno</a>, on 2021-10-17</p>
+  
+    <p class="summary">I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it.</p>
+  
+  <p class="separator">***</p>
+</header>
+
+<article>
+  <p>Last month I bought to myself an Apple M1, really good computer, with great power, and awesome battery.</p>
+<p>My work with it is pretty simple, I code python API, some simple front App with TypeScript/react, trying some Go, learning swift and administrating some kubernetes clusters. Nothing too fancy.</p>
+<p>I am trying to work with latest versions of software I use, and in this case, python 3.10.</p>
+<p>I installed it with brew, pretty easily : </p>
+<blockquote class="blockquotecode">
+    brew install python@3.10
+</blockquote>
+
+<p>I had troubles with psycopg2-binary, installing depedencies of one of the projects I work with, the error message i was getting was this one : </p>
+<blockquote class="blockquotecode">
+    Error: pg_config executable not found.
+
+pg_config is required to build psycopg2 from source.  Please add the directory
+containing pg_config to the $PATH or specify the full executable path with the
+option:
+
+    python setup.py build_ext --pg-config /path/to/pg_config build ...
+
+or with the pg_config option in 'setup.cfg'.
+</blockquote>
+
+<p>It seems there is some conf file that is missing. I tried to solve it by installing postgres server to get that missing file :</p>
+<blockquote class="blockquotecode">
+    brew install postgresql@12
+</blockquote>
+
+<p>At this point, brew tell me to setup the path to PG in my PATH, this way (using ZSH, it tells me to write it obviously to .zshrc):</p>
+<blockquote class="blockquotecode">
+    echo 'export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"' > ~/.zshrc
+</blockquote>
+
+<p>Now i'm all set, and i can install it the way i want :</p>
+<blockquote class="blockquotecode">
+    pip(3) install psycopg2-binary
+</blockquote>
+
+<p>Or in my project repository :</p>
+<blockquote class="blockquotecode">
+    pipenv install psycopg2-binary
+</blockquote>
+</article>
+        </main>
+            
+        <footer>
+    <a href="http://localhost:8000">http://localhost:8000</a>
+</footer>
+        
+    </body>
+
+</html>

@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Sudo with macos and TouchID"
-summary: I am a lazy guy, and type my password kind of annoy me 😏 
-cover: "images/posts/covers/2022-08-03.jpg"
+summary: I am a lazy guy, and type my password kind of annoy me :-D
+cover: 2022-08-03.jpg
 cover_alt: "Sudo with macos and TouchID article cover"
-date: 2022-08-03 00:00
-categories: tricks
+date: 2022-08-03
 tags: [macos, sudo, terminal, touch, id, touchid]
 ---
 

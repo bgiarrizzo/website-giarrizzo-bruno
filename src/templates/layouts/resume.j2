@@ -1,0 +1,49 @@
+<header>
+    <img width="100%" src="http://localhost:8000/media/images/pages/resume/cover.png" alt="">
+    <h1 class="text-center">
+      Resume
+    </h1>
+</header>
+
+<article>
+    <h2>Bruno Giarrizzo</h2>
+    <ul>
+        <li>Developer Python &amp; DevOps</li>
+        <li><b>Localization</b> : Lille, Nord, 59000, France<p></p></li>
+        <li><b>Experience</b> : 
+            <ul>
+                <li>As a SysOps/DevOps : 10 years</li>
+                <li>As a Python Developer : 4 years</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>My Favorites</h3>
+
+    <ul>
+        <li>Python</li>
+        <li>Python - FastAPI</li>
+        <li>Docker</li>
+        <li>Kubernetes</li>
+        <li>Prometheus</li>
+        <li>Terraform</li>
+        <li>Helm</li>
+    </ul>
+
+    <h2>Work Experience</h2>
+
+    {% for experience in experiences|reverse %}
+        <section>
+            <header>
+                <h3>{{ experience.company }}</h3>
+                <span>{{ experience.title }} - ({{ experience.contract_type }}) : </span>
+                <span>{{ experience.start_date }} - {{ experience.end_date }}</span>
+            </header>
+            <p>{{ experience.body }}</p>
+            {% if experience.tags %}
+                <p>{% for tag in experience.tags %}#{{ tag }} {% endfor %}</p>
+            {% endif %}
+        </section>
+    {% endfor %}
+
+</article>

@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "How I enriched prometheus metrics"
 summary: VMWare exporter metrics didn't have all the informations we wanted. This is how I enriched them.
-cover: "images/posts/covers/2022-05-06.jpg"
+cover: "2022-05-06.jpg"
 cover_alt: "how i enriched prometheus metrics article cover"
-date: 2022-05-05 00:00
-categories: experiences
+date: 2022-05-05
 tags: [prometheus, python, pandas, dataframe, vmware, exporter, vmware_exporter, fastapi]
 ---
 
