@@ -5,7 +5,7 @@
         <title>{{ site.name }}</title>
         <subtitle>{{ site.description_meta }}</subtitle>
 
-        <updated>{{ site.time }}</updated>
+        <updated>{% with posts|last as last_post %}{{ last_post.date }}{% endwith %}</updated>
 
         <link rel="alternate" type="text/html" href="{{ site.url }}" />
         <id>{{ site.url }}</id>
@@ -26,9 +26,9 @@
               {% if post.summary %}
                 <description><![CDATA[{{ post.summary }}]]></description>
               {% else %}
-                <description><![CDATA[{{ post.content }}]]></description>
+                <description><![CDATA[{{ post.body }}]]></description>
               {% endif %}
-              <content:encoded><![CDATA[{{ post.content }}]]></content:encoded>
+              <content:encoded><![CDATA[{{ post.body }}]]></content:encoded>
           </entry>
         {% endfor %}
     </channel>
