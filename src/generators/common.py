@@ -1,7 +1,5 @@
 from os import path, walk
 
-from slugify import slugify
-
 from utils.markdown import (
     convert_markdown_text_to_html,
     parse_yaml_header_and_markdown_body_in_file,
