@@ -1,0 +1,14 @@
+<header>
+  <img width="100%" src="/media/images/posts/covers/{{ post.cover }}" alt="{{ post.cover_alt }}">
+  <h1>{{ post.title }}</h1>
+  <p class="subtitle">by <a href="">Bruno</a>, on {{ post.short_date }}</p>
+  {% if post.summary %}
+    <p class="summary">{{ post.summary }}</p>
+  {% endif %}
+</header>
+
+<hr />
+
+<article>
+  {{ post.body }}
+</article>

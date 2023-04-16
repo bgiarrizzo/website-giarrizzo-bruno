@@ -1,0 +1,39 @@
+<article>
+  {% if page.permalink | length %}
+  <header>
+    {% if page.cover %}
+      <img width="100%" src="/media/images/pages/{{ page.cover }}" alt="{{ page.cover_alt }}">
+    {% endif %}
+    {% if page.title %}
+      <h1>
+        {{ page.title }}
+      </h1>
+    {% endif %}
+    {% if page.summary %}
+      <p class="subtitle">
+        {{ page.summary }}
+      </p>
+    {% endif %}
+  </header>
+  {% endif %}
+  
+  <main>
+  {{ page.body }}
+
+  {% if posts %}
+    {% if page %}
+      {% if page.title == "bruno-giarrizzo.fr" %}
+        <h2>Blog Posts</h2>
+        <ul><li><a href="/blog/">All blog posts</a></li></ul>
+        <ul>
+          {% for post in posts | reverse %}
+            <li>
+              <a href="/blog/{{ post.slug }}/">{{ post.short_date }} : {{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+  </main>
+</article>

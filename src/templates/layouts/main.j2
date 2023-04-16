@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr-FR" prefix="og: http://ogp.me/ns#" >
+    <head>
+
+        <title>
+            bruno-giarrizzo.fr
+        </title>
+
+        {% include "includes/meta.j2" %}
+        
+    </head>
+
+    <body>
+
+        {% include "includes/navigation.j2" %}
+
+        <main>
+            {% if posts %}
+                {% if page %}
+                    {% if page.title == "bruno-giarrizzo.fr" %}
+                        {% include "includes/head.j2" %}
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+            {{ content }}
+        </main>
+            
+        {% include "includes/footer.j2" %}
+        {% include "includes/style.j2" %}
+        
+    </body>
+
+</html>

@@ -1,0 +1,17 @@
+{% include "includes/head.j2" %}
+
+<h2>Blog Posts</h2>
+
+{% for year, post in posts | reverse | groupby("year") | reverse %}
+
+    <h3>{{ year }}</h3>
+
+    <ul>
+        {% for post in post %}
+            <li>
+                <a href="/blog/{{ post.slug }}/">{{ post.short_date }} : {{ post.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endfor %}
