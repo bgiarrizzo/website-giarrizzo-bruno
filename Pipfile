@@ -9,7 +9,7 @@ python_version = "3.11"
 [scripts]
 black = "black src/"
 black_dry = "black src/ --check"
-build = "python src/main.py"
+build = "time python src/main.py"
 dev = "python -m http.server 8000 --directory build/"
 isort = "isort src/"
 isort_dry = "isort src/ --check-only"
@@ -20,7 +20,6 @@ jinja2 = "*"
 pyyaml = "*"
 markdown = "*"
 pydantic = "*"
-markdown-full-yaml-metadata = "*"
 python-slugify = "*"
 
 [dev-packages]

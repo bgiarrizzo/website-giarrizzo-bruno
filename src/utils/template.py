@@ -20,7 +20,15 @@ def render_template(template_name, data):
 
 def generate_data_for_template(datalist):
     data_for_template = {}
-    site_infos = {"site": {"url": settings.BASE_URL}}
+    site_infos = {
+        "site": {
+            "url": settings.BASE_URL,
+            "short_url": settings.SHORT_URL,
+            "language": settings.LANGUAGE,
+            "name": settings.NAME,
+            "keywords": settings.KEYWORDS,
+        }
+    }
     data_for_template = data_for_template | site_infos
     if len(datalist) > 0:
         for data in datalist:

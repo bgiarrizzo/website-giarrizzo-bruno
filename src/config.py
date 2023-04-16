@@ -4,7 +4,7 @@ from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
-    BASE_URL: str = "http://localhost:8000"
+    BASE_URL: str = "https://www.bruno-giarrizzo.fr"
 
     BUILD_PATH: str = "build"
     MEDIA_PATH: str = "media"
@@ -17,6 +17,29 @@ class Settings(BaseSettings):
     TEMPLATE_PATH: str = "src/templates"
     LAYOUT_PATH: str = "src/templates/layouts"
     INCLUDE_PATH: str = "src/templates/layouts/includes"
+
+    NAME: str = "Bruno Giarrizzo"
+    SHORT_URL: str = "bruno-giarrizzo.fr"
+    DESCRIPTION: str = "Freelance Developer, DevOps, Ethical Hacker"
+    KEYWORDS: list = [
+        "Bruno",
+        "Giarrizzo",
+        "Bruno Giarrizzo",
+        "Freelance",
+        "Developer",
+        "DevOps",
+        "Ethical Hacker",
+        "Ethical",
+        "Hacker",
+        "Django",
+        "Python",
+        "Swift",
+        "Ansible",
+        "Terraform",
+        "Kubernetes",
+        "Infra as Code",
+    ]
+    LANGUAGE: str = "en"
 
     def get_working_directory(self):
         return os.getcwd()

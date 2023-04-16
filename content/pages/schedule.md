@@ -2,7 +2,7 @@
 title: Want to schedule a call ?
 summary: You can use the form below, you will know when I am available for a call :-)
 permalink: schedule
-cover: "onboard/cover.jpg"
+cover: "schedule/cover.jpg"
 ---
 
 <!-- Calendly inline widget begin -->

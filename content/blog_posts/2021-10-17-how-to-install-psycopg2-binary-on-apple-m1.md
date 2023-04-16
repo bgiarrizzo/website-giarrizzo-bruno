@@ -3,7 +3,8 @@ title: "How to install psycopg2-binary on Apple M1"
 summary: I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it.
 cover: "2021-10-17.png"
 cover_alt: "how to install psycopg2-binary on mac m1 article cover"
-date: 2021-10-17
+publish_date: 2021-10-17T09:30:00Z
+update_date: 2021-10-17T09:30:00Z
 tags: [apple, m1, postgres, python3.10, psycopg2, psycopg2-binary, install]
 ---
 
@@ -15,13 +16,13 @@ I am trying to work with latest versions of software I use, and in this case, py
 
 I installed it with brew, pretty easily : 
 
-<blockquote class="blockquotecode">
-    brew install python@3.10
-</blockquote>
+<pre>
+brew install python@3.10
+</pre>
 
 I had troubles with psycopg2-binary, installing depedencies of one of the projects I work with, the error message i was getting was this one : 
 
-<blockquote class="blockquotecode">
+<pre>
     Error: pg_config executable not found.
 
 pg_config is required to build psycopg2 from source.  Please add the directory
@@ -31,28 +32,28 @@ option:
     python setup.py build_ext --pg-config /path/to/pg_config build ...
 
 or with the pg_config option in 'setup.cfg'.
-</blockquote>
+</pre>
 
 It seems there is some conf file that is missing. I tried to solve it by installing postgres server to get that missing file :
 
-<blockquote class="blockquotecode">
-    brew install postgresql@12
-</blockquote>
+<pre>
+brew install postgresql@12
+</pre>
 
 At this point, brew tell me to setup the path to PG in my PATH, this way (using ZSH, it tells me to write it obviously to .zshrc):
 
-<blockquote class="blockquotecode">
-    echo 'export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"' > ~/.zshrc
-</blockquote>
+<pre>
+echo 'export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"' > ~/.zshrc
+</pre>
 
 Now i'm all set, and i can install it the way i want :
 
-<blockquote class="blockquotecode">
-    pip(3) install psycopg2-binary
-</blockquote>
+<pre>
+pip(3) install psycopg2-binary
+</pre>
 
 Or in my project repository :
 
-<blockquote class="blockquotecode">
-    pipenv install psycopg2-binary
-</blockquote>
+<pre>
+pipenv install psycopg2-binary
+</pre>

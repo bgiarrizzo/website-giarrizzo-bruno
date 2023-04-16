@@ -1,78 +1,351 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   
-  <title>http://localhost:8000</title>
-  <subtitle>http://localhost:8000</subtitle>
+  <title>https://www.bruno-giarrizzo.fr</title>
+  <subtitle>https://www.bruno-giarrizzo.fr</subtitle>
 
-  <updated>2022-08-03</updated>
+  <updated>03-Aug-2022</updated>
 
-  <link rel="alternate" type="text/html" href="http://localhost:8000/blog/" />
-  <id>http://localhost:8000/blog/</id>
-  <link rel="self" type="application/atom+xml" href="http://localhost:8000/blog/feed.xml" />
+  <link rel="alternate" type="text/html" href="https://www.bruno-giarrizzo.fr/blog/" />
+  <id>https://www.bruno-giarrizzo.fr/blog/</id>
+  <link rel="self" type="application/atom+xml" href="https://www.bruno-giarrizzo.fr/blog/feed.xml" />
 
   
     <entry xml:lang="en">
         <title type="html">Hello World!</title>
         <author>
             <name></name>
-            <uri>http://localhost:8000</uri>
+            <uri>https://www.bruno-giarrizzo.fr</uri>
         </author>
-        <id>http://localhost:8000/blog/hello-world/</id>
-        <published>2020-09-26</published>
-        <updated>2020-09-26</updated>
-        <link rel="alternate" type="text/html">http://localhost:8000/blog/hello-world/</link>
+        <id>https://www.bruno-giarrizzo.fr/blog/hello-world/</id>
+        <published>2021-09-26</published>
+        <updated></updated>
+        <link rel="alternate" type="text/html">https://www.bruno-giarrizzo.fr/blog/hello-world/</link>
         
-          <summary>Hello World!</summary>
+          <summary>
+            Hello World!
+          </summary>
         
-        <content type="html">%3Cp%3EHello%20World%3C/p%3E</content>
+        <content type="html">
+          <p>Hello World</p>
+        </content>
     </entry>
   
     <entry xml:lang="en">
         <title type="html">How to install psycopg2-binary on Apple M1</title>
         <author>
             <name></name>
-            <uri>http://localhost:8000</uri>
+            <uri>https://www.bruno-giarrizzo.fr</uri>
         </author>
-        <id>http://localhost:8000/blog/how-to-install-psycopg2-binary-on-apple-m1/</id>
-        <published>2021-10-17</published>
-        <updated>2021-10-17</updated>
-        <link rel="alternate" type="text/html">http://localhost:8000/blog/how-to-install-psycopg2-binary-on-apple-m1/</link>
+        <id>https://www.bruno-giarrizzo.fr/blog/how-to-install-psycopg2-binary-on-apple-m1/</id>
+        <published>2021-10-17 09:30:00+00:00</published>
+        <updated></updated>
+        <link rel="alternate" type="text/html">https://www.bruno-giarrizzo.fr/blog/how-to-install-psycopg2-binary-on-apple-m1/</link>
         
-          <summary>I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it.</summary>
+          <summary>
+            I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it.
+          </summary>
         
-        <content type="html">%3Cp%3ELast%20month%20I%20bought%20to%20myself%20an%20Apple%20M1%2C%20really%20good%20computer%2C%20with%20great%20power%2C%20and%20awesome%20battery.%3C/p%3E%0A%3Cp%3EMy%20work%20with%20it%20is%20pretty%20simple%2C%20I%20code%20python%20API%2C%20some%20simple%20front%20App%20with%20TypeScript/react%2C%20trying%20some%20Go%2C%20learning%20swift%20and%20administrating%20some%20kubernetes%20clusters.%20Nothing%20too%20fancy.%3C/p%3E%0A%3Cp%3EI%20am%20trying%20to%20work%20with%20latest%20versions%20of%20software%20I%20use%2C%20and%20in%20this%20case%2C%20python%203.10.%3C/p%3E%0A%3Cp%3EI%20installed%20it%20with%20brew%2C%20pretty%20easily%20%3A%20%3C/p%3E%0A%3Cblockquote%20class%3D%22blockquotecode%22%3E%0A%20%20%20%20brew%20install%20python%403.10%0A%3C/blockquote%3E%0A%0A%3Cp%3EI%20had%20troubles%20with%20psycopg2-binary%2C%20installing%20depedencies%20of%20one%20of%20the%20projects%20I%20work%20with%2C%20the%20error%20message%20i%20was%20getting%20was%20this%20one%20%3A%20%3C/p%3E%0A%3Cblockquote%20class%3D%22blockquotecode%22%3E%0A%20%20%20%20Error%3A%20pg_config%20executable%20not%20found.%0A%0Apg_config%20is%20required%20to%20build%20psycopg2%20from%20source.%20%20Please%20add%20the%20directory%0Acontaining%20pg_config%20to%20the%20%24PATH%20or%20specify%20the%20full%20executable%20path%20with%20the%0Aoption%3A%0A%0A%20%20%20%20python%20setup.py%20build_ext%20--pg-config%20/path/to/pg_config%20build%20...%0A%0Aor%20with%20the%20pg_config%20option%20in%20%27setup.cfg%27.%0A%3C/blockquote%3E%0A%0A%3Cp%3EIt%20seems%20there%20is%20some%20conf%20file%20that%20is%20missing.%20I%20tried%20to%20solve%20it%20by%20installing%20postgres%20server%20to%20get%20that%20missing%20file%20%3A%3C/p%3E%0A%3Cblockquote%20class%3D%22blockquotecode%22%3E%0A%20%20%20%20brew%20install%20postgresql%4012%0A%3C/blockquote%3E%0A%0A%3Cp%3EAt%20this%20point%2C%20brew%20tell%20me%20to%20setup%20the%20path%20to%20PG%20in%20my%20PATH%2C%20this%20way%20%28using%20ZSH%2C%20it%20tells%20me%20to%20write%20it%20obviously%20to%20.zshrc%29%3A%3C/p%3E%0A%3Cblockquote%20class%3D%22blockquotecode%22%3E%0A%20%20%20%20echo%20%27export%20PATH%3D%22/opt/homebrew/opt/postgresql%4012/bin%3A%24PATH%22%27%20%3E%20~/.zshrc%0A%3C/blockquote%3E%0A%0A%3Cp%3ENow%20i%27m%20all%20set%2C%20and%20i%20can%20install%20it%20the%20way%20i%20want%20%3A%3C/p%3E%0A%3Cblockquote%20class%3D%22blockquotecode%22%3E%0A%20%20%20%20pip%283%29%20install%20psycopg2-binary%0A%3C/blockquote%3E%0A%0A%3Cp%3EOr%20in%20my%20project%20repository%20%3A%3C/p%3E%0A%3Cblockquote%20class%3D%22blockquotecode%22%3E%0A%20%20%20%20pipenv%20install%20psycopg2-binary%0A%3C/blockquote%3E</content>
+        <content type="html">
+          <p>Last month I bought to myself an Apple M1, really good computer, with great power, and awesome battery.</p>
+<p>My work with it is pretty simple, I code python API, some simple front App with TypeScript/react, trying some Go, learning swift and administrating some kubernetes clusters. Nothing too fancy.</p>
+<p>I am trying to work with latest versions of software I use, and in this case, python 3.10.</p>
+<p>I installed it with brew, pretty easily : </p>
+<pre>
+brew install python@3.10
+</pre>
+
+<p>I had troubles with psycopg2-binary, installing depedencies of one of the projects I work with, the error message i was getting was this one : </p>
+<pre>
+    Error: pg_config executable not found.
+
+pg_config is required to build psycopg2 from source.  Please add the directory
+containing pg_config to the $PATH or specify the full executable path with the
+option:
+
+    python setup.py build_ext --pg-config /path/to/pg_config build ...
+
+or with the pg_config option in 'setup.cfg'.
+</pre>
+
+<p>It seems there is some conf file that is missing. I tried to solve it by installing postgres server to get that missing file :</p>
+<pre>
+brew install postgresql@12
+</pre>
+
+<p>At this point, brew tell me to setup the path to PG in my PATH, this way (using ZSH, it tells me to write it obviously to .zshrc):</p>
+<pre>
+echo 'export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"' > ~/.zshrc
+</pre>
+
+<p>Now i'm all set, and i can install it the way i want :</p>
+<pre>
+pip(3) install psycopg2-binary
+</pre>
+
+<p>Or in my project repository :</p>
+<pre>
+pipenv install psycopg2-binary
+</pre>
+        </content>
     </entry>
   
     <entry xml:lang="en">
         <title type="html">How I enriched prometheus metrics</title>
         <author>
             <name></name>
-            <uri>http://localhost:8000</uri>
+            <uri>https://www.bruno-giarrizzo.fr</uri>
         </author>
-        <id>http://localhost:8000/blog/how-i-enriched-prometheus-metrics/</id>
-        <published>2022-05-05</published>
-        <updated>2022-05-05</updated>
-        <link rel="alternate" type="text/html">http://localhost:8000/blog/how-i-enriched-prometheus-metrics/</link>
+        <id>https://www.bruno-giarrizzo.fr/blog/how-i-enriched-prometheus-metrics/</id>
+        <published>2022-05-05 09:30:00+00:00</published>
+        <updated></updated>
+        <link rel="alternate" type="text/html">https://www.bruno-giarrizzo.fr/blog/how-i-enriched-prometheus-metrics/</link>
         
-          <summary>VMWare exporter metrics didn't have all the informations we wanted. This is how I enriched them.</summary>
+          <summary>
+            VMWare exporter metrics didn't have all the informations we wanted. This is how I enriched them.
+          </summary>
         
-        <content type="html">%3Ch2%3EContext%3C/h2%3E%0A%3Cp%3EIn%20my%20current%20mission%2C%20in%20order%20to%20set%20up%20a%20metric-federation%2C%20we%20have%20to%20gather%20vmware%20metrics.%3C/p%3E%0A%3Cp%3ESo%20we%20used%20the%20%3Ca%20href%3D%22https%3A//github.com/pryorda/vmware_exporter%22%3Evmware_exporter%3C/a%3E%20by%20%3Ca%20href%3D%22https%3A//github.com/pryorda%22%3EDaniel%20Pryor%3C/a%3E%2C%20and%20to%20not%20edit%20it%2C%20i%20wrote%20a%20small%20front%20made%20with%20fastapi.%3C/p%3E%0A%3Cp%3EMetrics%20are%20get%20by%20fastapi%2C%20parsed%2C%20enriched%2C%20reserialized%2C%20and%20scrapped%20by%20prometheus.%3C/p%3E%0A%3Cp%3EMetrics%20names%20need%20to%20be%20mapped%2C%20as%20they%20are%20unified%20with%20metrics%20from%20openstack%20and%20IBM%20cloud.%3C/p%3E%0A%3Cp%3EMapTable%20is%20the%20one%20below%20%3A%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%3Ccode%3EMAPPING_METRICS_NAME%20%3D%20%7B%0A%20%20%20%20%22vmware_vm_power_state%22%20%3A%20%22power_state%22%0A%20%20%20%20%22vmware_vm_cpu_usage_average%22%27%3A%20%22cpu_usage_percentage%0A%20%20%20%20%22vmware_vm_mem_consumed_average%22%3A%20%22memory_used%22%0A%20%20%20%20%22vmware_vm_memory_max%22%3A%20%22memory_total%22%0A%20%20%20%20%22vmware_vm_mem_usage_average%22%3A%20%22memory_usage_percentage%22%2C%0A%20%20%20%20%22vmware_vm_num_cpu%22%3A%20%22vcpus%22%0A%7D%3C/code%3E%3C/pre%3E%0A%0A%3Ch2%3EStep1%20%3A%20Parsing%20vmware_exporter%20metrics%3C/h2%3E%0A%3Cp%3EExporter%20is%20hit%20from%20within%20a%20function%20named%20request_exporter%28%29.%3C/p%3E%0A%3Cp%3EThe%20output%20of%20the%20exporter%20is%20one%20big%20str%20file%20that%20need%20to%20be%20parsed%20in%20order%20to%20be%20processed.%3C/p%3E%0A%3Cp%3EI%20used%20prometheus_client.parser%20for%20this.%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%3Ccode%3Efrom%20prometheus_client.parser%20import%20text_string_to_metric_families%0A%0Adata_from_exporter%20%3D%20request_exporter%28target%29%0Ametric_families%20%3D%20text_string_to_metric_families%28data_from_exporter%29%3C/code%3E%0A%3C/pre%3E%0A%0A%3Cp%3EThe%20variable%20metric_families%20is%20a%20multilevel%20object%20containing%20metrics%20grouped%20by%20metric%20name.%3C/p%3E%0A%3Cp%3EIt%20can%20be%20represented%20as%20a%20dict%2C%20where%20key%20is%20the%20metric_name%20and%20the%20value%20is%20a%20list%20containing%20all%20metrics%20as%20tuples.%3C/p%3E%0A%3Cp%3EExample%20%3A%20%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%3Ccode%3E%7B%0A%20%20%20%20%22vmware_vm_power_state%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%28%22vmware_vm_power_state%22%2C%20%7B%22vm_name%22%3A%20%22vm1%22%2C%20%22label2%22%3A%20%22value2%22%7D%2C%201%29%2C%0A%20%20%20%20%20%20%20%20%28%22vmware_vm_power_state%22%2C%20%7B%22vm_name%22%3A%20%22vm2%22%2C%20%22label2%22%3A%20%22value2%22%7D%2C%200%29%2C%0A%20%20%20%20%5D%0A%7D%3C/code%3E%0A%3C/pre%3E%0A%0A%3Cp%3ESo%20I%20made%20a%20little%20algorithm%20to%20flatten%20the%20object%20as%20a%20list%20of%20dicts%20%3A%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%3Ccode%3Eprocessed_exporter_data%20%3D%20%5B%5D%0A%0Afor%20family%20in%20data_from%20exporter%3A%0A%20%20%20%20if%20family.name%20not%20in%20MAPPING_METRICS_NAME%3A%0A%20%20%20%20%20%20%20%20continue%0A%20%20%20%20for%20sample%20in%20family.samples%3A%0A%20%20%20%20%20%20%20%20row%20dict%20%3D%20%7B%7D%0A%20%20%20%20%20%20%20%20row%20dict%5B%22__name__%22%5D%20%3D%20sample%5B0%5D%0A%20%20%20%20%20%20%20%20for%20key%2C%20value%20in%20sample%5B1%5D.items%28%29%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20row%20dict%5Bkey%5D%20%3D%20value%0A%20%20%20%20%20%20%20%20row_dict%5B%22value%22%5D%20%3D%20sample%5B2%5D%0A%20%20%20%20%20%20%20%20processed%20exporter_data.append%28row_dict%29%3C/code%3E%0A%3C/pre%3E%0A%0A%3Cp%3EI%20will%20have%20then%20a%20list%20of%20dicts%2C%20a%20dataframe%20can%20be%20created%20out%20of%20it.%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%3Ccode%3E%5B%0A%20%20%20%20%7B%22__name__%22%3A%20%22vmware_vm_power_state%22%2C%20%22vm_name%22%3A%20%22vm1%22%2C%20%22value%22%3A%201%7D%2C%0A%20%20%20%20%7B%22__name__%22%3A%20%22vmware_vm_power_state%22%2C%20%22vm_name%22%3A%20%22vm2%22%2C%20%22value%22%3A%200%7D%2C%0A%5D%3C/code%3E%0A%3C/pre%3E%0A%0A%3Cp%3ENow%20let%27s%20play%20with%20dataframe%20...%3C/p%3E%0A%3Ch2%3EStep2%3A%20Playing%20with%20dataframes%3C/h2%3E%0A%3Cp%3EFirst%20of%20all%2C%20i%27m%20creating%20the%20dataframe%20%3A%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%3Ccode%3Eimport%20pandas%0A%0Ametrics_df%20%3D%20pandas.DataFrame%28processed_exporter_data%29%3C/code%3E%0A%3C/pre%3E%0A%0A%3Cp%3EThen%2C%20I%20am%20purging%20the%20uneeded%20labels%20%3A%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%3Ccode%3Emetrics_df.drop%28%0A%20%20%20%20colums%3D%5B%0A%20%20%20%20%20%20%20%20%22host_name%22%2C%0A%20%20%20%20%20%20%20%20%22ds_name%22%2C%0A%20%20%20%20%20%20%20%20%22dc_name%22%2C%0A%20%20%20%20%20%20%20%20%22cluster_name%22%2C%0A%20%20%20%20%5D%2C%0A%20%20%20%20axis%3D1%2C%0A%20%20%20%20inplace%3DTrue%2C%0A%29%3C/code%3E%0A%3C/pre%3E%0A%0A%3Cp%3EThis%20way%2C%20I%20am%20using%20the%20dataframe%20to%20delete%20the%204%20columns%2C%20%3Ccode%3Einplace%3DTrue%3C/code%3E%20is%20used%20in%20order%20to%20overwrite%20existing%20dataframe%20and%20not%20create%20a%20new%20one.%3C/p%3E%0A%3Cp%3EThen%20i%20have%20to%20merge%20metric%20data%20with%20data%20from%20two%20other%20internal%20datasources%20%28one%20for%20the%20hosts/vm%20referential%2C%20one%20for%20the%20business%20lines%29.%20%3C/p%3E%0A%3Cp%3EThese%20are%20also%20represented%20as%20dataframes.%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%3Ccode%3Ebusinesslines_referential_df%20%3D%20referential_df.merge%28%0A%20%20%20%20businesslines_df%2C%20how%3D%22left%22%2C%20left_on%3D%22ecosystem%22%2C%20right_index%3DTrue%0A%29%3C/code%3E%0A%3C/pre%3E%0A%0A%3Cp%3EThis%20merge%20will%20enrich%20referential%20dataframe%20with%20businesslines%20data%2C%20from%20right%20to%20left%2C%20according%20to%20ecosystem%20name%20and%20use%20the%20index%20from%20the%20right%20dataframe%20as%20the%20join%20key.%3C/p%3E%0A%3Cp%3ENow%20it%20is%20time%20to%20merge%20this%20dataframe%20with%20the%20metrics%20dataframe.%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%3Ccode%3Emetrics_df%20%3D%20metrics_df.merge%28%0A%20%20%20%20businesslines_referential_df%2C%20how%3D%22inner%22%2C%20left_on%3D%22vm_name%22%2C%20right_index%3DTrue%0A%29%3C/code%3E%0A%3C/pre%3E%0A%0A%3Cp%3EThis%20merge%20is%20made%20with%20the%20inner%20method%2C%20so%20this%20way%20we%20only%20keep%20common%20columns%2C%20according%20to%20vm_name.%3C/p%3E%0A%3Cp%3ENow%20i%27m%20replacing%20original%20metric%20name%20with%20the%20mapping%20we%20talked%20about%20earlier%20%3A%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%3Ccode%3Emetrics_df.replace%28%7B%22__name_%22%3A%20MAPPING_METRICS_NAME%7D%2C%20inplace%3DTrue%29%3C/code%3E%0A%3C/pre%3E%0A%0A%3Cp%3ENow%20%22vmware_vm_power_state%22%20is%20mapped%20to%20%22power_state%22.%3C/p%3E%0A%3Cp%3EThe%20result%20is%20similar%20to%20this%20%3A%3C/p%3E%0A%3Ctable%20width%3D%22100%25%22%20border%3D%221px%22%3E%0A%20%20%20%20%3Ctr%3E%0A%20%20%20%20%20%20%20%20%3Cth%3E__name__%3C/th%3E%0A%20%20%20%20%20%20%20%20%3Cth%3Evm_name%3C/th%3E%0A%20%20%20%20%20%20%20%20%3Cth%3Eecosystem%3C/th%3E%0A%20%20%20%20%20%20%20%20%3Cth%3Ebusiness_line%3C/th%3E%0A%20%20%20%20%20%20%20%20%3Cth%3Evalue%3C/th%3E%0A%20%20%20%20%3C/tr%3E%0A%20%20%20%20%3Ctr%3E%0A%20%20%20%20%20%20%20%20%3Ctd%3Epower_state%3C/td%3E%0A%20%20%20%20%20%20%20%20%3Ctd%3Evm1%3C/td%3E%0A%20%20%20%20%20%20%20%20%3Ctd%3ETESTECO%3C/td%3E%0A%20%20%20%20%20%20%20%20%3Ctd%3EBL1%3C/td%3E%0A%20%20%20%20%20%20%20%20%3Ctd%3E1%3C/td%3E%0A%20%20%20%20%3C/tr%3E%0A%3C/table%3E%0A%0A%3Cp%3ENow%20to%20be%20scrapped%20by%20prometheus%20that%20data%20needs%20to%20be%20reserialized.%3C/p%3E%0A%3Ch2%3EStep3%3A%20How%20i%20re-serialized%20data%20%3F%3C/h2%3E%0A%3Cp%3EPrometheus%20Metrics%20strings%20are%20pretty%20simple%20%3A%3C/p%3E%0A%3Cp%3E%3Ccode%3Emetric_name%7Blabel1%3D%22value1%22%2C%20label2%3D%22value2%22%7D%200%3C/code%3E%3C/p%3E%0A%3Cp%3EUsing%20list%20comprehension%20i%20am%20iterating%20over%20the%20dataframe%20to%20print%20a%20string%20containing%20in%20the%20begining%20the%20metric_name%20and%20in%20the%20end%20the%20metric_value.%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%3Ccode%3Ereturn%20%22%5Cn%22.join%28%0A%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20f%22%7Brow%5B%27__name__%27%5D%7D%7Bgenerate_dict_label%28row%29%7D%20%7Brow%5B%27value%27%5D%7D%22%0A%20%20%20%20%20%20%20%20for%20index%2C%20row%20in%20metrics%20df.iterrows%28%29%0A%20%20%20%20%5D%0A%29%3C/code%3E%0A%3C/pre%3E%0A%0A%3Cp%3EThe%20tricky%20thing%20to%20do%20is%20to%20generate%20labels%20stuff%2C%20because%20we%20cannot%20tweak%20output%20of%20a%20dict%20in%20python.%3C/p%3E%0A%3Cp%3EDict%20in%20python%20look%20like%20%3Ccode%3E%7B%22key%22%3A%20%22value%22%7D%3C/code%3E%2C%20we%20have%20to%20generate%20a%20string%20that%20look%20like%20%3Ccode%3E%7Blabel%3D%22value%22%7D%3C/code%3E%3C/p%3E%0A%3Cp%3ESo%20I%20wrote%20a%20little%20function%20that%20generate%20that%20string.%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%3Ccode%3Edef%20generate_dict_label%28row%29%3A%0A%0A%20%20%20%20labels%20%3D%20set%28row.index%29%20-%20%7B%22__name__%22%2C%20%22value%22%7D%0A%0A%20%20%20%20return%20%28%0A%20%20%20%20%20%20%20%20%22%7B%22%0A%20%20%20%20%20%20%20%20%2B%20%22%2C%22.join%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20f%27%7Bkey%7D%3D%22%7Bvalue%7D%22%27%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20for%20key%2C%20value%20in%20row.items%28%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20key%20in%20labels%0A%20%20%20%20%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20%20%20%29%0A%20%20%20%20%20%20%20%20%2B%20%22%7D%22%0A%20%20%20%20%29%3C/code%3E%0A%3C/pre%3E%0A%0A%3Cp%3EFinally%2C%20serialized%20data%20looks%20like%20%3A%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%3Ccode%3E%0Apower_state%7Bvm_name%3D%22vm1%22%2C%20ecosystem%3D%22TESTECO%22%2C%20business_line%3D%22BL1%22%7D%201%0A%3C/code%3E%0A%3C/pre%3E%0A%0A%3Cp%3ENow%2C%20metrics%20are%20scrapped%20by%20prometheus%20calling%20a%20small%20module%20made%20with%20fastapi%2C%20that%20will%20parse%2C%20enrich%2C%20and%20reserialize%20data%2C%20that%20comes%20from%20a%20prometheus%20vmware%20exporter.%3C/p%3E</content>
+        <content type="html">
+          <h2>Context</h2>
+<p>In my current mission, in order to set up a metric-federation, we have to gather vmware metrics.</p>
+<p>So we used the <a href="https://github.com/pryorda/vmware_exporter">vmware_exporter</a> by <a href="https://github.com/pryorda">Daniel Pryor</a>, and to not edit it, i wrote a small front made with fastapi.</p>
+<p>Metrics are get by fastapi, parsed, enriched, reserialized, and scrapped by prometheus.</p>
+<p>Metrics names need to be mapped, as they are unified with metrics from openstack and IBM cloud.</p>
+<p>MapTable is the one below :</p>
+<pre>
+MAPPING_METRICS_NAME = {
+    "vmware_vm_power_state" : "power_state"
+    "vmware_vm_cpu_usage_average"': "cpu_usage_percentage
+    "vmware_vm_mem_consumed_average": "memory_used"
+    "vmware_vm_memory_max": "memory_total"
+    "vmware_vm_mem_usage_average": "memory_usage_percentage",
+    "vmware_vm_num_cpu": "vcpus"
+}</pre>
+
+<h2>Step1 : Parsing vmware_exporter metrics</h2>
+<p>Exporter is hit from within a function named request_exporter().</p>
+<p>The output of the exporter is one big str file that need to be parsed in order to be processed.</p>
+<p>I used prometheus_client.parser for this.</p>
+<pre>
+from prometheus_client.parser import text_string_to_metric_families
+
+data_from_exporter = request_exporter(target)
+metric_families = text_string_to_metric_families(data_from_exporter)
+</pre>
+
+<p>The variable metric_families is a multilevel object containing metrics grouped by metric name.</p>
+<p>It can be represented as a dict, where key is the metric_name and the value is a list containing all metrics as tuples.</p>
+<p>Example : </p>
+<pre>
+{
+    "vmware_vm_power_state": [
+        ("vmware_vm_power_state", {"vm_name": "vm1", "label2": "value2"}, 1),
+        ("vmware_vm_power_state", {"vm_name": "vm2", "label2": "value2"}, 0),
+    ]
+}
+</pre>
+
+<p>So I made a little algorithm to flatten the object as a list of dicts :</p>
+<pre>
+processed_exporter_data = []
+
+for family in data_from exporter:
+    if family.name not in MAPPING_METRICS_NAME:
+        continue
+    for sample in family.samples:
+        row dict = {}
+        row dict["__name__"] = sample[0]
+        for key, value in sample[1].items():
+            row dict[key] = value
+        row_dict["value"] = sample[2]
+        processed exporter_data.append(row_dict)
+</pre>
+
+<p>I will have then a list of dicts, a dataframe can be created out of it.</p>
+<pre>
+[
+    {"__name__": "vmware_vm_power_state", "vm_name": "vm1", "value": 1},
+    {"__name__": "vmware_vm_power_state", "vm_name": "vm2", "value": 0},
+]
+</pre>
+
+<p>Now let's play with dataframe ...</p>
+<h2>Step2: Playing with dataframes</h2>
+<p>First of all, i'm creating the dataframe :</p>
+<pre>
+import pandas
+
+metrics_df = pandas.DataFrame(processed_exporter_data)
+</pre>
+
+<p>Then, I am purging the uneeded labels :</p>
+<pre>
+metrics_df.drop(
+    colums=[
+        "host_name",
+        "ds_name",
+        "dc_name",
+        "cluster_name",
+    ],
+    axis=1,
+    inplace=True,
+)
+</pre>
+
+<p>This way, I am using the dataframe to delete the 4 columns, <code>inplace=True</code> is used in order to overwrite existing dataframe and not create a new one.</p>
+<p>Then i have to merge metric data with data from two other internal datasources (one for the hosts/vm referential, one for the business lines). </p>
+<p>These are also represented as dataframes.</p>
+<pre>
+businesslines_referential_df = referential_df.merge(
+    businesslines_df, how="left", left_on="ecosystem", right_index=True
+)
+</pre>
+
+<p>This merge will enrich referential dataframe with businesslines data, from right to left, according to ecosystem name and use the index from the right dataframe as the join key.</p>
+<p>Now it is time to merge this dataframe with the metrics dataframe.</p>
+<pre>
+metrics_df = metrics_df.merge(
+    businesslines_referential_df, how="inner", left_on="vm_name", right_index=True
+)
+</pre>
+
+<p>This merge is made with the inner method, so this way we only keep common columns, according to vm_name.</p>
+<p>Now i'm replacing original metric name with the mapping we talked about earlier :</p>
+<pre>
+metrics_df.replace({"__name_": MAPPING_METRICS_NAME}, inplace=True)
+</pre>
+
+<p>Now "vmware_vm_power_state" is mapped to "power_state".</p>
+<p>The result is similar to this :</p>
+<table width="100%" border="1px">
+    <tr>
+        <th>__name__</th>
+        <th>vm_name</th>
+        <th>ecosystem</th>
+        <th>business_line</th>
+        <th>value</th>
+    </tr>
+    <tr>
+        <td>power_state</td>
+        <td>vm1</td>
+        <td>TESTECO</td>
+        <td>BL1</td>
+        <td>1</td>
+    </tr>
+</table>
+
+<p>Now to be scrapped by prometheus that data needs to be reserialized.</p>
+<h2>Step3: How i re-serialized data ?</h2>
+<p>Prometheus Metrics strings are pretty simple :</p>
+<pre>
+metric_name{label1="value1", label2="value2"} 0
+</pre>
+
+<p>Using list comprehension i am iterating over the dataframe to print a string containing in the begining the metric_name and in the end the metric_value.</p>
+<pre>
+return "\n".join(
+    [
+        f"{row['__name__']}{generate_dict_label(row)} {row['value']}"
+        for index, row in metrics df.iterrows()
+    ]
+)
+</pre>
+
+<p>The tricky thing to do is to generate labels stuff, because we cannot tweak output of a dict in python.</p>
+<p>Dict in python look like <code>{"key": "value"}</code>, we have to generate a string that look like <code>{label="value"}</code></p>
+<p>So I wrote a little function that generate that string.</p>
+<pre>
+def generate_dict_label(row):
+
+    labels = set(row.index) - {"__name__", "value"}
+
+    return (
+        "{"
+        + ",".join(
+            [
+                f'{key}="{value}"'
+                for key, value in row.items()
+                if key in labels
+            ]
+        )
+        + "}"
+    )
+</pre>
+
+<p>Finally, serialized data looks like :</p>
+<pre>
+power_state{vm_name="vm1", ecosystem="TESTECO", business_line="BL1"} 1
+</pre>
+
+<p>Now, metrics are scrapped by prometheus calling a small module made with fastapi, that will parse, enrich, and reserialize data, that comes from a prometheus vmware exporter.</p>
+        </content>
     </entry>
   
     <entry xml:lang="en">
         <title type="html">Sudo with macos and TouchID</title>
         <author>
             <name></name>
-            <uri>http://localhost:8000</uri>
+            <uri>https://www.bruno-giarrizzo.fr</uri>
         </author>
-        <id>http://localhost:8000/blog/sudo-with-macos-and-touchid/</id>
-        <published>2022-08-03</published>
-        <updated>2022-08-03</updated>
-        <link rel="alternate" type="text/html">http://localhost:8000/blog/sudo-with-macos-and-touchid/</link>
+        <id>https://www.bruno-giarrizzo.fr/blog/sudo-with-macos-and-touchid/</id>
+        <published>2022-08-03 09:30:00+00:00</published>
+        <updated></updated>
+        <link rel="alternate" type="text/html">https://www.bruno-giarrizzo.fr/blog/sudo-with-macos-and-touchid/</link>
         
-          <summary>I am a lazy guy, and type my password kind of annoy me :-D</summary>
+          <summary>
+            I am a lazy guy, and type my password kind of annoy me :-D
+          </summary>
         
-        <content type="html">%3Cp%3ELast%20October%2C%20i%20got%20for%20myself%20one%20M1%20Macbook%20pro.%3C/p%3E%0A%3Cp%3EIt%20is%20a%20hell%20of%20a%20machine%2C%20powerful%2C%20silent%20and%20it%20comes%20with%20touchID.%20%3C/p%3E%0A%3Cp%3EI%20didn%27t%20change%20my%20laptop%20since%20my%20mid-2012%20macbook%20pro%2C%20and%20this%20was%20a%20revolution%20%21%3C/p%3E%0A%3Cp%3EI%20saw%20one%20day%2C%20one%20of%20my%20coworker%20edit%20files%20with%20%3Ccode%3Esudo%20vi%3C/code%3E%2C%20no%20password%20typed%2C%20just%20put%20his%20finger%20on%20touchID%20pad%2C%20I%20always%20wanted%20to%20do%20the%20same%2C%20so%20i%20configured%20it.%3C/p%3E%0A%3Cp%3EBy%20default%2C%20it%20is%20not%20configured%20on%20macos%2C%20you%20have%20to%20edit%20one%20file%20%3A%20%3Ccode%3E/etc/pam.d/sudo%3C/code%3E%3C/p%3E%0A%3Cp%3EIn%20this%20file%2C%20you%27ll%20find%20this%20content%20%3A%20%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%20%20%20%20%3Ccode%3E%0A%20%20%20%20%20%20%20%20%23%20sudo%3A%20auth%20account%20password%20session%0A%20%20%20%20%20%20%20%20auth%20%20%20%20%20%20%20sufficient%20%20%20%20%20pam_smartcard.so%0A%20%20%20%20%20%20%20%20auth%20%20%20%20%20%20%20required%20%20%20%20%20%20%20pam_opendirectory.so%0A%20%20%20%20%20%20%20%20account%20%20%20%20required%20%20%20%20%20%20%20pam_permit.so%0A%20%20%20%20%20%20%20%20password%20%20%20required%20%20%20%20%20%20%20pam_deny.so%0A%20%20%20%20%20%20%20%20session%20%20%20%20required%20%20%20%20%20%20%20pam_permit.so%0A%20%20%20%20%3C/code%3E%0A%3C/pre%3E%0A%0A%3Cp%3EI%20just%20add%20the%20line%20%3A%20%3Ccode%3Eauth%20sufficient%20pam_tid.so%3C/code%3E%20so%20the%20file%20looks%20like%20this%20then%20%3A%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%20%20%20%20%3Ccode%3E%0A%20%20%20%20%20%20%20%20%23%20sudo%3A%20auth%20account%20password%20session%0A%20%20%20%20%20%20%20%20auth%20%20%20%20%20%20%20sufficient%20%20%20%20%20pam_tid.so%0A%20%20%20%20%20%20%20%20auth%20%20%20%20%20%20%20sufficient%20%20%20%20%20pam_smartcard.so%0A%20%20%20%20%20%20%20%20auth%20%20%20%20%20%20%20required%20%20%20%20%20%20%20pam_opendirectory.so%0A%20%20%20%20%20%20%20%20account%20%20%20%20required%20%20%20%20%20%20%20pam_permit.so%0A%20%20%20%20%20%20%20%20password%20%20%20required%20%20%20%20%20%20%20pam_deny.so%0A%20%20%20%20%20%20%20%20session%20%20%20%20required%20%20%20%20%20%20%20pam_permit.so%0A%20%20%20%20%3C/code%3E%0A%3C/pre%3E%0A%0A%3Ch1%3EBonus%3C/h1%3E%0A%3Cp%3EOn%20the%20day%20you%20update%20your%20mac%2C%20the%20%3Ccode%3E/etc/pam.d/sudo%3C/code%3E%20may%20be%20overwritten%20by%20the%20update%20process.%20And%20your%20changes%20will%20be%20lost.%3C/p%3E%0A%3Cp%3E%28I%20know%20it%20is%20one%20line%20to%20add%20to%20file%2C%20but%20if%20you%20are%20lazy%20like%20me%2C%20you%20will%20understand%20%3AD%29%3C/p%3E%0A%3Cp%3EOne%20github%20user%2C%20named%20%3Ca%20href%3D%22https%3A//github.com/tjluoma%22%3Etjluoma%3C/a%3E%20made%20a%20little%20script%2C%20named%20%3Ca%20href%3D%22https%3A//github.com/tjluoma/sudo-via-touch-id%22%3Etjluoma/sudo-via-touch-id%3C/a%3E%2C%20that%20will%20check%20if%20the%20line%20is%20present%20in%20your%20%3Ccode%3E/etc/pam.d/sudo%3C/code%3E%2C%20and%20will%20add%20it%20if%20not%20%21%3C/p%3E%0A%3Cp%3EJust%20like%20he%20indicates%20it%20on%20his%20README%20%3A%20%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%23%23%20How%20to%20use%20this%0A%0A1.%20Download%20sudo-via-touch-id.sh%0A2.%20Make%20it%20executable%3A%20%60chmod%20755%20sudo-via-touch-id.sh%60%0A3.%20Run%20it%3A%20%60./sudo-via-touch-id.sh%60%0A4.%20%28Optional%20But%20Useful%29%20move%20it%20to%20a%20directory%20such%20as%20%60/usr/local/bin/%60%20%0Aso%20you%20can%20run%20it%20again%20next%20time%20there%27s%20an%20update%20to%20macOS.%0A%3C/pre%3E%0A%0A%3Cp%3EAfter%20i%20installed%20this%20script%20in%20my%20%3Ccode%3E/usr/local/bin/%3C/code%3E%2C%20i%20edited%20my%20crontab%20to%20run%20the%20script%20each%20time%20my%20laptop%20is%20rebooted.%3C/p%3E%0A%3Cp%3ELike%20this%20%3A%20%3C/p%3E%0A%3Cpre%20class%3D%22blockquotecode%20my-4%20py-3%22%3E%0A%20%20%20%20%3Ccode%3E%0A%20%20%20%20%20%20%20%20%40reboot%20%20%20%20bash%20/usr/local/bin/sudo-via-touch-id.sh%0A%20%20%20%20%3C/code%3E%0A%3C/pre%3E%0A%0A%3Cp%3EWith%20this%2C%20on%20each%20reboot%20the%20script%20will%20run%2C%20and%20add%20the%20missing%20line%20to%20the%20%3Ccode%3E/etc/pam.d/sudo%3C/code%3E%20if%20update%20deleted%20it%20%21%3C/p%3E</content>
+        <content type="html">
+          <p>Last October, i got for myself one M1 Macbook pro.</p>
+<p>It is a hell of a machine, powerful, silent and it comes with touchID. </p>
+<p>I didn't change my laptop since my mid-2012 macbook pro, and this was a revolution !</p>
+<p>I saw one day, one of my coworker edit files with <code>sudo vi</code>, no password typed, just put his finger on touchID pad, I always wanted to do the same, so i configured it.</p>
+<p>By default, it is not configured on macos, you have to edit one file : <code>/etc/pam.d/sudo</code></p>
+<p>In this file, you'll find this content : </p>
+<pre>
+    # sudo: auth account password session
+    auth       sufficient     pam_smartcard.so
+    auth       required       pam_opendirectory.so
+    account    required       pam_permit.so
+    password   required       pam_deny.so
+    session    required       pam_permit.so
+</pre>
+
+<p>I just add the line : <code>auth sufficient pam_tid.so</code> so the file looks like this then :</p>
+<pre>
+    # sudo: auth account password session
+    auth       sufficient     pam_tid.so
+    auth       sufficient     pam_smartcard.so
+    auth       required       pam_opendirectory.so
+    account    required       pam_permit.so
+    password   required       pam_deny.so
+    session    required       pam_permit.so
+</pre>
+
+<h1>Bonus</h1>
+<p>On the day you update your mac, the <code>/etc/pam.d/sudo</code> may be overwritten by the update process. And your changes will be lost.</p>
+<p>(I know it is one line to add to file, but if you are lazy like me, you will understand :D)</p>
+<p>One github user, named <a href="https://github.com/tjluoma">tjluoma</a> made a little script, named <a href="https://github.com/tjluoma/sudo-via-touch-id">tjluoma/sudo-via-touch-id</a>, that will check if the line is present in your <code>/etc/pam.d/sudo</code>, and will add it if not !</p>
+<p>Just like he indicates it on his README : </p>
+<pre>
+## How to use this
+
+1. Download sudo-via-touch-id.sh
+2. Make it executable: `chmod 755 sudo-via-touch-id.sh`
+3. Run it: `./sudo-via-touch-id.sh`
+4. (Optional But Useful) move it to a directory such as `/usr/local/bin/` 
+so you can run it again next time there's an update to macOS.
+</pre>
+
+<p>After i installed this script in my <code>/usr/local/bin/</code>, i edited my crontab to run the script each time my laptop is rebooted.</p>
+<p>Like this : </p>
+<pre>
+    @reboot    bash /usr/local/bin/sudo-via-touch-id.sh
+</pre>
+
+<p>With this, on each reboot the script will run, and add the missing line to the <code>/etc/pam.d/sudo</code> if update deleted it !</p>
+        </content>
     </entry>
   
 </feed>

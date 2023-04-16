@@ -1,7 +1,5 @@
 ---
+title: bruno-giarrizzo.fr
 permalink: ""
+summary: My little website
 ---
-
-## HomePage
-
-Hello World, this is my homepage.

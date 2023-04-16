@@ -17,8 +17,8 @@ if __name__ == "__main__":
     print("#", "-" * 80)
     print("Building site ...")
 
-    generate_blog()
-    generate_pages()
+    posts = generate_blog()
+    generate_pages(posts)
 
     print("#", "-" * 80)
     generate_resume()

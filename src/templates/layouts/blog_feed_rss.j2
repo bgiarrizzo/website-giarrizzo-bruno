@@ -4,7 +4,7 @@
   <title>{{ site.url }}</title>
   <subtitle>{{ site.url }}</subtitle>
 
-  <updated>{{ last_post.date }}</updated>
+  <updated>{{ last_post.short_date }}</updated>
 
   <link rel="alternate" type="text/html" href="{{ site.url }}/blog/" />
   <id>{{ site.url }}/blog/</id>
@@ -18,13 +18,17 @@
             <uri>{{ site.url }}</uri>
         </author>
         <id>{{ site.url }}/blog/{{ post.slug }}/</id>
-        <published>{{ post.date }}</published>
-        <updated>{{ post.date }}</updated>
+        <published>{{ post.publish_date }}</published>
+        <updated>{{ post.upddate_date }}</updated>
         <link rel="alternate" type="text/html">{{ site.url }}/blog/{{ post.slug }}/</link>
         {% if post.summary %}
-          <summary>{{ post.summary }}</summary>
+          <summary>
+            {{ post.summary }}
+          </summary>
         {% endif %}
-        <content type="html">{{ post.body | urlencode }}</content>
+        <content type="html">
+          {{ post.body }}
+        </content>
     </entry>
   {% endfor %}
 </feed>

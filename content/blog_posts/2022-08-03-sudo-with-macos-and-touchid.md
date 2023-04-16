@@ -3,7 +3,8 @@ title: "Sudo with macos and TouchID"
 summary: I am a lazy guy, and type my password kind of annoy me :-D
 cover: 2022-08-03.jpg
 cover_alt: "Sudo with macos and TouchID article cover"
-date: 2022-08-03
+publish_date: 2022-08-03T09:30:00Z
+update_date: 2022-08-03T09:30:00Z
 tags: [macos, sudo, terminal, touch, id, touchid]
 ---
 
@@ -19,29 +20,25 @@ By default, it is not configured on macos, you have to edit one file : <code>/et
 
 In this file, you'll find this content : 
 
-<pre class="blockquotecode my-4 py-3">
-    <code>
-        # sudo: auth account password session
-        auth       sufficient     pam_smartcard.so
-        auth       required       pam_opendirectory.so
-        account    required       pam_permit.so
-        password   required       pam_deny.so
-        session    required       pam_permit.so
-    </code>
+<pre>
+    # sudo: auth account password session
+    auth       sufficient     pam_smartcard.so
+    auth       required       pam_opendirectory.so
+    account    required       pam_permit.so
+    password   required       pam_deny.so
+    session    required       pam_permit.so
 </pre>
 
 I just add the line : <code>auth sufficient pam_tid.so</code> so the file looks like this then :
 
-<pre class="blockquotecode my-4 py-3">
-    <code>
-        # sudo: auth account password session
-        auth       sufficient     pam_tid.so
-        auth       sufficient     pam_smartcard.so
-        auth       required       pam_opendirectory.so
-        account    required       pam_permit.so
-        password   required       pam_deny.so
-        session    required       pam_permit.so
-    </code>
+<pre>
+    # sudo: auth account password session
+    auth       sufficient     pam_tid.so
+    auth       sufficient     pam_smartcard.so
+    auth       required       pam_opendirectory.so
+    account    required       pam_permit.so
+    password   required       pam_deny.so
+    session    required       pam_permit.so
 </pre>
 
 # Bonus 
@@ -54,7 +51,7 @@ One github user, named [tjluoma](https://github.com/tjluoma) made a little scrip
 
 Just like he indicates it on his README : 
 
-<pre class="blockquotecode my-4 py-3">
+<pre>
 ## How to use this
 
 1. Download sudo-via-touch-id.sh
@@ -68,10 +65,8 @@ After i installed this script in my <code>/usr/local/bin/</code>, i edited my cr
 
 Like this : 
 
-<pre class="blockquotecode my-4 py-3">
-    <code>
-        @reboot    bash /usr/local/bin/sudo-via-touch-id.sh
-    </code>
+<pre>
+    @reboot    bash /usr/local/bin/sudo-via-touch-id.sh
 </pre>
 
 With this, on each reboot the script will run, and add the missing line to the <code>/etc/pam.d/sudo</code> if update deleted it !
