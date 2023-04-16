@@ -12,6 +12,11 @@ def extract_year_from_item(item):
     return item.get("date").year
 
 
+def add_cname_to_build(path_to_build, cname):
+    with open(path.join(path_to_build, "CNAME"), "w") as f:
+        f.write(cname)
+
+
 def get_all_files_from_path(target_path) -> list:
     files_list = []
     for root, dirs, files in walk(target_path):

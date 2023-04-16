@@ -4,6 +4,7 @@ from config import settings
 from generators.blog import generate_blog
 from generators.pages import generate_pages
 from generators.resume import generate_resume
+from generators.common import add_cname_to_build
 from utils.collection import collect_media_files, collect_static_files
 
 if __name__ == "__main__":
@@ -22,3 +23,5 @@ if __name__ == "__main__":
 
     print("#", "-" * 80)
     generate_resume()
+
+    add_cname_to_build(settings.BUILD_PATH, settings.CNAME)

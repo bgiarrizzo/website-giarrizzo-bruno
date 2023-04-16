@@ -5,6 +5,7 @@ from pydantic import BaseSettings
 
 class Settings(BaseSettings):
     BASE_URL: str = "https://www.bruno-giarrizzo.fr"
+    CNAME: str = "www.bruno-giarrizzo.fr"
 
     BUILD_PATH: str = "docs"
     MEDIA_PATH: str = "media"
