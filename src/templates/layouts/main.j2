@@ -15,11 +15,9 @@
         {% include "includes/navigation.j2" %}
 
         <main>
-            {% if posts %}
-                {% if page %}
-                    {% if page.title == "bruno-giarrizzo.fr" %}
-                        {% include "includes/head.j2" %}
-                    {% endif %}
+            {% if page %}
+                {% if page.title == "bruno-giarrizzo.fr" %}
+                    {% include "includes/head.j2" %}
                 {% endif %}
             {% endif %}
             {{ content }}
