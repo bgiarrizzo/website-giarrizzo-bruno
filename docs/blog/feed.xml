@@ -1,62 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  
-  <title>https://www.bruno-giarrizzo.fr</title>
-  <subtitle>https://www.bruno-giarrizzo.fr</subtitle>
-
-  <updated>03-Aug-2022</updated>
-
-  <link rel="alternate" type="text/html" href="https://www.bruno-giarrizzo.fr/blog/" />
-  <id>https://www.bruno-giarrizzo.fr/blog/</id>
-  <link rel="self" type="application/atom+xml" href="https://www.bruno-giarrizzo.fr/blog/feed.xml" />
-
-  
-    <entry xml:lang="en">
-        <title type="html">Hello World!</title>
-        <author>
-            <name></name>
-            <uri>https://www.bruno-giarrizzo.fr</uri>
-        </author>
-        <id>https://www.bruno-giarrizzo.fr/blog/hello-world/</id>
-        <published>2021-09-26</published>
-        <updated></updated>
-        <link rel="alternate" type="text/html">https://www.bruno-giarrizzo.fr/blog/hello-world/</link>
-        
-          <summary>
-            Hello World!
-          </summary>
-        
-        <content type="html">
-          <p>Hello World</p>
-        </content>
-    </entry>
-  
-    <entry xml:lang="en">
-        <title type="html">How to install psycopg2-binary on Apple M1</title>
-        <author>
-            <name></name>
-            <uri>https://www.bruno-giarrizzo.fr</uri>
-        </author>
-        <id>https://www.bruno-giarrizzo.fr/blog/how-to-install-psycopg2-binary-on-apple-m1/</id>
-        <published>2021-10-17 09:30:00+00:00</published>
-        <updated></updated>
-        <link rel="alternate" type="text/html">https://www.bruno-giarrizzo.fr/blog/how-to-install-psycopg2-binary-on-apple-m1/</link>
-        
-          <summary>
-            I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it.
-          </summary>
-        
-        <content type="html">
-          <p>Last month I bought to myself an Apple M1, really good computer, with great power, and awesome battery.</p>
-<p>My work with it is pretty simple, I code python API, some simple front App with TypeScript/react, trying some Go, learning swift and administrating some kubernetes clusters. Nothing too fancy.</p>
-<p>I am trying to work with latest versions of software I use, and in this case, python 3.10.</p>
-<p>I installed it with brew, pretty easily : </p>
-<pre>
-brew install python@3.10
-</pre>
-
-<p>I had troubles with psycopg2-binary, installing depedencies of one of the projects I work with, the error message i was getting was this one : </p>
-<pre>
+ <title>
+  bruno-giarrizzo.fr
+ </title>
+ <subtitle>
+  Freelance Developer, DevOps, Ethical Hacker
+ </subtitle>
+ <updated>
+  03-Aug-2022
+ </updated>
+ <link href="https://www.bruno-giarrizzo.fr/blog/" rel="alternate" type="text/html"/>
+ <id>
+  https://www.bruno-giarrizzo.fr/blog/
+ </id>
+ <link href="https://www.bruno-giarrizzo.fr/blog/feed.xml" rel="self" type="application/atom+xml"/>
+ <entry xml:lang="en">
+  <title type="html">
+   Hello World!
+  </title>
+  <author>
+   <name/>
+   <uri>
+    https://www.bruno-giarrizzo.fr
+   </uri>
+  </author>
+  <id>
+   https://www.bruno-giarrizzo.fr/blog/hello-world/
+  </id>
+  <published>
+   2021-09-26
+  </published>
+  <updated/>
+  <link rel="alternate" type="text/html">
+   https://www.bruno-giarrizzo.fr/blog/hello-world/
+  </link>
+  <summary>
+   Hello World!
+  </summary>
+  <content type="html">
+   <p>
+    Hello World
+   </p>
+  </content>
+ </entry>
+ <entry xml:lang="en">
+  <title type="html">
+   How to install psycopg2-binary on Apple M1
+  </title>
+  <author>
+   <name/>
+   <uri>
+    https://www.bruno-giarrizzo.fr
+   </uri>
+  </author>
+  <id>
+   https://www.bruno-giarrizzo.fr/blog/how-to-install-psycopg2-binary-on-apple-m1/
+  </id>
+  <published>
+   2021-10-17 09:30:00+00:00
+  </published>
+  <updated/>
+  <link rel="alternate" type="text/html">
+   https://www.bruno-giarrizzo.fr/blog/how-to-install-psycopg2-binary-on-apple-m1/
+  </link>
+  <summary>
+   I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it.
+  </summary>
+  <content type="html">
+   <p>
+    Last month I bought to myself an Apple M1, really good computer, with great power, and awesome battery.
+   </p>
+   <p>
+    My work with it is pretty simple, I code python API, some simple front App with TypeScript/react, trying some Go, learning swift and administrating some kubernetes clusters. Nothing too fancy.
+   </p>
+   <p>
+    I am trying to work with latest versions of software I use, and in this case, python 3.10.
+   </p>
+   <p>
+    I installed it with brew, pretty easily :
+   </p>
+   <pre>
+    brew install python@3.10
+   </pre>
+   <p>
+    I had troubles with psycopg2-binary, installing depedencies of one of the projects I work with, the error message i was getting was this one :
+   </p>
+   <pre>
     Error: pg_config executable not found.
 
 pg_config is required to build psycopg2 from source.  Please add the directory
@@ -66,88 +95,133 @@ option:
     python setup.py build_ext --pg-config /path/to/pg_config build ...
 
 or with the pg_config option in 'setup.cfg'.
-</pre>
-
-<p>It seems there is some conf file that is missing. I tried to solve it by installing postgres server to get that missing file :</p>
-<pre>
-brew install postgresql@12
-</pre>
-
-<p>At this point, brew tell me to setup the path to PG in my PATH, this way (using ZSH, it tells me to write it obviously to .zshrc):</p>
-<pre>
-echo 'export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"' > ~/.zshrc
-</pre>
-
-<p>Now i'm all set, and i can install it the way i want :</p>
-<pre>
-pip(3) install psycopg2-binary
-</pre>
-
-<p>Or in my project repository :</p>
-<pre>
-pipenv install psycopg2-binary
-</pre>
-        </content>
-    </entry>
-  
-    <entry xml:lang="en">
-        <title type="html">How I enriched prometheus metrics</title>
-        <author>
-            <name></name>
-            <uri>https://www.bruno-giarrizzo.fr</uri>
-        </author>
-        <id>https://www.bruno-giarrizzo.fr/blog/how-i-enriched-prometheus-metrics/</id>
-        <published>2022-05-05 09:30:00+00:00</published>
-        <updated></updated>
-        <link rel="alternate" type="text/html">https://www.bruno-giarrizzo.fr/blog/how-i-enriched-prometheus-metrics/</link>
-        
-          <summary>
-            VMWare exporter metrics didn't have all the informations we wanted. This is how I enriched them.
-          </summary>
-        
-        <content type="html">
-          <h2>Context</h2>
-<p>In my current mission, in order to set up a metric-federation, we have to gather vmware metrics.</p>
-<p>So we used the <a href="https://github.com/pryorda/vmware_exporter">vmware_exporter</a> by <a href="https://github.com/pryorda">Daniel Pryor</a>, and to not edit it, i wrote a small front made with fastapi.</p>
-<p>Metrics are get by fastapi, parsed, enriched, reserialized, and scrapped by prometheus.</p>
-<p>Metrics names need to be mapped, as they are unified with metrics from openstack and IBM cloud.</p>
-<p>MapTable is the one below :</p>
-<pre>
-MAPPING_METRICS_NAME = {
+   </pre>
+   <p>
+    It seems there is some conf file that is missing. I tried to solve it by installing postgres server to get that missing file :
+   </p>
+   <pre>
+    brew install postgresql@12
+   </pre>
+   <p>
+    At this point, brew tell me to setup the path to PG in my PATH, this way (using ZSH, it tells me to write it obviously to .zshrc):
+   </p>
+   <pre>
+    echo 'export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"' &gt; ~/.zshrc
+   </pre>
+   <p>
+    Now i'm all set, and i can install it the way i want :
+   </p>
+   <pre>
+    pip(3) install psycopg2-binary
+   </pre>
+   <p>
+    Or in my project repository :
+   </p>
+   <pre>
+    pipenv install psycopg2-binary
+   </pre>
+  </content>
+ </entry>
+ <entry xml:lang="en">
+  <title type="html">
+   How I enriched prometheus metrics
+  </title>
+  <author>
+   <name/>
+   <uri>
+    https://www.bruno-giarrizzo.fr
+   </uri>
+  </author>
+  <id>
+   https://www.bruno-giarrizzo.fr/blog/how-i-enriched-prometheus-metrics/
+  </id>
+  <published>
+   2022-05-05 09:30:00+00:00
+  </published>
+  <updated/>
+  <link rel="alternate" type="text/html">
+   https://www.bruno-giarrizzo.fr/blog/how-i-enriched-prometheus-metrics/
+  </link>
+  <summary>
+   VMWare exporter metrics didn't have all the informations we wanted. This is how I enriched them.
+  </summary>
+  <content type="html">
+   <h2>
+    Context
+   </h2>
+   <p>
+    In my current mission, in order to set up a metric-federation, we have to gather vmware metrics.
+   </p>
+   <p>
+    So we used the
+    <a href="https://github.com/pryorda/vmware_exporter">
+     vmware_exporter
+    </a>
+    by
+    <a href="https://github.com/pryorda">
+     Daniel Pryor
+    </a>
+    , and to not edit it, i wrote a small front made with fastapi.
+   </p>
+   <p>
+    Metrics are get by fastapi, parsed, enriched, reserialized, and scrapped by prometheus.
+   </p>
+   <p>
+    Metrics names need to be mapped, as they are unified with metrics from openstack and IBM cloud.
+   </p>
+   <p>
+    MapTable is the one below :
+   </p>
+   <pre>
+    MAPPING_METRICS_NAME = {
     "vmware_vm_power_state" : "power_state"
     "vmware_vm_cpu_usage_average"': "cpu_usage_percentage
     "vmware_vm_mem_consumed_average": "memory_used"
     "vmware_vm_memory_max": "memory_total"
     "vmware_vm_mem_usage_average": "memory_usage_percentage",
     "vmware_vm_num_cpu": "vcpus"
-}</pre>
-
-<h2>Step1 : Parsing vmware_exporter metrics</h2>
-<p>Exporter is hit from within a function named request_exporter().</p>
-<p>The output of the exporter is one big str file that need to be parsed in order to be processed.</p>
-<p>I used prometheus_client.parser for this.</p>
-<pre>
-from prometheus_client.parser import text_string_to_metric_families
+}
+   </pre>
+   <h2>
+    Step1 : Parsing vmware_exporter metrics
+   </h2>
+   <p>
+    Exporter is hit from within a function named request_exporter().
+   </p>
+   <p>
+    The output of the exporter is one big str file that need to be parsed in order to be processed.
+   </p>
+   <p>
+    I used prometheus_client.parser for this.
+   </p>
+   <pre>
+    from prometheus_client.parser import text_string_to_metric_families
 
 data_from_exporter = request_exporter(target)
 metric_families = text_string_to_metric_families(data_from_exporter)
-</pre>
-
-<p>The variable metric_families is a multilevel object containing metrics grouped by metric name.</p>
-<p>It can be represented as a dict, where key is the metric_name and the value is a list containing all metrics as tuples.</p>
-<p>Example : </p>
-<pre>
-{
+   </pre>
+   <p>
+    The variable metric_families is a multilevel object containing metrics grouped by metric name.
+   </p>
+   <p>
+    It can be represented as a dict, where key is the metric_name and the value is a list containing all metrics as tuples.
+   </p>
+   <p>
+    Example :
+   </p>
+   <pre>
+    {
     "vmware_vm_power_state": [
         ("vmware_vm_power_state", {"vm_name": "vm1", "label2": "value2"}, 1),
         ("vmware_vm_power_state", {"vm_name": "vm2", "label2": "value2"}, 0),
     ]
 }
-</pre>
-
-<p>So I made a little algorithm to flatten the object as a list of dicts :</p>
-<pre>
-processed_exporter_data = []
+   </pre>
+   <p>
+    So I made a little algorithm to flatten the object as a list of dicts :
+   </p>
+   <pre>
+    processed_exporter_data = []
 
 for family in data_from exporter:
     if family.name not in MAPPING_METRICS_NAME:
@@ -159,28 +233,35 @@ for family in data_from exporter:
             row dict[key] = value
         row_dict["value"] = sample[2]
         processed exporter_data.append(row_dict)
-</pre>
-
-<p>I will have then a list of dicts, a dataframe can be created out of it.</p>
-<pre>
-[
+   </pre>
+   <p>
+    I will have then a list of dicts, a dataframe can be created out of it.
+   </p>
+   <pre>
+    [
     {"__name__": "vmware_vm_power_state", "vm_name": "vm1", "value": 1},
     {"__name__": "vmware_vm_power_state", "vm_name": "vm2", "value": 0},
 ]
-</pre>
-
-<p>Now let's play with dataframe ...</p>
-<h2>Step2: Playing with dataframes</h2>
-<p>First of all, i'm creating the dataframe :</p>
-<pre>
-import pandas
+   </pre>
+   <p>
+    Now let's play with dataframe ...
+   </p>
+   <h2>
+    Step2: Playing with dataframes
+   </h2>
+   <p>
+    First of all, i'm creating the dataframe :
+   </p>
+   <pre>
+    import pandas
 
 metrics_df = pandas.DataFrame(processed_exporter_data)
-</pre>
-
-<p>Then, I am purging the uneeded labels :</p>
-<pre>
-metrics_df.drop(
+   </pre>
+   <p>
+    Then, I am purging the uneeded labels :
+   </p>
+   <pre>
+    metrics_df.drop(
     colums=[
         "host_name",
         "ds_name",
@@ -190,72 +271,128 @@ metrics_df.drop(
     axis=1,
     inplace=True,
 )
-</pre>
-
-<p>This way, I am using the dataframe to delete the 4 columns, <code>inplace=True</code> is used in order to overwrite existing dataframe and not create a new one.</p>
-<p>Then i have to merge metric data with data from two other internal datasources (one for the hosts/vm referential, one for the business lines). </p>
-<p>These are also represented as dataframes.</p>
-<pre>
-businesslines_referential_df = referential_df.merge(
+   </pre>
+   <p>
+    This way, I am using the dataframe to delete the 4 columns,
+    <code>
+     inplace=True
+    </code>
+    is used in order to overwrite existing dataframe and not create a new one.
+   </p>
+   <p>
+    Then i have to merge metric data with data from two other internal datasources (one for the hosts/vm referential, one for the business lines).
+   </p>
+   <p>
+    These are also represented as dataframes.
+   </p>
+   <pre>
+    businesslines_referential_df = referential_df.merge(
     businesslines_df, how="left", left_on="ecosystem", right_index=True
 )
-</pre>
-
-<p>This merge will enrich referential dataframe with businesslines data, from right to left, according to ecosystem name and use the index from the right dataframe as the join key.</p>
-<p>Now it is time to merge this dataframe with the metrics dataframe.</p>
-<pre>
-metrics_df = metrics_df.merge(
+   </pre>
+   <p>
+    This merge will enrich referential dataframe with businesslines data, from right to left, according to ecosystem name and use the index from the right dataframe as the join key.
+   </p>
+   <p>
+    Now it is time to merge this dataframe with the metrics dataframe.
+   </p>
+   <pre>
+    metrics_df = metrics_df.merge(
     businesslines_referential_df, how="inner", left_on="vm_name", right_index=True
 )
-</pre>
-
-<p>This merge is made with the inner method, so this way we only keep common columns, according to vm_name.</p>
-<p>Now i'm replacing original metric name with the mapping we talked about earlier :</p>
-<pre>
-metrics_df.replace({"__name_": MAPPING_METRICS_NAME}, inplace=True)
-</pre>
-
-<p>Now "vmware_vm_power_state" is mapped to "power_state".</p>
-<p>The result is similar to this :</p>
-<table width="100%" border="1px">
+   </pre>
+   <p>
+    This merge is made with the inner method, so this way we only keep common columns, according to vm_name.
+   </p>
+   <p>
+    Now i'm replacing original metric name with the mapping we talked about earlier :
+   </p>
+   <pre>
+    metrics_df.replace({"__name_": MAPPING_METRICS_NAME}, inplace=True)
+   </pre>
+   <p>
+    Now "vmware_vm_power_state" is mapped to "power_state".
+   </p>
+   <p>
+    The result is similar to this :
+   </p>
+   <table border="1px" width="100%">
     <tr>
-        <th>__name__</th>
-        <th>vm_name</th>
-        <th>ecosystem</th>
-        <th>business_line</th>
-        <th>value</th>
+     <th>
+      __name__
+     </th>
+     <th>
+      vm_name
+     </th>
+     <th>
+      ecosystem
+     </th>
+     <th>
+      business_line
+     </th>
+     <th>
+      value
+     </th>
     </tr>
     <tr>
-        <td>power_state</td>
-        <td>vm1</td>
-        <td>TESTECO</td>
-        <td>BL1</td>
-        <td>1</td>
+     <td>
+      power_state
+     </td>
+     <td>
+      vm1
+     </td>
+     <td>
+      TESTECO
+     </td>
+     <td>
+      BL1
+     </td>
+     <td>
+      1
+     </td>
     </tr>
-</table>
-
-<p>Now to be scrapped by prometheus that data needs to be reserialized.</p>
-<h2>Step3: How i re-serialized data ?</h2>
-<p>Prometheus Metrics strings are pretty simple :</p>
-<pre>
-metric_name{label1="value1", label2="value2"} 0
-</pre>
-
-<p>Using list comprehension i am iterating over the dataframe to print a string containing in the begining the metric_name and in the end the metric_value.</p>
-<pre>
-return "\n".join(
+   </table>
+   <p>
+    Now to be scrapped by prometheus that data needs to be reserialized.
+   </p>
+   <h2>
+    Step3: How i re-serialized data ?
+   </h2>
+   <p>
+    Prometheus Metrics strings are pretty simple :
+   </p>
+   <pre>
+    metric_name{label1="value1", label2="value2"} 0
+   </pre>
+   <p>
+    Using list comprehension i am iterating over the dataframe to print a string containing in the begining the metric_name and in the end the metric_value.
+   </p>
+   <pre>
+    return "\n".join(
     [
         f"{row['__name__']}{generate_dict_label(row)} {row['value']}"
         for index, row in metrics df.iterrows()
     ]
 )
-</pre>
-
-<p>The tricky thing to do is to generate labels stuff, because we cannot tweak output of a dict in python.</p>
-<p>Dict in python look like <code>{"key": "value"}</code>, we have to generate a string that look like <code>{label="value"}</code></p>
-<p>So I wrote a little function that generate that string.</p>
-<pre>
-def generate_dict_label(row):
+   </pre>
+   <p>
+    The tricky thing to do is to generate labels stuff, because we cannot tweak output of a dict in python.
+   </p>
+   <p>
+    Dict in python look like
+    <code>
+     {"key": "value"}
+    </code>
+    , we have to generate a string that look like
+    <code>
+     {label="value"}
+    </code>
+   </p>
+   <p>
+    So I wrote a little function that generate that string.
+   </p>
+   <pre>
+    def generate_dict_label(row):
 
     labels = set(row.index) - {"__name__", "value"}
 
@@ -270,50 +407,83 @@ def generate_dict_label(row):
         )
         + "}"
     )
-</pre>
-
-<p>Finally, serialized data looks like :</p>
-<pre>
-power_state{vm_name="vm1", ecosystem="TESTECO", business_line="BL1"} 1
-</pre>
-
-<p>Now, metrics are scrapped by prometheus calling a small module made with fastapi, that will parse, enrich, and reserialize data, that comes from a prometheus vmware exporter.</p>
-        </content>
-    </entry>
-  
-    <entry xml:lang="en">
-        <title type="html">Sudo with macos and TouchID</title>
-        <author>
-            <name></name>
-            <uri>https://www.bruno-giarrizzo.fr</uri>
-        </author>
-        <id>https://www.bruno-giarrizzo.fr/blog/sudo-with-macos-and-touchid/</id>
-        <published>2022-08-03 09:30:00+00:00</published>
-        <updated></updated>
-        <link rel="alternate" type="text/html">https://www.bruno-giarrizzo.fr/blog/sudo-with-macos-and-touchid/</link>
-        
-          <summary>
-            I am a lazy guy, and type my password kind of annoy me :-D
-          </summary>
-        
-        <content type="html">
-          <p>Last October, i got for myself one M1 Macbook pro.</p>
-<p>It is a hell of a machine, powerful, silent and it comes with touchID. </p>
-<p>I didn't change my laptop since my mid-2012 macbook pro, and this was a revolution !</p>
-<p>I saw one day, one of my coworker edit files with <code>sudo vi</code>, no password typed, just put his finger on touchID pad, I always wanted to do the same, so i configured it.</p>
-<p>By default, it is not configured on macos, you have to edit one file : <code>/etc/pam.d/sudo</code></p>
-<p>In this file, you'll find this content : </p>
-<pre>
+   </pre>
+   <p>
+    Finally, serialized data looks like :
+   </p>
+   <pre>
+    power_state{vm_name="vm1", ecosystem="TESTECO", business_line="BL1"} 1
+   </pre>
+   <p>
+    Now, metrics are scrapped by prometheus calling a small module made with fastapi, that will parse, enrich, and reserialize data, that comes from a prometheus vmware exporter.
+   </p>
+  </content>
+ </entry>
+ <entry xml:lang="en">
+  <title type="html">
+   Sudo with macos and TouchID
+  </title>
+  <author>
+   <name/>
+   <uri>
+    https://www.bruno-giarrizzo.fr
+   </uri>
+  </author>
+  <id>
+   https://www.bruno-giarrizzo.fr/blog/sudo-with-macos-and-touchid/
+  </id>
+  <published>
+   2022-08-03 09:30:00+00:00
+  </published>
+  <updated/>
+  <link rel="alternate" type="text/html">
+   https://www.bruno-giarrizzo.fr/blog/sudo-with-macos-and-touchid/
+  </link>
+  <summary>
+   I am a lazy guy, and type my password kind of annoy me :-D
+  </summary>
+  <content type="html">
+   <p>
+    Last October, i got for myself one M1 Macbook pro.
+   </p>
+   <p>
+    It is a hell of a machine, powerful, silent and it comes with touchID.
+   </p>
+   <p>
+    I didn't change my laptop since my mid-2012 macbook pro, and this was a revolution !
+   </p>
+   <p>
+    I saw one day, one of my coworker edit files with
+    <code>
+     sudo vi
+    </code>
+    , no password typed, just put his finger on touchID pad, I always wanted to do the same, so i configured it.
+   </p>
+   <p>
+    By default, it is not configured on macos, you have to edit one file :
+    <code>
+     /etc/pam.d/sudo
+    </code>
+   </p>
+   <p>
+    In this file, you'll find this content :
+   </p>
+   <pre>
     # sudo: auth account password session
     auth       sufficient     pam_smartcard.so
     auth       required       pam_opendirectory.so
     account    required       pam_permit.so
     password   required       pam_deny.so
     session    required       pam_permit.so
-</pre>
-
-<p>I just add the line : <code>auth sufficient pam_tid.so</code> so the file looks like this then :</p>
-<pre>
+   </pre>
+   <p>
+    I just add the line :
+    <code>
+     auth sufficient pam_tid.so
+    </code>
+    so the file looks like this then :
+   </p>
+   <pre>
     # sudo: auth account password session
     auth       sufficient     pam_tid.so
     auth       sufficient     pam_smartcard.so
@@ -321,31 +491,67 @@ power_state{vm_name="vm1", ecosystem="TESTECO", business_line="BL1"} 1
     account    required       pam_permit.so
     password   required       pam_deny.so
     session    required       pam_permit.so
-</pre>
-
-<h1>Bonus</h1>
-<p>On the day you update your mac, the <code>/etc/pam.d/sudo</code> may be overwritten by the update process. And your changes will be lost.</p>
-<p>(I know it is one line to add to file, but if you are lazy like me, you will understand :D)</p>
-<p>One github user, named <a href="https://github.com/tjluoma">tjluoma</a> made a little script, named <a href="https://github.com/tjluoma/sudo-via-touch-id">tjluoma/sudo-via-touch-id</a>, that will check if the line is present in your <code>/etc/pam.d/sudo</code>, and will add it if not !</p>
-<p>Just like he indicates it on his README : </p>
-<pre>
-## How to use this
+   </pre>
+   <h1>
+    Bonus
+   </h1>
+   <p>
+    On the day you update your mac, the
+    <code>
+     /etc/pam.d/sudo
+    </code>
+    may be overwritten by the update process. And your changes will be lost.
+   </p>
+   <p>
+    (I know it is one line to add to file, but if you are lazy like me, you will understand :D)
+   </p>
+   <p>
+    One github user, named
+    <a href="https://github.com/tjluoma">
+     tjluoma
+    </a>
+    made a little script, named
+    <a href="https://github.com/tjluoma/sudo-via-touch-id">
+     tjluoma/sudo-via-touch-id
+    </a>
+    , that will check if the line is present in your
+    <code>
+     /etc/pam.d/sudo
+    </code>
+    , and will add it if not !
+   </p>
+   <p>
+    Just like he indicates it on his README :
+   </p>
+   <pre>
+    ## How to use this
 
 1. Download sudo-via-touch-id.sh
 2. Make it executable: `chmod 755 sudo-via-touch-id.sh`
 3. Run it: `./sudo-via-touch-id.sh`
 4. (Optional But Useful) move it to a directory such as `/usr/local/bin/` 
 so you can run it again next time there's an update to macOS.
-</pre>
-
-<p>After i installed this script in my <code>/usr/local/bin/</code>, i edited my crontab to run the script each time my laptop is rebooted.</p>
-<p>Like this : </p>
-<pre>
+   </pre>
+   <p>
+    After i installed this script in my
+    <code>
+     /usr/local/bin/
+    </code>
+    , i edited my crontab to run the script each time my laptop is rebooted.
+   </p>
+   <p>
+    Like this :
+   </p>
+   <pre>
     @reboot    bash /usr/local/bin/sudo-via-touch-id.sh
-</pre>
-
-<p>With this, on each reboot the script will run, and add the missing line to the <code>/etc/pam.d/sudo</code> if update deleted it !</p>
-        </content>
-    </entry>
-  
+   </pre>
+   <p>
+    With this, on each reboot the script will run, and add the missing line to the
+    <code>
+     /etc/pam.d/sudo
+    </code>
+    if update deleted it !
+   </p>
+  </content>
+ </entry>
 </feed>

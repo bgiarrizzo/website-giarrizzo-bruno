@@ -1,6 +1,7 @@
 from config import settings
 from generators.common import generate_dataset_of_item_files, get_all_files_from_path
 from utils.template import generate_data_for_template, render_template, write_page
+from utils.format import beautify_html
 
 
 def generate_resume_experience(experiences):
@@ -20,7 +21,7 @@ def generate_resume_experience(experiences):
         "main.j2",
         generate_data_for_template([resume, content]),
     )
-    write_page("/resume/index.html", rendered_resume)
+    write_page("/resume/index.html", beautify_html(rendered_resume))
 
 
 def generate_resume():

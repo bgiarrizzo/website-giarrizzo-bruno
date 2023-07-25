@@ -21,6 +21,8 @@ pyyaml = "*"
 markdown = "*"
 pydantic = "*"
 python-slugify = "*"
+pydantic-settings = "*"
+lxml = "*"
 
 [dev-packages]
 black = "*"

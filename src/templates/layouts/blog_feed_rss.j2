@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   {% set last_post = posts|last %}
-  <title>{{ site.url }}</title>
-  <subtitle>{{ site.url }}</subtitle>
+  <title>{{ site.short_url }}</title>
+  <subtitle>{{ site.description }}</subtitle>
 
   <updated>{{ last_post.short_date }}</updated>
 

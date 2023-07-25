@@ -1,77 +1,88 @@
 <!DOCTYPE html>
-<html lang="fr-FR" prefix="og: http://ogp.me/ns#" >
-    <head>
-
-        <title>
-            bruno-giarrizzo.fr
-        </title>
-
-            <meta charset="utf-8">
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=5.0" />
-    <link rel="alternate" type="application/rss+xml" title="Bruno Giarrizzo - Blog RSS" href="https://www.bruno-giarrizzo.fr/blog/feed.xml" />
-    <meta name="rating" content="General" />
-    <meta name="Author" content="Bruno Giarrizzo" />
-    <meta name="Webmaster" content="Bruno Giarrizzo" />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="Language" content="en" />
-    <meta http-equiv="content-language" content="en" />
-    <meta name="robots" content="all" />
-    <meta name="revisit-after" content="1 days" />
-    <meta name="expires" content="never" />
-
-    <!-- SEO -->
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="identifier-URL" content="https://www.bruno-giarrizzo.fr" />
- 
-    <!-- Meta -->
-    
-        <title>How to install psycopg2-binary on Apple M1</title>
-        <meta name="title" content="How to install psycopg2-binary on Apple M1 - Bruno Giarrizzo" />
-        <link rel="canonical" href="https://www.bruno-giarrizzo.fr/blog/how-to-install-psycopg2-binary-on-apple-m1/" />
-        <meta name="keywords" content="Bruno, Giarrizzo, Bruno Giarrizzo, Freelance, Developer, DevOps, Ethical Hacker, Ethical, Hacker, Django, Python, Swift, Ansible, Terraform, Kubernetes, Infra as Code, apple, m1, postgres, python3.10, psycopg2, psycopg2-binary, install" />
-        <meta name="description" content="I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it." />
-    
-        
-    </head>
-
-    <body>
-
-        <nav>
-    <a href="/">Home</a>
-    <a href="/blog/">Blog</a>
-    <a href="/resume/">Resume</a>
-    <a href="/about/">About</a>
-</nav>
-
-        <main>
-            
-            <header>
-  <img width="100%" src="/media/images/posts/covers/2021-10-17.png" alt="how to install psycopg2-binary on mac m1 article cover">
-  <h1>How to install psycopg2-binary on Apple M1</h1>
-  <p class="subtitle">by <a href="">Bruno</a>, on 17-Oct-2021</p>
-  
-    <p class="summary">I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it.</p>
-  
-</header>
-
-<hr />
-
-<article>
-  <p>Last month I bought to myself an Apple M1, really good computer, with great power, and awesome battery.</p>
-<p>My work with it is pretty simple, I code python API, some simple front App with TypeScript/react, trying some Go, learning swift and administrating some kubernetes clusters. Nothing too fancy.</p>
-<p>I am trying to work with latest versions of software I use, and in this case, python 3.10.</p>
-<p>I installed it with brew, pretty easily : </p>
-<pre>
+<html lang="fr-FR" prefix="og: http://ogp.me/ns#">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=5.0" name="viewport"/>
+  <link href="https://www.bruno-giarrizzo.fr/blog/feed.xml" rel="alternate" title="Bruno Giarrizzo - Blog RSS" type="application/rss+xml"/>
+  <meta content="General" name="rating"/>
+  <meta content="Bruno Giarrizzo" name="Author"/>
+  <meta content="Bruno Giarrizzo" name="Webmaster"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="en" name="Language"/>
+  <meta content="en" http-equiv="content-language"/>
+  <meta content="all" name="robots"/>
+  <meta content="1 days" name="revisit-after"/>
+  <meta content="never" name="expires"/>
+  <!-- SEO -->
+  <meta content="index, follow" name="robots"/>
+  <meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="googlebot"/>
+  <meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="bingbot"/>
+  <meta content="https://www.bruno-giarrizzo.fr" name="identifier-URL"/>
+  <!-- Meta -->
+  <title>
+   How to install psycopg2-binary on Apple M1 - bruno-giarrizzo.fr
+  </title>
+  <meta content="How to install psycopg2-binary on Apple M1 - bruno-giarrizzo.fr" name="title"/>
+  <link href="https://www.bruno-giarrizzo.fr/blog/how-to-install-psycopg2-binary-on-apple-m1/" rel="canonical"/>
+  <meta content="Bruno, Giarrizzo, Bruno Giarrizzo, Freelance, Developer, DevOps, Ethical Hacker, Ethical, Hacker, Django, Python, Swift, Ansible, Terraform, Kubernetes, Infra as Code, apple, m1, postgres, python3.10, psycopg2, psycopg2-binary, install" name="keywords"/>
+  <meta content="I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it." name="description"/>
+ </head>
+ <body>
+  <nav>
+   <a href="/">
+    Home
+   </a>
+   <a href="/blog/">
+    Blog
+   </a>
+   <a href="/resume/">
+    Resume
+   </a>
+   <a href="/about/">
+    About
+   </a>
+  </nav>
+  <main>
+   <header>
+    <img alt="how to install psycopg2-binary on mac m1 article cover" src="/media/images/posts/covers/2021-10-17.png" width="100%"/>
+    <h1>
+     How to install psycopg2-binary on Apple M1
+    </h1>
+    <p class="subtitle">
+     by
+     <a href="">
+      Bruno
+     </a>
+     , on 17-Oct-2021
+    </p>
+    <p class="summary">
+     I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it.
+    </p>
+   </header>
+   <hr/>
+   <article>
+    <p>
+     Last month I bought to myself an Apple M1, really good computer, with great power, and awesome battery.
+    </p>
+    <p>
+     My work with it is pretty simple, I code python API, some simple front App with TypeScript/react, trying some Go, learning swift and administrating some kubernetes clusters. Nothing too fancy.
+    </p>
+    <p>
+     I am trying to work with latest versions of software I use, and in this case, python 3.10.
+    </p>
+    <p>
+     I installed it with brew, pretty easily :
+    </p>
+    <pre>
 brew install python@3.10
 </pre>
-
-<p>I had troubles with psycopg2-binary, installing depedencies of one of the projects I work with, the error message i was getting was this one : </p>
-<pre>
+    <p>
+     I had troubles with psycopg2-binary, installing depedencies of one of the projects I work with, the error message i was getting was this one :
+    </p>
+    <pre>
     Error: pg_config executable not found.
 
 pg_config is required to build psycopg2 from source.  Please add the directory
@@ -82,37 +93,41 @@ option:
 
 or with the pg_config option in 'setup.cfg'.
 </pre>
-
-<p>It seems there is some conf file that is missing. I tried to solve it by installing postgres server to get that missing file :</p>
-<pre>
+    <p>
+     It seems there is some conf file that is missing. I tried to solve it by installing postgres server to get that missing file :
+    </p>
+    <pre>
 brew install postgresql@12
 </pre>
-
-<p>At this point, brew tell me to setup the path to PG in my PATH, this way (using ZSH, it tells me to write it obviously to .zshrc):</p>
-<pre>
-echo 'export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"' > ~/.zshrc
+    <p>
+     At this point, brew tell me to setup the path to PG in my PATH, this way (using ZSH, it tells me to write it obviously to .zshrc):
+    </p>
+    <pre>
+echo 'export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"' &gt; ~/.zshrc
 </pre>
-
-<p>Now i'm all set, and i can install it the way i want :</p>
-<pre>
+    <p>
+     Now i'm all set, and i can install it the way i want :
+    </p>
+    <pre>
 pip(3) install psycopg2-binary
 </pre>
-
-<p>Or in my project repository :</p>
-<pre>
+    <p>
+     Or in my project repository :
+    </p>
+    <pre>
 pipenv install psycopg2-binary
 </pre>
-</article>
-        </main>
-            
-        <footer>
-    <a href="https://www.bruno-giarrizzo.fr">https://www.bruno-giarrizzo.fr</a>
-</footer>
-        <!-- Favicon -->
-<link href="/static/img/logo.jpg" rel="icon" type="image/jpg" />
-
-<style>
-    body {
+   </article>
+  </main>
+  <footer>
+   <a href="https://www.bruno-giarrizzo.fr">
+    https://www.bruno-giarrizzo.fr
+   </a>
+  </footer>
+  <!-- Favicon -->
+  <link href="/static/img/logo.jpg" rel="icon" type="image/jpg"/>
+  <style>
+   body {
         margin: 40px auto;
         max-width: 650px;
         line-height: 1.4;
@@ -149,8 +164,6 @@ pipenv install psycopg2-binary
     figure img { width: 100%; box-shadow: #444; }
     figure figcaption { text-align: center; font-style: italic; }
     footer { border-top: 1px solid; padding-top: 0.6em; }
-</style>
-        
-    </body>
-
+  </style>
+ </body>
 </html>

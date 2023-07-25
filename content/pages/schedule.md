@@ -1,5 +1,6 @@
 ---
 title: Want to schedule a call ?
+meta_title: Schedule
 summary: You can use the form below, you will know when I am available for a call :-)
 permalink: schedule
 cover: "schedule/cover.jpg"

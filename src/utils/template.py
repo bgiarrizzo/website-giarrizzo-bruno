@@ -24,6 +24,7 @@ def generate_data_for_template(datalist):
         "site": {
             "url": settings.BASE_URL,
             "short_url": settings.SHORT_URL,
+            "description": settings.DESCRIPTION,
             "language": settings.LANGUAGE,
             "name": settings.NAME,
             "keywords": settings.KEYWORDS,
