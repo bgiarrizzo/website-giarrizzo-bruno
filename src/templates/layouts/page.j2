@@ -24,7 +24,7 @@
       {% if page.title == "bruno-giarrizzo.fr" %}
         <h2>Blog Posts</h2>
         <ul><li><a href="/blog/">All blog posts</a></li></ul>
-        <ul>
+        <ul class="blog_post_list">
           {% for post in posts | reverse %}
             <li>
               <a href="/blog/{{ post.slug }}/">{{ post.short_date }} : {{ post.title }}</a>
