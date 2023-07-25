@@ -2,12 +2,12 @@
 
 <h2>Blog Posts</h2>
 
-{% for year, post in posts | reverse | groupby("year") | reverse %}
+{% for year, posts in all_posts | reverse | groupby("year") | reverse %}
 
     <h3>{{ year }}</h3>
 
     <ul>
-        {% for post in post %}
+        {% for post in posts %}
             <li>
                 <a href="/blog/{{ post.slug }}/">{{ post.short_date }} : {{ post.title }}</a>
             </li>

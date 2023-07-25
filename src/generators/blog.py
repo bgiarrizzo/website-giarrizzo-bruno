@@ -3,6 +3,7 @@ from slugify import slugify
 from config import settings
 from generators.common import generate_dataset_of_item_files, get_all_files_from_path
 from utils.template import generate_data_for_template, render_template, write_page
+from utils.format import beautify_html, beautify_xml
 
 
 def extract_date_and_slugify_title_of_blog_post(post_list):
@@ -20,7 +21,7 @@ def generate_rss_feed(posts: list):
     rendered_rss_feed = render_template(
         "blog_feed_rss.j2", generate_data_for_template([posts_data])
     )
-    write_page("blog/feed.xml", rendered_rss_feed)
+    write_page("blog/feed.xml", beautify_xml(rendered_rss_feed))
 
 
 def generate_blog_post(post_data):
@@ -35,11 +36,11 @@ def generate_blog_post(post_data):
     rendered_page = render_template(
         "main.j2", generate_data_for_template([post, content])
     )
-    write_page(f"blog/{post_data['slug']}/index.html", rendered_page)
+    write_page(f"blog/{post_data['slug']}/index.html", beautify_html(rendered_page))
 
 
 def generate_blog_page_list(posts_data):
-    posts = {"posts": posts_data}
+    posts = {"all_posts": posts_data}
 
     blog_post_list_template = render_template(
         "blog_post_list.j2", generate_data_for_template([posts])
@@ -50,7 +51,7 @@ def generate_blog_page_list(posts_data):
     rendered_page = render_template(
         "main.j2", generate_data_for_template([posts, content])
     )
-    write_page("blog/index.html", rendered_page)
+    write_page("blog/index.html", beautify_html(rendered_page))
 
 
 def generate_blog():
