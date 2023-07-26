@@ -2,8 +2,8 @@ from slugify import slugify
 
 from config import settings
 from generators.common import generate_dataset_of_item_files, get_all_files_from_path
-from utils.template import generate_data_for_template, render_template, write_page
 from utils.format import beautify_html, beautify_xml
+from utils.template import generate_data_for_template, render_template, write_page
 
 
 def extract_date_and_slugify_title_of_blog_post(post_list):

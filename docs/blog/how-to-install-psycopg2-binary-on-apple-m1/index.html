@@ -22,68 +22,30 @@
   <meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="bingbot"/>
   <meta content="https://www.bruno-giarrizzo.fr" name="identifier-URL"/>
   <!-- Meta -->
-  <title>
-   How to install psycopg2-binary on Apple M1 - bruno-giarrizzo.fr
-  </title>
+  <title>How to install psycopg2-binary on Apple M1 - bruno-giarrizzo.fr</title>
   <meta content="How to install psycopg2-binary on Apple M1 - bruno-giarrizzo.fr" name="title"/>
   <link href="https://www.bruno-giarrizzo.fr/blog/how-to-install-psycopg2-binary-on-apple-m1/" rel="canonical"/>
   <meta content="Bruno, Giarrizzo, Bruno Giarrizzo, Freelance, Developer, DevOps, Ethical Hacker, Ethical, Hacker, Django, Python, Swift, Ansible, Terraform, Kubernetes, Infra as Code, apple, m1, postgres, python3.10, psycopg2, psycopg2-binary, install" name="keywords"/>
   <meta content="I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it." name="description"/>
  </head>
  <body>
-  <nav>
-   <a href="/">
-    Home
-   </a>
-   <a href="/blog/">
-    Blog
-   </a>
-   <a href="/resume/">
-    Resume
-   </a>
-   <a href="/about/">
-    About
-   </a>
-  </nav>
+  <nav><a href="/">Home</a><a href="/blog/">Blog</a><a href="/resume/">Resume</a><a href="/about/">About</a></nav>
   <main>
    <header>
     <img alt="how to install psycopg2-binary on mac m1 article cover" src="/media/images/posts/covers/2021-10-17.png" width="100%"/>
-    <h1>
-     How to install psycopg2-binary on Apple M1
-    </h1>
-    <p class="subtitle">
-     by
-     <a href="">
-      Bruno
-     </a>
-     , on 17-Oct-2021
-    </p>
-    <p class="summary">
-     I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it.
-    </p>
+    <h1>How to install psycopg2-binary on Apple M1</h1>
+    <p class="subtitle">by <a href="">Bruno</a>, on 17-Oct-2021</p>
+    <p class="summary">I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it.</p>
    </header>
-   <hr/>
-   <article>
-    <p>
-     Last month I bought to myself an Apple M1, really good computer, with great power, and awesome battery.
-    </p>
-    <p>
-     My work with it is pretty simple, I code python API, some simple front App with TypeScript/react, trying some Go, learning swift and administrating some kubernetes clusters. Nothing too fancy.
-    </p>
-    <p>
-     I am trying to work with latest versions of software I use, and in this case, python 3.10.
-    </p>
-    <p>
-     I installed it with brew, pretty easily :
-    </p>
+   <hr/> <article><p>Last month I bought to myself an Apple M1, really good computer, with great power, and awesome battery.</p>
+    <p>My work with it is pretty simple, I code python API, some simple front App with TypeScript/react, trying some Go, learning swift and administrating some kubernetes clusters. Nothing too fancy.</p>
+    <p>I am trying to work with latest versions of software I use, and in this case, python 3.10.</p>
+    <p>I installed it with brew, pretty easily :</p>
     <pre>
 brew install python@3.10
 </pre>
-    <p>
-     I had troubles with psycopg2-binary, installing depedencies of one of the projects I work with, the error message i was getting was this one :
-    </p>
-    <pre>
-    Error: pg_config executable not found.
+    <p>I had troubles with psycopg2-binary, installing depedencies of one of the projects I work with, the error message i was getting was this one :</p>
+    <pre>Error: pg_config executable not found.
 
 pg_config is required to build psycopg2 from source.  Please add the directory
 containing pg_config to the $PATH or specify the full executable path with the
@@ -91,55 +53,42 @@ option:
 
     python setup.py build_ext --pg-config /path/to/pg_config build ...
 
-or with the pg_config option in 'setup.cfg'.
-</pre>
-    <p>
-     It seems there is some conf file that is missing. I tried to solve it by installing postgres server to get that missing file :
-    </p>
+or with the pg_config option in 'setup.cfg'.</pre>
+    <p>It seems there is some conf file that is missing. I tried to solve it by installing postgres server to get that missing file :</p>
     <pre>
 brew install postgresql@12
 </pre>
-    <p>
-     At this point, brew tell me to setup the path to PG in my PATH, this way (using ZSH, it tells me to write it obviously to .zshrc):
-    </p>
+    <p>At this point, brew tell me to setup the path to PG in my PATH, this way (using ZSH, it tells me to write it obviously to .zshrc):</p>
     <pre>
 echo 'export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"' &gt; ~/.zshrc
 </pre>
-    <p>
-     Now i'm all set, and i can install it the way i want :
-    </p>
+    <p>Now i'm all set, and i can install it the way i want :</p>
     <pre>
 pip(3) install psycopg2-binary
 </pre>
-    <p>
-     Or in my project repository :
-    </p>
+    <p>Or in my project repository :</p>
     <pre>
 pipenv install psycopg2-binary
 </pre>
    </article>
   </main>
-  <footer>
-   <a href="https://www.bruno-giarrizzo.fr">
-    https://www.bruno-giarrizzo.fr
-   </a>
-  </footer>
+  <footer><a href="https://www.bruno-giarrizzo.fr">https://www.bruno-giarrizzo.fr</a></footer>
   <!-- Favicon -->
   <link href="/static/img/logo.jpg" rel="icon" type="image/jpg"/>
-  <style>
-   body {
+  <style>body {
         margin: 40px auto;
         max-width: 650px;
         line-height: 1.4;
         font-size: 18px;
         color: #444;
         background-color: #fdf6e3;
-        padding: 0 10px
+        padding: 0 10px;
+        font-family: "Courier New", Courier, monospace;
     }
     h1 { line-height: 1.2; text-align: center; }
     h2, h3 { line-height: 1.2; border-bottom: 1px solid; }
-    pre, blockquote, .code { background: #d5e7ee; font-size: 0.8em; padding: 1em; overflow: scroll; }
-    p, ul, ol { list-style-type: circle; }
+    pre, blockquote, .code { background: #f5ead6; font-size: 0.8em; padding: 1em; overflow: scroll; }
+    ul, ol { list-style-type: circle; }
     .blog_post_list li { padding-top: 0.8em; padding-bottom: 0.8em; }
     a { color: #169; text-decoration: none; padding: 0.5em 0; }
     a:hover { text-decoration: underline; }
@@ -158,13 +107,12 @@ pipenv install psycopg2-binary
     header .summary { text-align: center; font-style: italic; }
     header img { width: 100%; }
     main { text-align: justify; }
-    article code { background: #d5e7ee; font-size: 0.8em; padding: 0.2em; }
+    article code { background: #f0e0c2; font-size: 0.8em; padding: 0; padding-top: 0.2em; padding-bottom: 0.2em; }
     .horizontal { text-align: center; padding: 10px 40px; }
     .horizontal li { display: inline-block; margin: 0 0.5em; }
     figure { width: 85%; }
     figure img { width: 100%; box-shadow: #444; }
     figure figcaption { text-align: center; font-style: italic; }
-    footer { border-top: 1px solid; padding-top: 0.6em; }
-  </style>
+    footer { border-top: 1px solid; padding-top: 0.6em; }</style>
  </body>
 </html>

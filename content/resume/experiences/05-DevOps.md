@@ -23,7 +23,7 @@ tags:
     php,
     mysql,
     redis,
-    Stack ELK,
+    ELK,
     Grafana,
     Prometheus,
     Zabbix,

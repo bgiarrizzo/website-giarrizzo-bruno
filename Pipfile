@@ -23,6 +23,8 @@ pydantic = "*"
 python-slugify = "*"
 pydantic-settings = "*"
 lxml = "*"
+prettierfier = "*"
+defusedxml = "*"
 
 [dev-packages]
 black = "*"

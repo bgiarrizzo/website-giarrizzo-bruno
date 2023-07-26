@@ -10,7 +10,7 @@ tags: [macos, sudo, terminal, touch, id, touchid]
 
 Last October, i got for myself one M1 Macbook pro.
 
-It is a hell of a machine, powerful, silent and it comes with touchID. 
+It is a hell of a machine, powerful, silent and it comes with touchID.
 
 I didn't change my laptop since my mid-2012 macbook pro, and this was a revolution !
 
@@ -18,7 +18,7 @@ I saw one day, one of my coworker edit files with <code>sudo vi</code>, no passw
 
 By default, it is not configured on macos, you have to edit one file : <code>/etc/pam.d/sudo</code>
 
-In this file, you'll find this content : 
+In this file, you'll find this content :
 
 <pre>
     # sudo: auth account password session
@@ -49,7 +49,7 @@ On the day you update your mac, the <code>/etc/pam.d/sudo</code> may be overwrit
 
 One github user, named [tjluoma](https://github.com/tjluoma) made a little script, named [tjluoma/sudo-via-touch-id](https://github.com/tjluoma/sudo-via-touch-id), that will check if the line is present in your <code>/etc/pam.d/sudo</code>, and will add it if not !
 
-Just like he indicates it on his README : 
+Just like he indicates it on his README :
 
 <pre>
 ## How to use this
@@ -63,7 +63,7 @@ so you can run it again next time there's an update to macOS.
 
 After i installed this script in my <code>/usr/local/bin/</code>, i edited my crontab to run the script each time my laptop is rebooted.
 
-Like this : 
+Like this :
 
 <pre>
     @reboot    bash /usr/local/bin/sudo-via-touch-id.sh

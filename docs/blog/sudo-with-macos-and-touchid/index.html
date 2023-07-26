@@ -22,128 +22,57 @@
   <meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="bingbot"/>
   <meta content="https://www.bruno-giarrizzo.fr" name="identifier-URL"/>
   <!-- Meta -->
-  <title>
-   Sudo with macos and TouchID - bruno-giarrizzo.fr
-  </title>
+  <title>Sudo with macos and TouchID - bruno-giarrizzo.fr</title>
   <meta content="Sudo with macos and TouchID - bruno-giarrizzo.fr" name="title"/>
   <link href="https://www.bruno-giarrizzo.fr/blog/sudo-with-macos-and-touchid/" rel="canonical"/>
   <meta content="Bruno, Giarrizzo, Bruno Giarrizzo, Freelance, Developer, DevOps, Ethical Hacker, Ethical, Hacker, Django, Python, Swift, Ansible, Terraform, Kubernetes, Infra as Code, macos, sudo, terminal, touch, id, touchid" name="keywords"/>
   <meta content="I am a lazy guy, and type my password kind of annoy me :-D" name="description"/>
  </head>
  <body>
-  <nav>
-   <a href="/">
-    Home
-   </a>
-   <a href="/blog/">
-    Blog
-   </a>
-   <a href="/resume/">
-    Resume
-   </a>
-   <a href="/about/">
-    About
-   </a>
-  </nav>
+  <nav><a href="/">Home</a><a href="/blog/">Blog</a><a href="/resume/">Resume</a><a href="/about/">About</a></nav>
   <main>
    <header>
     <img alt="Sudo with macos and TouchID article cover" src="/media/images/posts/covers/2022-08-03.jpg" width="100%"/>
-    <h1>
-     Sudo with macos and TouchID
-    </h1>
-    <p class="subtitle">
-     by
-     <a href="">
-      Bruno
-     </a>
-     , on 03-Aug-2022
-    </p>
-    <p class="summary">
-     I am a lazy guy, and type my password kind of annoy me :-D
-    </p>
+    <h1>Sudo with macos and TouchID</h1>
+    <p class="subtitle">by <a href="">Bruno</a>, on 03-Aug-2022</p>
+    <p class="summary">I am a lazy guy, and type my password kind of annoy me :-D</p>
    </header>
-   <hr/>
-   <article>
-    <p>
-     Last October, i got for myself one M1 Macbook pro.
-    </p>
-    <p>
-     It is a hell of a machine, powerful, silent and it comes with touchID.
-    </p>
-    <p>
-     I didn't change my laptop since my mid-2012 macbook pro, and this was a revolution !
-    </p>
-    <p>
-     I saw one day, one of my coworker edit files with
+   <hr/> <article><p>Last October, i got for myself one M1 Macbook pro.</p>
+    <p>It is a hell of a machine, powerful, silent and it comes with touchID.</p>
+    <p>I didn't change my laptop since my mid-2012 macbook pro, and this was a revolution !</p>
+    <p>I saw one day, one of my coworker edit files with
      <code>
-      sudo vi
-     </code>
-     , no password typed, just put his finger on touchID pad, I always wanted to do the same, so i configured it.
-    </p>
-    <p>
-     By default, it is not configured on macos, you have to edit one file :
+      sudo vi</code>, no password typed, just put his finger on touchID pad, I always wanted to do the same, so i configured it.</p>
+    <p>By default, it is not configured on macos, you have to edit one file :
      <code>
-      /etc/pam.d/sudo
-     </code>
+      /etc/pam.d/sudo</code>
     </p>
-    <p>
-     In this file, you'll find this content :
-    </p>
-    <pre>
-    # sudo: auth account password session
+    <p>In this file, you'll find this content :</p>
+    <pre># sudo: auth account password session
     auth       sufficient     pam_smartcard.so
     auth       required       pam_opendirectory.so
     account    required       pam_permit.so
     password   required       pam_deny.so
-    session    required       pam_permit.so
-</pre>
-    <p>
-     I just add the line :
+    session    required       pam_permit.so</pre>
+    <p>I just add the line :
      <code>
-      auth sufficient pam_tid.so
-     </code>
-     so the file looks like this then :
-    </p>
-    <pre>
-    # sudo: auth account password session
+      auth sufficient pam_tid.so</code>so the file looks like this then :</p>
+    <pre># sudo: auth account password session
     auth       sufficient     pam_tid.so
     auth       sufficient     pam_smartcard.so
     auth       required       pam_opendirectory.so
     account    required       pam_permit.so
     password   required       pam_deny.so
-    session    required       pam_permit.so
-</pre>
-    <h1>
-     Bonus
-    </h1>
-    <p>
-     On the day you update your mac, the
+    session    required       pam_permit.so</pre>
+    <h1>Bonus</h1>
+    <p>On the day you update your mac, the
      <code>
-      /etc/pam.d/sudo
-     </code>
-     may be overwritten by the update process. And your changes will be lost.
-    </p>
-    <p>
-     (I know it is one line to add to file, but if you are lazy like me, you will understand :D)
-    </p>
-    <p>
-     One github user, named
-     <a href="https://github.com/tjluoma">
-      tjluoma
-     </a>
-     made a little script, named
-     <a href="https://github.com/tjluoma/sudo-via-touch-id">
-      tjluoma/sudo-via-touch-id
-     </a>
-     , that will check if the line is present in your
+      /etc/pam.d/sudo</code>may be overwritten by the update process. And your changes will be lost.</p>
+    <p>(I know it is one line to add to file, but if you are lazy like me, you will understand :D)</p>
+    <p>One github user, named <a href="https://github.com/tjluoma">tjluoma</a> made a little script, named <a href="https://github.com/tjluoma/sudo-via-touch-id">tjluoma/sudo-via-touch-id</a>, that will check if the line is present in your
      <code>
-      /etc/pam.d/sudo
-     </code>
-     , and will add it if not !
-    </p>
-    <p>
-     Just like he indicates it on his README :
-    </p>
+      /etc/pam.d/sudo</code>, and will add it if not !</p>
+    <p>Just like he indicates it on his README :</p>
     <pre>
 ## How to use this
 
@@ -153,49 +82,33 @@
 4. (Optional But Useful) move it to a directory such as `/usr/local/bin/` 
 so you can run it again next time there's an update to macOS.
 </pre>
-    <p>
-     After i installed this script in my
+    <p>After i installed this script in my
      <code>
-      /usr/local/bin/
-     </code>
-     , i edited my crontab to run the script each time my laptop is rebooted.
-    </p>
-    <p>
-     Like this :
-    </p>
-    <pre>
-    @reboot    bash /usr/local/bin/sudo-via-touch-id.sh
-</pre>
-    <p>
-     With this, on each reboot the script will run, and add the missing line to the
+      /usr/local/bin/</code>, i edited my crontab to run the script each time my laptop is rebooted.</p>
+    <p>Like this :</p>
+    <pre>@reboot    bash /usr/local/bin/sudo-via-touch-id.sh</pre>
+    <p>With this, on each reboot the script will run, and add the missing line to the
      <code>
-      /etc/pam.d/sudo
-     </code>
-     if update deleted it !
-    </p>
+      /etc/pam.d/sudo</code>if update deleted it !</p>
    </article>
   </main>
-  <footer>
-   <a href="https://www.bruno-giarrizzo.fr">
-    https://www.bruno-giarrizzo.fr
-   </a>
-  </footer>
+  <footer><a href="https://www.bruno-giarrizzo.fr">https://www.bruno-giarrizzo.fr</a></footer>
   <!-- Favicon -->
   <link href="/static/img/logo.jpg" rel="icon" type="image/jpg"/>
-  <style>
-   body {
+  <style>body {
         margin: 40px auto;
         max-width: 650px;
         line-height: 1.4;
         font-size: 18px;
         color: #444;
         background-color: #fdf6e3;
-        padding: 0 10px
+        padding: 0 10px;
+        font-family: "Courier New", Courier, monospace;
     }
     h1 { line-height: 1.2; text-align: center; }
     h2, h3 { line-height: 1.2; border-bottom: 1px solid; }
-    pre, blockquote, .code { background: #d5e7ee; font-size: 0.8em; padding: 1em; overflow: scroll; }
-    p, ul, ol { list-style-type: circle; }
+    pre, blockquote, .code { background: #f5ead6; font-size: 0.8em; padding: 1em; overflow: scroll; }
+    ul, ol { list-style-type: circle; }
     .blog_post_list li { padding-top: 0.8em; padding-bottom: 0.8em; }
     a { color: #169; text-decoration: none; padding: 0.5em 0; }
     a:hover { text-decoration: underline; }
@@ -214,13 +127,12 @@ so you can run it again next time there's an update to macOS.
     header .summary { text-align: center; font-style: italic; }
     header img { width: 100%; }
     main { text-align: justify; }
-    article code { background: #d5e7ee; font-size: 0.8em; padding: 0.2em; }
+    article code { background: #f0e0c2; font-size: 0.8em; padding: 0; padding-top: 0.2em; padding-bottom: 0.2em; }
     .horizontal { text-align: center; padding: 10px 40px; }
     .horizontal li { display: inline-block; margin: 0 0.5em; }
     figure { width: 85%; }
     figure img { width: 100%; box-shadow: #444; }
     figure figcaption { text-align: center; font-style: italic; }
-    footer { border-top: 1px solid; padding-top: 0.6em; }
-  </style>
+    footer { border-top: 1px solid; padding-top: 0.6em; }</style>
  </body>
 </html>

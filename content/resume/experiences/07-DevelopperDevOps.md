@@ -9,6 +9,7 @@ contract_type: Freelance contract
 tags:
   [
     Go,
+    Golang,
     Python,
     Kafka,
     REST API,
@@ -16,7 +17,8 @@ tags:
     Kubernetes,
     Google Cloud Platform,
     GKE,
-    Github, Github Actions,
+    Github, 
+    Github Actions,
     Terraform,
   ]
 ---

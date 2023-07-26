@@ -1,7 +1,7 @@
 from config import settings
 from generators.common import generate_dataset_of_item_files, get_all_files_from_path
-from utils.template import generate_data_for_template, render_template, write_page
 from utils.format import beautify_html
+from utils.template import generate_data_for_template, render_template, write_page
 
 
 def generate_page(page, blog_posts=None):

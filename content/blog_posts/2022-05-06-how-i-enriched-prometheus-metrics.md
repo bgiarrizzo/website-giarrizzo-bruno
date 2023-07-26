@@ -112,7 +112,7 @@ metrics_df.drop(
 )
 </pre>
 
-This way, I am using the dataframe to delete the 4 columns, <code>inplace=True</code> is used in order to overwrite existing dataframe and not create a new one.
+This way, I am using the dataframe to delete the 4 columns. <code>inplace=True</code> is used in order to overwrite existing dataframe and not create a new one.
 
 Then i have to merge metric data with data from two other internal datasources (one for the hosts/vm referential, one for the business lines). 
 

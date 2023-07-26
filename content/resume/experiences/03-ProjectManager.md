@@ -1,6 +1,6 @@
 ---
 id: 03
-title: Head of Project
+title: Project Manager
 company: Decathlon
 company_url: http://www.decathlon.com/
 start_date: 2015/11

@@ -28,7 +28,11 @@
             <title>{{ site.short_url }}</title>
         {% endif %}
         <meta name="title" content="{{ page.meta_title }} - {{ site.short_url }}" />
-        <link rel="canonical" href="{{ site.url }}/{{ page.permalink }}/" />
+        {% if page.permalink %}
+            <link rel="canonical" href="{{ site.url }}/{{ page.permalink }}/" />
+        {% else %}
+            <link rel="canonical" href="{{ site.url }}" />
+        {% endif %}
         <meta name="keywords" content="{{ site.keywords | join(', ') }}, {{ page.tags | join(', ') }}" />
         <meta name="description" content="{{ page.summary }}" />
     {% elif post %}
@@ -38,17 +42,19 @@
         <meta name="keywords" content="{{ site.keywords | join(', ') }}, {{ post.tags | join(', ') }}" />
         <meta name="description" content="{{ post.summary }}" />
     {% else %}
-        <link rel="canonical" href="{{ site.url }}" />
         {% if resume %}
             <title>Resume - {{ site.short_url }}</title>
+            <link rel="canonical" href="{{ site.url }}/resume/" />
             <meta name="title" content="Resume - {{ site.short_url }}" />
             <meta name="keywords" content="{{ site.keywords | join(', ') }}, {{ resume.tags | join(', ') }}" />
         {% elif all_posts %}
             <title>Blog - {{ site.short_url }}</title>
+            <link rel="canonical" href="{{ site.url }}/blog/" />
             <meta name="title" content="Blog - {{ site.short_url }}" />
             <meta name="keywords" content="{{ site.keywords | join(', ') }}" />
         {% else %}
             <title>{{ site.short_url }}</title>
+            <link rel="canonical" href="{{ site.url }}/" />
             <meta name="title" content="{{ site.short_url }}" />
             <meta name="keywords" content="{{ site.keywords | join(', ') }}" />
         {% endif %}

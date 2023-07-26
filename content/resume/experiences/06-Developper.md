@@ -2,7 +2,7 @@
 id: 06
 title: Developper
 company: BNP Paribas - Corporate Institutional Banking (CIB)
-company_url: https://group.bnpparibas/decouvrez-le-groupe/activites/corporate-institutional-banking
+company_url: https://group.bnpparibas/decouvrez-le-groupe/nos-metiers-et-expertises/corporate-institutional-banking
 start_date: 2020/09
 end_date: 2022/06
 contract_type: Freelance contract
