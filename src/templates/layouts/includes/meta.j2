@@ -34,7 +34,9 @@
             <link rel="canonical" href="{{ site.url }}" />
         {% endif %}
         <meta name="keywords" content="{{ site.keywords | join(', ') }}, {{ page.tags | join(', ') }}" />
-        <meta name="description" content="{{ page.summary }}" />
+        {% if page.summary %} 
+            <meta name="description" content="{{ page.summary }}" />
+        {% endif %}
     {% elif post %}
         <title>{{ post.title }} - {{ site.short_url }}</title>
         <meta name="title" content="{{ post.title }} - {{ site.short_url }}" />

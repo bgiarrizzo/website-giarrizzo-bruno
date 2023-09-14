@@ -2,7 +2,6 @@
 title: About
 meta_title: About
 permalink: about
-summary: by <b>Bruno</b>
 ---
 
 I'm an experienced Developer and DevOps, and have been working with technology since I was a kid.
@@ -30,6 +29,6 @@ In my opinion, to reach success for a software product, it needs two key ingredi
 
 ## Reach Me Out
 
-You can contact me by mail, at [b.giarrizzo_at_cyberlife.sh](mailto:bgiarrizzo_at_cyberlife.sh) and I am occasionaly livestreaming on [Twitch](https://www.twitch.tv/hyweene)
+You can contact me by mail, at [b.giarrizzo_at_cyberlife.sh](mailto:bgiarrizzo_at_cyberlife.sh)
 
 You can also follow me through my blog [RSS Feed](/blog/feed.xml).
