@@ -3,10 +3,21 @@
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspaces/app/",
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"installOhMyZsh": "true",
+			"configureZshAsDefaultShell": "true",
+			"username": "vscode",
+			"userUid": "1000",
+			"userGid": "1000",
+			"upgradePackages": "true"
+		},
+		"ghcr.io/devcontainers/features/git:1": {}
+	},
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"editor.fontSize": 14,
 				"editor.formatOnSave": true,
 				"files.exclude": {
 					"**/__pycache__": true,
@@ -17,35 +28,23 @@
 					"**/.svn": true,
 					"**/*.pyc": true,
 					"**/CVS": true
-				},
-				"python.defaultInterpreterPath": "${workspaceFolder}/Backend/.venv/bin/python",
-				"python.formatting.blackPath": "${workspaceFolder}/Backend/.venv/bin/black",
-				"python.formatting.provider": "black",
-				"python.linting.banditPath": "${workspaceFolder}/Backend/.venv/bin/bandit",
-				"python.linting.enabled": true,
-				"python.linting.flake8Args": [
-					"--config=${workspaceFolder}/setup.cfg"
-				],
-				"python.linting.flake8Enabled": true,
-				"python.linting.flake8Path": "${workspaceFolder}/Backend/.venv/bin/flake8",
-				"workbench.colorTheme": "GitHub Dark",
-				"workbench.preferredLightColorTheme": "Default Dark+",
-				"workbench.tree.indent": 20,
-				"workbench.tree.renderIndentGuides": "always",
-				"[python]": {
-					"editor.codeActionsOnSave": {
-						"source.organizeImports": true
-					}
 				}
 			},
 			"extensions": [
+				"GitHub.copilot-chat",
 				"GitHub.copilot",
 				"GitHub.github-vscode-theme",
 				"github.vscode-github-actions",
 				"GitHub.vscode-pull-request-github",
+				"matangover.mypy",
+				"ms-python.black-formatter",
+				"ms-python.flake8",
+				"ms-python.isort",
+				"ms-python.pylint",
 				"ms-python.python",
 				"ms-python.vscode-pylance",
 				"vscode-icons-team.vscode-icons",
+				"waderyan.gitblame"
 			]
 		}
 	},

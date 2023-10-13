@@ -6,7 +6,7 @@ services:
       context: ../
       dockerfile: .devcontainer/Dockerfile
       args:
-        PYTHON_VERSION: "3.11-bullseye"
+        VARIANT: "3.11-slim-bookworm"
     volumes:
       - ../:/workspaces/app/:cached
     environment:
@@ -16,7 +16,11 @@ services:
       - "APP_DEBUG=True"
       - "APP_LOG_LEVEL=DEBUG"
       - "APP_SECRET_KEY=my-Sup3r-S3cr3t-K3y-F0r-D3v-Env!"
-    user: vscode
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
     command: sleep infinity
     ports:
       - 8000:8000

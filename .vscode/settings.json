@@ -1,33 +1,33 @@
 {
-    "editor.fontSize": 14,
-    "editor.formatOnSave": true,
-    "files.exclude": {
-        "**/__pycache__": true,
-        "**/.DS_Store": true,
-        "**/.git": true,
-        "**/.hg": true,
-        "**/.pytest_cache": true,
-        "**/.svn": true,
-        "**/*.pyc": true,
-        "**/CVS": true
-    },
-    "python.defaultInterpreterPath": "python",
-    "python.formatting.blackPath": "black",
-    "python.formatting.provider": "black",
-    "python.linting.banditPath": "bandit",
-    "python.linting.enabled": true,
-    "python.linting.flake8Args": [
-        "--config=${workspaceFolder}/setup.cfg"
-    ],
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8Path": "flake8",
-    "workbench.colorTheme": "GitHub Dark",
-    "workbench.preferredLightColorTheme": "Default Dark+",
-    "workbench.tree.indent": 20,
-    "workbench.tree.renderIndentGuides": "always",
     "[python]": {
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
-        }
-    }
+        },
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true
+    },
+    "python.formatting.provider": "none",
+    // Linters
+    "flake8.args": [
+        "--toml-config=${workspaceFolder}/Backend/pyproject.toml"
+    ],
+    "pylint.args": [
+        "--rcfile=${workspaceFolder}/Backend/pyproject.toml"
+    ],
+    "mypy.configFile": "Backend/pyproject.toml",
+    "mypy.runUsingActiveInterpreter": true,
+    // Formatters
+    "black-formatter.args": [
+        "--config=${workspaceFolder}/Backend/pyproject.toml"
+    ],
+    "isort.args": [
+        "--settings-file",
+        "${workspaceFolder}/Backend/pyproject.toml"
+    ],
+    // Testers
+    "python.testing.pytestArgs": [
+        "${workspaceFolder}/Backend/src/tests"
+    ],
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
 }
