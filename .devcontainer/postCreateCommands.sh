@@ -16,8 +16,11 @@ cd ${PATH_TO_CODE}
 pipenv install --dev
 
 echo -e "\n###############################################################"
-echo -e  "Run Web Server ... \n"
+echo -e "Build Site ... \n"
 
-cd ${PATH_TO_CODE}/build/
+pipenv run build
+
+echo -e "\n###############################################################"
+echo -e  "Run Web Server ... \n"
 
 pipenv run dev

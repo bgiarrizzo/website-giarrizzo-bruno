@@ -14,7 +14,7 @@
     </author>
     <id>https://www.bruno-giarrizzo.fr/blog/hello-world/</id>
     <published>2021-09-26</published>
-    <updated/>
+    <updated>2021-09-26</updated>
     <link rel="alternate" type="text/html">https://www.bruno-giarrizzo.fr/blog/hello-world/</link>
     <summary>Hello World!</summary>
     <content type="html">
@@ -29,7 +29,7 @@
     </author>
     <id>https://www.bruno-giarrizzo.fr/blog/how-to-install-psycopg2-binary-on-apple-m1/</id>
     <published>2021-10-17 09:30:00+00:00</published>
-    <updated/>
+    <updated>2021-10-17 09:30:00+00:00</updated>
     <link rel="alternate" type="text/html">https://www.bruno-giarrizzo.fr/blog/how-to-install-psycopg2-binary-on-apple-m1/</link>
     <summary>I had some difficulties working with python code accessing postgres databases. Let me show you how I handled it.</summary>
     <content type="html">
@@ -66,7 +66,7 @@ or with the pg_config option in 'setup.cfg'.</pre>
     </author>
     <id>https://www.bruno-giarrizzo.fr/blog/how-i-enriched-prometheus-metrics/</id>
     <published>2022-05-05 09:30:00+00:00</published>
-    <updated/>
+    <updated>2022-05-05 09:30:00+00:00</updated>
     <link rel="alternate" type="text/html">https://www.bruno-giarrizzo.fr/blog/how-i-enriched-prometheus-metrics/</link>
     <summary>VMWare exporter metrics didn't have all the informations we wanted. This is how I enriched them.</summary>
     <content type="html">
@@ -226,10 +226,11 @@ metrics_df = pandas.DataFrame(processed_exporter_data)</pre>
     </author>
     <id>https://www.bruno-giarrizzo.fr/blog/sudo-with-macos-and-touchid/</id>
     <published>2022-08-03 09:30:00+00:00</published>
-    <updated/>
+    <updated>2022-08-03 09:30:00+00:00</updated>
     <link rel="alternate" type="text/html">https://www.bruno-giarrizzo.fr/blog/sudo-with-macos-and-touchid/</link>
     <summary>I am a lazy guy, and type my password kind of annoy me :-D</summary>
     <content type="html">
+      <p>I’m addicted to home automation. There. Said it. But it’s just such a tremendous amount of fun to play with. I’m pretty sure it’s the SRE in me. Why do anything by hand when you can have computers do things for you? Why turn on the lights when you get home when it can happen automatically? Turn on the lights when you enter the bathroom? Barbaric! Turn them off? I’ve git better things to do! Why not wake up to the smell of freshly brewed coffee every morning instead of having to get out of bed first to turn on the coffee machine?</p>
       <p>Last October, i got for myself one M1 Macbook pro.</p>
       <p>It is a hell of a machine, powerful, silent and it comes with touchID.</p>
       <p>I didn't change my laptop since my mid-2012 macbook pro, and this was a revolution !</p>

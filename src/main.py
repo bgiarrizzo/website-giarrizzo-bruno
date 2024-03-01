@@ -2,6 +2,7 @@ import shutil
 
 from config import settings
 from generators.blog import generate_blog
+from generators.links import generate_links
 from generators.common import add_cname_to_build
 from generators.pages import generate_pages
 from generators.resume import generate_resume
@@ -19,7 +20,9 @@ if __name__ == "__main__":
     print("Building site ...")
 
     posts = generate_blog()
-    generate_pages(posts)
+    links = generate_links()
+
+    generate_pages(posts=posts, links=links)
 
     print("#", "-" * 80)
     generate_resume()

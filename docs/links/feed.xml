@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>bruno-giarrizzo.fr</title>
+  <subtitle>Freelance Developer, DevOps, Ethical Hacker</subtitle>
+  <updated>29-Feb-2024</updated>
+  <link href="https://www.bruno-giarrizzo.fr/links/" rel="alternate" type="text/html"/>
+  <id>https://www.bruno-giarrizzo.fr/links/</id>
+  <link href="https://www.bruno-giarrizzo.fr/links/feed.xml" rel="self" type="application/atom+xml"/>
+  <entry xml:lang="en">
+    <title type="html">Il avait déguisé son distributeur automatique en radar, la justice exige son retrait - La Voix du Nord</title>
+    <author>
+      <name/>
+      <uri>https://www.bruno-giarrizzo.fr</uri>
+    </author>
+    <id>https://www.bruno-giarrizzo.fr/links/il-avait-deguise-son-distributeur-automatique-en-radar-la-justice-exige-son-retrait-la-voix-du-nord/</id>
+    <published>2024-02-28 09:30:00+00:00</published>
+    <updated>2024-02-28 09:30:00+00:00</updated>
+    <link rel="alternate" type="text/html">https://www.bruno-giarrizzo.fr/links/il-avait-deguise-son-distributeur-automatique-en-radar-la-justice-exige-son-retrait-la-voix-du-nord/</link>
+    <content type="html">
+      <p>Les gens se sont crus obligés de respecter la loi.</p>
+      <p>On ne se rend pas compte du malaise ...</p>
+    </content>
+  </entry>
+  <entry xml:lang="en">
+    <title type="html">INSOLITE. &quot;Pierre Curry&quot; au lieu de Pierre Curie : deux plaques de rue mal orthographiées installées à Carcassonne</title>
+    <author>
+      <name/>
+      <uri>https://www.bruno-giarrizzo.fr</uri>
+    </author>
+    <id>https://www.bruno-giarrizzo.fr/links/insolite-pierre-curry-au-lieu-de-pierre-curie-deux-plaques-de-rue-mal-orthographiees-installees-a-carcassonne/</id>
+    <published>2024-02-29 09:30:00+00:00</published>
+    <updated>2024-02-29 09:30:00+00:00</updated>
+    <link rel="alternate" type="text/html">https://www.bruno-giarrizzo.fr/links/insolite-pierre-curry-au-lieu-de-pierre-curie-deux-plaques-de-rue-mal-orthographiees-installees-a-carcassonne/</link>
+    <content type="html">
+      <p>Pierre Curry, le physicien de la famille de Stephen Curry ?</p>
+    </content>
+  </entry>
+</feed>

@@ -22,10 +22,10 @@
   {% if posts %}
     {% if page %}
       {% if page.title == "bruno-giarrizzo.fr" %}
-        <h2>Blog Posts</h2>
+        <h2>Latest Blog Posts</h2>
         <ul><li><a href="/blog/">All blog posts</a></li></ul>
-        <ul class="blog_post_list">
-          {% for post in posts | reverse %}
+        <ul>
+          {% for post in posts[:5] | reverse %}
             <li>
               <a href="/blog/{{ post.slug }}/">{{ post.short_date }} : {{ post.title }}</a>
             </li>
@@ -34,4 +34,21 @@
       {% endif %}
     {% endif %}
   {% endif %}
+
+  {% if links %}
+    {% if page %}
+      {% if page.title == "bruno-giarrizzo.fr" %}
+        <h2>Latest Links</h2>
+        <ul><li><a href="/blog/">All Links</a></li></ul>
+        <ul>
+          {% for link in links[:10] | reverse %}
+            <li>
+              <a href="{{ link.url }}">{{ link.short_date }} : {{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+
 </article>

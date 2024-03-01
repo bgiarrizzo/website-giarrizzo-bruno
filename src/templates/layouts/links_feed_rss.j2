@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  {% set last_link = links|last %}
+  <title>{{ site.short_url }}</title>
+  <subtitle>{{ site.description }}</subtitle>
+
+  <updated>{{ last_link.short_date }}</updated>
+
+  <link rel="alternate" type="text/html" href="{{ site.url }}/links/" />
+  <id>{{ site.url }}/links/</id>
+  <link rel="self" type="application/atom+xml" href="{{ site.url }}/links/feed.xml" />
+
+  {% for link in links %}
+    <entry xml:lang="en">
+        <title type="html">{{ link.title }}</title>
+        <author>
+            <name>{{ link.author }}</name>
+            <uri>{{ site.url }}</uri>
+        </author>
+        <id>{{ site.url }}/links/{{ link.slug }}/</id>
+        <published>{{ link.publish_date }}</published>
+        <updated>{{ link.update_date }}</updated>
+        <link rel="alternate" type="text/html">{{ site.url }}/links/{{ link.slug }}/</link>
+        {% if link.summary %}
+          <summary>
+            {{ link.summary }}
+          </summary>
+        {% endif %}
+        <content type="html">
+          {{ link.body }}
+        </content>
+    </entry>
+  {% endfor %}
+</feed>

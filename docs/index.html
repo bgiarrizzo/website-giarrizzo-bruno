@@ -29,7 +29,7 @@
   <meta content="My little website" name="description"/>
  </head>
  <body>
-  <nav><a href="/">Home</a><a href="/blog/">Blog</a><a href="/resume/">Resume</a><a href="/about/">About</a></nav>
+  <nav><a href="/">Home</a><a href="/blog/">Blog</a><a href="/links/">Links</a><a href="/resume/">Resume</a><a href="/about/">About</a></nav>
   <main>
    <header>
     <h1>bruno-giarrizzo.fr</h1>
@@ -42,15 +42,23 @@
      <li><a href="/blog/">Blog</a></li>
     </ul>
     <p>If you do not see me on a keyboard, I am probably out, in some Gym, boxing, body building, or with a GamePad in my hands, playing Mario Kart, Pokemon, or some other Nintendo Retro Console.</p>
-   </header> <article><h2>Blog Posts</h2>
+   </header> <article><h2>Latest Blog Posts</h2>
     <ul>
      <li><a href="/blog/">All blog posts</a></li>
     </ul>
-    <ul class="blog_post_list">
+    <ul>
      <li><a href="/blog/sudo-with-macos-and-touchid/">03-Aug-2022 : Sudo with macos and TouchID</a></li>
      <li><a href="/blog/how-i-enriched-prometheus-metrics/">05-May-2022 : How I enriched prometheus metrics</a></li>
      <li><a href="/blog/how-to-install-psycopg2-binary-on-apple-m1/">17-Oct-2021 : How to install psycopg2-binary on Apple M1</a></li>
      <li><a href="/blog/hello-world/">26-Sep-2021 : Hello World!</a></li>
+    </ul>
+    <h2>Latest Links</h2>
+    <ul>
+     <li><a href="/blog/">All Links</a></li>
+    </ul>
+    <ul>
+     <li><a href="https://france3-regions.francetvinfo.fr/occitanie/aude/carcassonne/insolite-pierre-curry-au-lieu-de-pierre-curie-deux-plaques-de-rue-mal-orthographiees-installees-a-carcassonne-2930313.html#Echobox=1708794694">29-Feb-2024 : INSOLITE. "Pierre Curry" au lieu de Pierre Curie : deux plaques de rue mal orthographiées installées à Carcassonne</a></li>
+     <li><a href="https://www.lavoixdunord.fr/1432264/article/2024-02-19/il-avait-deguise-son-distributeur-automatique-en-radar-la-justice-exige-son">28-Feb-2024 : Il avait déguisé son distributeur automatique en radar, la justice exige son retrait - La Voix du Nord</a></li>
     </ul>
    </article>
   </main>
@@ -59,16 +67,18 @@
   <link href="/static/img/logo.jpg" rel="icon" type="image/jpg"/>
   <style>body {
         margin: 0 auto;
-        max-width: 650px;
-        line-height: 1.4;
-        font-size: 18px;
+        max-width: 700px;
+        line-height: 1.8;
+        font-family: 'Latin Modern', Georgia, Cambria, 'Times New Roman', Times, serif;
+        font-size: 1rem;
         color: #444;
         background-color: #fdf6e3;
         padding: 20px 40px;
-        letter-spacing: 0.5px;
+        text-rendering: optimizeLegibility;
     }
     h1 { line-height: 1.2; text-align: center; }
-    h2, h3 { line-height: 1.2; border-bottom: 1px solid; }
+    h2, h3, h4 { line-height: 1.2; border-bottom: 1px solid; }
+    p { hyphens: auto; text-align: justify; }
     pre, blockquote, .code { background: #f5ead6; font-size: 0.8em; padding: 1em; overflow: scroll; }
     ul, ol { list-style-type: circle; }
     .blog_post_list li { padding-top: 0.8em; padding-bottom: 0.8em; }

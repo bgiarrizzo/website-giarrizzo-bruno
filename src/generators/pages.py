@@ -4,8 +4,8 @@ from utils.format import beautify_html
 from utils.template import generate_data_for_template, render_template, write_page
 
 
-def generate_page(page, blog_posts=None):
-    data = {"page": page, "posts": blog_posts}
+def generate_page(page, blog_posts=None, links=None):
+    data = {"page": page, "posts": blog_posts, "links": links}
 
     page_template = render_template("page.j2", generate_data_for_template([data]))
 
@@ -17,7 +17,7 @@ def generate_page(page, blog_posts=None):
     write_page(f"{page['permalink']}/index.html", beautify_html(rendered_page))
 
 
-def generate_pages(posts):
+def generate_pages(posts, links):
     pages_files = get_all_files_from_path(f"{settings.CONTENT_PATH}/pages")
     pages = generate_dataset_of_item_files(pages_files)
 
@@ -28,4 +28,4 @@ def generate_pages(posts):
             print("Generating page with empty permalink: Home ? ...")
         else:
             print(f"Generating page: {page['permalink']} ...")
-        generate_page(page, posts)
+        generate_page(page=page, blog_posts=posts, links=links)

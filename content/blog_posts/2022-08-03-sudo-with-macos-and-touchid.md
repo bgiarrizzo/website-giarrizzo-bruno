@@ -8,6 +8,8 @@ update_date: 2022-08-03T09:30:00Z
 tags: [macos, sudo, terminal, touch, id, touchid]
 ---
 
+I’m addicted to home automation. There. Said it. But it’s just such a tremendous amount of fun to play with. I’m pretty sure it’s the SRE in me. Why do anything by hand when you can have computers do things for you? Why turn on the lights when you get home when it can happen automatically? Turn on the lights when you enter the bathroom? Barbaric! Turn them off? I’ve git better things to do! Why not wake up to the smell of freshly brewed coffee every morning instead of having to get out of bed first to turn on the coffee machine?
+
 Last October, i got for myself one M1 Macbook pro.
 
 It is a hell of a machine, powerful, silent and it comes with touchID.
