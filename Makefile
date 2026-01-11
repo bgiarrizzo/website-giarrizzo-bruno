@@ -5,6 +5,12 @@ help:
 
 .PHONY: build
 build: ## Build the project
+	@rm -rf build/
 	@mkdir -p build
 	@cp -r src/* build/
 	@rm -rf src/stats/
+
+.PHONY: serve
+serve: build ## Serve the project locally
+	@echo "Serving project at http://localhost:8000"
+	python3 -m http.server 8000 --directory build
