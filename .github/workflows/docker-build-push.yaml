@@ -32,7 +32,6 @@ jobs:
           images: ghcr.io/${{ github.repository }}
           tags: |
             type=sha
-            latest=true
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v7
@@ -40,4 +39,6 @@ jobs:
           context: .
           file: docker/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: |
+            latest
+            ${{ steps.meta.outputs.tags }}
