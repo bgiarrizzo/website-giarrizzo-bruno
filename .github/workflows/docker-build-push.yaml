@@ -25,14 +25,6 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v6
-        with:
-          images: ghcr.io/${{ github.repository }}
-          tags: |
-            type=sha
-
       - name: Build and push Docker image
         uses: docker/build-push-action@v7
         with:
@@ -40,5 +32,6 @@ jobs:
           file: docker/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
-            latest
-            ${{ steps.meta.outputs.tags }}
+            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{ github.sha }}
+            ghcr.io/${{ github.repository }}:$(date +%Y%m%d%H%M%S)
